@@ -14,8 +14,8 @@
     
   </head>
   <body>
-    <div class="container">
-        <h1 class="display-4 center">Myanmar Unicode Font Preview</h1>
+    <div class="container" id="main-content">
+        <h1 class="display-4 center">Myanmar Unicode Fonts Preview</h1>
         <div class="row">
             <div class="form-group"  id="display">
                 <label for="exampleFormControlTextarea1">Enter Your Text Here</label>
@@ -24,8 +24,11 @@
             <h2>Khmer Type</h2>
             <div id="khmertype-container" class="type"></div>
 
-            <h2>Other</h2>
+            <h2>Known Fonts</h2>
             <div id="other-container" class="type"></div>
+
+            <h2>New Typeface</h2>
+            <div id="unknown-container" class="type"></div>
         </div>
     </div>
     <!-- Optional JavaScript -->
@@ -66,8 +69,21 @@
             "NotoSansMyanmarUI",
             "Ours-Unicode",
             "Pyidaungsu",
-            "Yunghkio"
-        ]
+            "Yunghkio",
+            "MyMyanmarUniversal"
+        ];
+
+        unknown = [
+            "CherryUnicode",
+            "Kamjing",
+            "MyanmarBlack",
+            "MyanmarHeadOne",
+            "MyanmarSquare",
+            "MyanmarSquareLight",
+            "NKSSmart2",
+            "NKSSmart3",
+            "Yangon"
+        ];
            
 
         $(document).ready(function() {
@@ -99,7 +115,7 @@
             
             $("#khmertype-container").html(getTemplateFromArray(khmertype));
             $("#other-container").html(getTemplateFromArray(other));
-
+            $("#unknown-container").html(getTemplateFromArray(unknown));
 
         }
 
