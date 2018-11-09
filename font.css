@@ -1,0 +1,237 @@
+/* Khmer Type Start */
+@font-face {
+    font-family: "MyanmarAngoun";
+    src: local("MyanmarAngoun"),url('./KhmerType/MyanmarAngoun.ttf');
+}
+@font-face {
+    font-family: "MyanmarChatu";
+    src: local("MyanmarChatu"),url('./KhmerType/MyanmarChatu.ttf');
+}
+@font-face {
+    font-family: "MyanmarChatuLight";
+    src: local("MyanmarChatuLight"),url('./KhmerType/MyanmarChatuLight.ttf');
+}
+@font-face {
+    font-family: "MyanmarGantgaw";
+    src: local("MyanmarGantgaw"),url('./KhmerType/MyanmarGantgaw.ttf');
+}
+@font-face {
+    font-family: "MyanmarKhyay";
+    src: local("MyanmarKhyay"),url('./KhmerType/MyanmarKhyay.ttf');
+}
+@font-face {
+    font-family: "MyanmarKuttar";
+    src: local("MyanmarKuttar"),url('./KhmerType/MyanmarKuttar.ttf');
+}
+@font-face {
+    font-family: "MyanmarNayone";
+    src: local("MyanmarNayone"),url('./KhmerType/MyanmarNayone.ttf');
+}
+@font-face {
+    font-family: "MyanmarNjaun";
+    src: local("MyanmarNjaun"),url('./KhmerType/MyanmarNjaun.ttf');
+}
+@font-face {
+    font-family: "MyanmarPauklay";
+    src: local("MyanmarPauklay"),url('./KhmerType/MyanmarPauklay.ttf');
+}
+@font-face {
+    font-family: "MyanmarPhetsot";
+    src: local("MyanmarPhetsot"),url('./KhmerType/MyanmarPhetsot.ttf');
+}
+@font-face {
+    font-family: "MyanmarPhiksel";
+    src: local("MyanmarPhiksel"),url('./KhmerType/MyanmarPhiksel.ttf');
+}
+@font-face {
+    font-family: "MyanmarPhikselSmooth";
+    src: local("MyanmarPhikselSmooth"),url('./KhmerType/MyanmarPhikselSmooth.ttf');
+}
+@font-face {
+    font-family: "MyanmarPonenyet";
+    src: local("MyanmarPonenyet"),url('./KhmerType/MyanmarPonenyet.ttf');
+}
+@font-face {
+    font-family: "MyanmarSabae";
+    src: local("MyanmarSabae"),url('./KhmerType/MyanmarSabae.ttf');
+}
+@font-face {
+    font-family: "MyanmarSagar";
+    src: local("MyanmarSagar"),url('./KhmerType/MyanmarSagar.ttf');
+}
+@font-face {
+    font-family: "MyanmarSanpya";
+    src: local("MyanmarSanpya"),url('./KhmerType/MyanmarSanpya.ttf');
+}
+@font-face {
+    font-family: "MyanmarTagu";
+    src: local("MyanmarTagu"),url('./KhmerType/MyanmarTagu.ttf');
+}
+@font-face {
+    font-family: "MyanmarThuriya";
+    src: local("MyanmarThuriya"),url('./KhmerType/MyanmarThuriya.ttf');
+}
+@font-face {
+    font-family: "MyanmarWaso";
+    src: local("MyanmarWaso"),url('./KhmerType/MyanmarWaso.ttf');
+}
+@font-face {
+    font-family: "MyanmarYinmar";
+    src: local("MyanmarYinmar"),url('./KhmerType/MyanmarYinmar.ttf');
+}
+.MyanmarAngoun {
+    font-family:"MyanmarAngoun";
+}
+.MyanmarChatu {
+    font-family:"MyanmarChatu";
+}
+.MyanmarChatuLight {
+    font-family:"MyanmarChatuLight";
+}
+.MyanmarGantgaw {
+    font-family:"MyanmarGantgaw";
+}
+.MyanmarKhyay {
+    font-family:"MyanmarKhyay";
+}
+.MyanmarKuttar {
+    font-family:"MyanmarKuttar";
+}
+.MyanmarNayone {
+    font-family:"MyanmarNayone";
+}
+.MyanmarNjaun {
+    font-family:"MyanmarNjaun";
+}
+.MyanmarPauklay {
+    font-family:"MyanmarPauklay";
+}
+.MyanmarPhetsot {
+    font-family:"MyanmarPhetsot";
+}
+.MyanmarPhiksel {
+    font-family:"MyanmarPhiksel";
+}
+.MyanmarPhikselSmooth {
+    font-family:"MyanmarPhikselSmooth";
+}
+.MyanmarPonenyet {
+    font-family:"MyanmarPonenyet";
+}
+.MyanmarSabae {
+    font-family:"MyanmarSabae";
+}
+.MyanmarSagar {
+    font-family:"MyanmarSagar";
+}
+.MyanmarSanpya {
+    font-family:"MyanmarSanpya";
+}
+.MyanmarTagu {
+    font-family:"MyanmarTagu";
+}
+.MyanmarThuriya {
+    font-family:"MyanmarThuriya";
+}
+.MyanmarWaso {
+    font-family:"MyanmarWaso";
+}
+.MyanmarYinmar {
+    font-family:"MyanmarYinmar";
+}
+
+
+/* Khmer Type end */
+/* Other Start */
+@font-face {
+    font-family:"Mon3";
+    src:local('Mon3'),url('./other/Mon3.ttf');
+}
+@font-face {
+    font-family:"Myanmar3";
+    src:local('Myanmar3'),url('./other/Myanmar3.ttf');
+}
+@font-face {
+    font-family:"MyanmarSansPro";
+    src:local('MyanmarSansPro'),url('./other/MyanmarSansPro.ttf');
+}
+@font-face {
+    font-family:"NotoSanMyanmar";
+    src:local('NotoSanMyanmar'),url('./other/NotoSanMyanmar.ttf');
+}
+@font-face {
+    font-family:"NotoSansMyanmarUI";
+    src:local('NotoSansMyanmarUI'),url('./other/NotoSansMyanmarUI.ttf');
+}
+@font-face {
+    font-family:"Ours-Unicode";
+    src:local('Ours-Unicode'),url('./other/Ours-Unicode.ttf');
+}
+@font-face {
+    font-family:"Pyidaungsu";
+    src:local('Pyidaungsu'),url('./other/Pyidaungsu.ttf');
+}
+@font-face {
+    font-family: "Yunghkio";
+    src: local('Yunghkio'),url('./other/Yunghkio.ttf');
+}
+.Mon3 {
+    font-family: "Mon3";
+}
+.Myanmar3 {
+    font-family: "Myanmar3";
+}
+.MyanmarSansPro {
+    font-family: "MyanmarSansPro";
+}
+.NotoSanMyanmar {
+    font-family: "NotoSanMyanmar";
+}
+.NotoSansMyanmarUI {
+    font-family: "NotoSansMyanmarUI";
+}
+.Ours-Unicode {
+    font-family: "Ours-Unicode";
+}
+.Pyidaungsu {
+    font-family: "Pyidaungsu";
+}
+.Yunghkio{
+    font-family: "Yunghkio";
+}
+/* Other End */
+
+h2 {
+    font-size: 20px;
+    display: block;
+    margin-top: 20px;
+}
+
+.type {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.type h3 {
+    font-size: 14px;
+}
+#display {
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+#inputText {
+    display: block;
+    width: 100%;
+}
+.result {
+    margin: auto;
+    min-width: 100px;
+    border: 1px solid #CCC;
+    padding: 10px;
+    margin-top: 10px;
+    flex: 0 0 250px;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
