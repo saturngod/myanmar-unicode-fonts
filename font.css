@@ -246,6 +246,10 @@
     font-family:"Yangon";
     src:local('Yangon'),url('./unknown/Yangon.ttf') format('truetype');
 }
+@font-face{
+    font-family: "YoeYar-One";
+    src:local('YoeYar-One'),url('./unknown/YoeYar-One.ttf') format('truetype');
+}
 .CherryUnicode {
     font-family: "CherryUnicode";
 }
@@ -272,6 +276,9 @@
 }
 .Yangon {
     font-family: "Yangon";
+}
+.YoeYar-One {
+    font-family: "YoeYar-One";
 }
 /* Unknown End */
 #main-content {
@@ -304,10 +311,9 @@ h2 {
 }
 .result {
     margin: auto;
-    min-width: 100px;
     border: 1px solid #CCC;
     padding: 10px;
     margin-top: 10px;
-    flex: 0 0 250px;
+    flex: 0 0 320px;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
