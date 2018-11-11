@@ -164,6 +164,10 @@
     src:local('NotoSansMyanmarUI'),url('./other/NotoSansMyanmarUI.ttf') format('truetype');
 }
 @font-face {
+    font-family: "NotoSerifMyanmar";
+    src: local("NotoSerifMyanmar"),url("./other/NotoSerifMyanmar.ttf") format('truetype');
+}
+@font-face {
     font-family:"Ours-Unicode";
     src:local('Ours-Unicode'),url('./other/Ours-Unicode.ttf') format('truetype');
 }
@@ -195,6 +199,9 @@
 }
 .NotoSansMyanmarUI {
     font-family: "NotoSansMyanmarUI";
+}
+.NotoSerifMyanmar{
+    font-family: "NotoSerifMyanmar";
 }
 .Ours-Unicode {
     font-family: "Ours-Unicode";
@@ -316,4 +323,8 @@ h2 {
     margin-top: 10px;
     flex: 0 0 320px;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+
+footer {
+    text-align: center;
 }
