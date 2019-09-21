@@ -352,4 +352,13 @@
 .Yunghkio {
     font-family: "Yunghkio";
 }
+
+@font-face {
+    font-family: "NotoZawDecode";
+    src:local('Noto Sans Myanmar UI'),url('./other/NotoSansMyanmarUI-Regular-ZawDecode.ttf') format('truetype');
+}
+
+.NotoZawDecode {
+    font-family: "NotoZawDecode";
+}
         
