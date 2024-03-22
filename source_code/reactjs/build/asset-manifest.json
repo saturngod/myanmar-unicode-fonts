@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "https://saturngod.github.io/myanmar-unicode-fonts/static/css/main.3263e76d.css",
+    "main.js": "https://saturngod.github.io/myanmar-unicode-fonts/static/js/main.c1a5c525.js",
+    "static/js/453.28122add.chunk.js": "https://saturngod.github.io/myanmar-unicode-fonts/static/js/453.28122add.chunk.js",
+    "index.html": "https://saturngod.github.io/myanmar-unicode-fonts/index.html",
+    "main.3263e76d.css.map": "https://saturngod.github.io/myanmar-unicode-fonts/static/css/main.3263e76d.css.map",
+    "main.c1a5c525.js.map": "https://saturngod.github.io/myanmar-unicode-fonts/static/js/main.c1a5c525.js.map",
+    "453.28122add.chunk.js.map": "https://saturngod.github.io/myanmar-unicode-fonts/static/js/453.28122add.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3263e76d.css",
+    "static/js/main.c1a5c525.js"
+  ]
+}
