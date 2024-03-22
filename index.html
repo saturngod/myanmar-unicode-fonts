@@ -31,6 +31,10 @@
 
                 <h2>New Typeface</h2>
                 <div id="unknown-container" class="type"></div>
+
+                <h2>Masterpiece Fonts</h2>
+                <div id="masterpiece-container" class="type"></div>
+
             </div>
         </div>
     </div>
@@ -102,6 +106,19 @@
             "MyanmarSabae",
             "MyanmarSansPro"
         ];
+
+        masterpiece = [
+            "MasterpieceCTL",
+            "MasterpieceLakwel",
+            "MasterpieceSpringRev",
+            "MasterpieceStadium",
+            "MasterpieceTawWin",
+            "MasterpieceUniHand",
+            "MasterpieceUniRound",
+            "MasterpieceUniSerif",
+            "MasterpieceUniType",
+            "MasterpieceYayChanZin"
+        ]
            
 
         $(document).ready(function() {
@@ -134,6 +151,7 @@
             $("#khmertype-container").html(getTemplateFromArray(khmertype));
             $("#other-container").html(getTemplateFromArray(other));
             $("#unknown-container").html(getTemplateFromArray(unknown));
+            $("#masterpiece-container").html(getTemplateFromArray(masterpiece));
 
         }
 

@@ -314,6 +314,14 @@
 }
         
 @font-face {
+    font-family:"NotoSansMyanmarUI-Regular-ZawDecode";
+    src:local('NotoSansMyanmarUI-Regular-ZawDecode'),url('./other/NotoSansMyanmarUI-Regular-ZawDecode.ttf') format('truetype');
+}
+.NotoSansMyanmarUI-Regular-ZawDecode {
+    font-family: "NotoSansMyanmarUI-Regular-ZawDecode";
+}
+        
+@font-face {
     font-family:"NotoSansMyanmarUI";
     src:local('NotoSansMyanmarUI'),url('./other/NotoSansMyanmarUI.ttf') format('truetype');
 }
@@ -352,13 +360,85 @@
 .Yunghkio {
     font-family: "Yunghkio";
 }
+        
 
 @font-face {
-    font-family: "NotoZawDecode";
-    src:local('Noto Sans Myanmar UI'),url('./other/NotoSansMyanmarUI-Regular-ZawDecode.ttf') format('truetype');
+    font-family:"MasterpieceCTL";
+    src:local('MasterpieceCTL'),url('./masterpiece/MasterpieceCTL.ttf') format('truetype');
 }
-
-.NotoZawDecode {
-    font-family: "NotoZawDecode";
+.MasterpieceCTL {
+    font-family: "MasterpieceCTL";
+}
+        
+@font-face {
+    font-family:"MasterpieceLakwel";
+    src:local('MasterpieceLakwel'),url('./masterpiece/MasterpieceLakwel.ttf') format('truetype');
+}
+.MasterpieceLakwel {
+    font-family: "MasterpieceLakwel";
+}
+        
+@font-face {
+    font-family:"MasterpieceSpringRev";
+    src:local('MasterpieceSpringRev'),url('./masterpiece/MasterpieceSpringRev.ttf') format('truetype');
+}
+.MasterpieceSpringRev {
+    font-family: "MasterpieceSpringRev";
+}
+        
+@font-face {
+    font-family:"MasterpieceStadium";
+    src:local('MasterpieceStadium'),url('./masterpiece/MasterpieceStadium.ttf') format('truetype');
+}
+.MasterpieceStadium {
+    font-family: "MasterpieceStadium";
+}
+        
+@font-face {
+    font-family:"MasterpieceTawWin";
+    src:local('MasterpieceTawWin'),url('./masterpiece/MasterpieceTawWin.ttf') format('truetype');
+}
+.MasterpieceTawWin {
+    font-family: "MasterpieceTawWin";
+}
+        
+@font-face {
+    font-family:"MasterpieceUniHand";
+    src:local('MasterpieceUniHand'),url('./masterpiece/MasterpieceUniHand.ttf') format('truetype');
+}
+.MasterpieceUniHand {
+    font-family: "MasterpieceUniHand";
+}
+        
+@font-face {
+    font-family:"MasterpieceUniRound";
+    src:local('MasterpieceUniRound'),url('./masterpiece/MasterpieceUniRound.ttf') format('truetype');
+}
+.MasterpieceUniRound {
+    font-family: "MasterpieceUniRound";
+}
+        
+@font-face {
+    font-family:"MasterpieceUniSerif";
+    src:local('MasterpieceUniSerif'),url('./masterpiece/MasterpieceUniSerif.ttf') format('truetype');
+}
+.MasterpieceUniSerif {
+    font-family: "MasterpieceUniSerif";
+}
+        
+@font-face {
+    font-family:"MasterpieceUniType";
+    src:local('MasterpieceUniType'),url('./masterpiece/MasterpieceUniType.ttf') format('truetype');
+}
+.MasterpieceUniType {
+    font-family: "MasterpieceUniType";
+}
+        
+@font-face {
+    font-family:"MasterpieceYayChanZin";
+    src:local('MasterpieceYayChanZin'),url('./masterpiece/MasterpieceYayChanZin.ttf') format('truetype');
+}
+.MasterpieceYayChanZin {
+    font-family: "MasterpieceYayChanZin";
 }
         

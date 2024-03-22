@@ -9,13 +9,13 @@ if (fs.existsSync(cssFile)) {
 function typesCSS(path) {
 
     fonts = fs.readdirSync(path)
-    
+
 
     var text = ""
-   
-    for (i = 0; i < fonts.length; i++) { 
+
+    for (i = 0; i < fonts.length; i++) {
         fontFile = fonts[i]
-        var font = fontFile.substr(0,fontFile.length - 4)
+        var font = fontFile.substr(0, fontFile.length - 4)
         var ext = fontFile.substr(-4)
         if (ext != ".ttf") {
             continue
@@ -30,16 +30,16 @@ function typesCSS(path) {
     font-family: "${font}";
 }
         `
-        
-        
+
+
     }
-    
+
     return text
-    
-    
+
+
 }
-var text = typesCSS("KhmerType") + "\n" + typesCSS("unknown") + "\n" + typesCSS("other")
-fs.writeFileSync(cssFile,text)
+var text = typesCSS("KhmerType") + "\n" + typesCSS("unknown") + "\n" + typesCSS("other") + "\n" + typesCSS("masterpiece")
+fs.writeFileSync(cssFile, text)
 
 
 
