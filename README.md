@@ -1,6 +1,13 @@
 Rewrite with ReactJS and Tailwind for myanmar font preview. All the source codes are under source code folder.
 
-To run
+To build CSS
+
+```
+cd source_code/buildCSS
+node buildfont.js
+```
+
+To run react app
 
 ```
 cd source_code/reactjs

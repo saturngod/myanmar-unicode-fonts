@@ -15,9 +15,9 @@ export const FontList: React.FC<FontListProps> = ({ title, data }) => {
         <>
         <HeaderFontPreview title={title}/>
 
-            <ul className={ grid ? "grid grid-cols-3 gap-4" : ""}>
+            <ul className={ grid ? "grid grid-cols-3 gap-x-8 gap-y-1" : ""}>
             {data.map((font, index) => (
-                <li className="mb-4 border p-2">
+                <li className="mb-4 border p-8">
                 <FontBox fontName={font}/>
                 </li>
             ))}
