@@ -120,7 +120,25 @@
   flex-direction: column;
   transition: width 0.3s ease, transform 0.3s ease;
   box-shadow: 2px 0 4px rgba(0, 0, 0, 0.05);
-  z-index: 10;
+  z-index: 100;
+}
+
+/* Desktop: Fixed positioning */
+@media (min-width: 768px) {
+  .left-control-panel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+}
+
+/* Mobile: Static positioning */
+@media (max-width: 767px) {
+  .left-control-panel {
+    position: static;
+    height: auto;
+  }
 }
 
 .left-control-panel.collapsed {
@@ -172,6 +190,10 @@
   color: #1e293b;
   width: 70%;
   text-align: center;
+}
+
+.panel-title.collapsed {
+  display: none;
 }
 
 .panel-content {
@@ -300,8 +322,26 @@
   overflow: hidden;
 }
 
-.right-preview-panel.expanded {
-  margin-left: 0;
+/* Desktop: Adjust margin for fixed left panel */
+@media (min-width: 768px) {
+  .right-preview-panel {
+    margin-left: 320px;
+  }
+
+  .right-preview-panel.expanded {
+    margin-left: 60px;
+  }
+}
+
+/* Mobile: Reset margin */
+@media (max-width: 767px) {
+  .right-preview-panel {
+    margin-left: 0;
+  }
+
+  .right-preview-panel.expanded {
+    margin-left: 0;
+  }
 }
 
 .search-section {
@@ -398,13 +438,21 @@
 }
 
 /* Responsive Breakpoints */
-@media (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .left-control-panel {
     width: 280px;
   }
 
   .left-control-panel.collapsed {
     width: 50px;
+  }
+
+  .right-preview-panel {
+    margin-left: 280px;
+  }
+
+  .right-preview-panel.expanded {
+    margin-left: 50px;
   }
 
   .app-title {
@@ -429,8 +477,12 @@
 
   .left-control-panel.collapsed {
     width: 100%;
-    height: 60px;
+    height: 80px;
     overflow: hidden;
+  }
+
+  .panel-title.collapsed {
+    display: block;
   }
 
   .app-header {

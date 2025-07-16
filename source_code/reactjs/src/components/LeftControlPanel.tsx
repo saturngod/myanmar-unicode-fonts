@@ -43,9 +43,7 @@ export const LeftControlPanel: React.FC<LeftControlPanelProps> = ({
                         <polyline points="15,18 9,12 15,6"></polyline>
                     </svg>
                 </button>
-                {!isCollapsed && (
-                    <h2 className="panel-title">Myanmar Fonts</h2>
-                )}
+                <h2 className={`panel-title ${isCollapsed ? 'collapsed' : ''}`}>Myanmar Fonts</h2>
             </div>
 
             {/* Panel Content - Hidden when collapsed */}
