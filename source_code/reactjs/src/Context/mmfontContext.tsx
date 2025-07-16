@@ -5,10 +5,14 @@ interface FontContextProps {
     lineHeight: number;
     previewText: string;
     grid: boolean;
+    searchTerm: string;
+    leftPanelCollapsed: boolean;
     changeFontSize: (newFontSize: number) => void;
     changeLineHeight: (newLineHeight: number) => void;
     changePreviewText: (newPreviewText: string) => void;
     toggleGrid: (gird: boolean) => void;
+    changeSearchTerm: (searchTerm: string) => void;
+    toggleLeftPanel: (collapsed: boolean) => void;
 }
 
 export const FontContext = createContext<FontContextProps | undefined>(undefined);
@@ -17,12 +21,14 @@ enum StorageType {
     FontSize = 'fontSize',
     LineHeight = 'lineHeight',
     PreviewText = 'previewText',
-    Grid = 'grid'
-  }
+    Grid = 'grid',
+    SearchTerm = 'searchTerm',
+    LeftPanelCollapsed = 'leftPanelCollapsed'
+}
 
 
 export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    
+
     const defaultFontSize = (): number => {
         const storedFontSize = localStorage.getItem(StorageType.FontSize);
         return storedFontSize ? parseInt(storedFontSize, 10) : 14;
@@ -32,7 +38,7 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const storedLineHeight = localStorage.getItem(StorageType.LineHeight);
         return storedLineHeight ? parseFloat(storedLineHeight) : 1.5;
     }
-    
+
 
     const defaultPreviewText = (): string => {
         const storedPreviewText = localStorage.getItem(StorageType.PreviewText);
@@ -44,14 +50,26 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         return storedGrid ? storedGrid === 'true' : false;
     }
 
+    const defaultSearchTerm = (): string => {
+        const storedSearchTerm = localStorage.getItem(StorageType.SearchTerm);
+        return storedSearchTerm ? storedSearchTerm : '';
+    }
+
+    const defaultLeftPanelCollapsed = (): boolean => {
+        const storedLeftPanelCollapsed = localStorage.getItem(StorageType.LeftPanelCollapsed);
+        return storedLeftPanelCollapsed ? storedLeftPanelCollapsed === 'true' : false;
+    }
+
 
     const [fontSize, setFontSize] = useState<number>(defaultFontSize());
     const [lineHeight, setLineHeight] = useState<number>(defaultLineHeight());
     const [previewText, setPreviewText] = useState<string>(defaultPreviewText());
     const [grid, setGrid] = useState<boolean>(defaultGrid());
+    const [searchTerm, setSearchTerm] = useState<string>(defaultSearchTerm());
+    const [leftPanelCollapsed, setLeftPanelCollapsed] = useState<boolean>(defaultLeftPanelCollapsed());
 
-    
-    
+
+
     const changeFontSize = (newFontSize: number) => {
         setFontSize(newFontSize);
         localStorage.setItem(StorageType.FontSize, newFontSize.toString());
@@ -72,15 +90,29 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         localStorage.setItem(StorageType.Grid, gird.toString());
     };
 
+    const changeSearchTerm = (newSearchTerm: string) => {
+        setSearchTerm(newSearchTerm);
+        localStorage.setItem(StorageType.SearchTerm, newSearchTerm);
+    };
+
+    const toggleLeftPanel = (collapsed: boolean) => {
+        setLeftPanelCollapsed(collapsed);
+        localStorage.setItem(StorageType.LeftPanelCollapsed, collapsed.toString());
+    };
+
     const contextValue: FontContextProps = {
         fontSize,
         lineHeight,
         previewText,
         grid,
+        searchTerm,
+        leftPanelCollapsed,
         changeFontSize,
         changeLineHeight,
         changePreviewText,
-        toggleGrid
+        toggleGrid,
+        changeSearchTerm,
+        toggleLeftPanel
     };
 
     return (
