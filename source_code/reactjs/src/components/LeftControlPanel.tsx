@@ -51,9 +51,50 @@ export const LeftControlPanel: React.FC<LeftControlPanelProps> = ({
                 <div className="panel-content">
                     {/* Preview Text */}
                     <div className="control-section">
-                        <label htmlFor="previewText" className="control-label">
-                            Preview Text
-                        </label>
+                        <div className="flex justify-between items-center mb-2">
+                            <label htmlFor="previewText" className="control-label">
+                                Preview Text
+                            </label>
+                            {/* View Mode Toggle - Icon Only */}
+                            <div className="flex rounded-md border border-gray-300 overflow-hidden hidden sm:flex">
+                                <button
+                                    onClick={() => toggleGrid?.(false)}
+                                    className={`flex items-center justify-center p-2 ${
+                                        !grid 
+                                            ? 'bg-blue-500 text-white' 
+                                            : 'bg-white text-gray-700 hover:bg-gray-50'
+                                    }`}
+                                    title="List View"
+                                    aria-label="List view"
+                                >
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <line x1="8" y1="6" x2="21" y2="6" />
+                                        <line x1="8" y1="12" x2="21" y2="12" />
+                                        <line x1="8" y1="18" x2="21" y2="18" />
+                                        <line x1="3" y1="6" x2="3.01" y2="6" />
+                                        <line x1="3" y1="12" x2="3.01" y2="12" />
+                                        <line x1="3" y1="18" x2="3.01" y2="18" />
+                                    </svg>
+                                </button>
+                                <button
+                                    onClick={() => toggleGrid?.(true)}
+                                    className={`flex items-center justify-center p-2 ${
+                                        grid 
+                                            ? 'bg-blue-500 text-white' 
+                                            : 'bg-white text-gray-700 hover:bg-gray-50'
+                                    }`}
+                                    title="Grid View"
+                                    aria-label="Grid view"
+                                >
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                        <rect x="3" y="3" width="7" height="7" />
+                                        <rect x="14" y="3" width="7" height="7" />
+                                        <rect x="14" y="14" width="7" height="7" />
+                                        <rect x="3" y="14" width="7" height="7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
                         <textarea
                             id="previewText"
                             rows={10}
@@ -102,28 +143,7 @@ export const LeftControlPanel: React.FC<LeftControlPanelProps> = ({
                         </div>
                     </div>
 
-                    {/* Grid Toggle */}
-                    <div className="control-section">
-                        <div className="control-group">
-                            <label className="control-label">Display Mode</label>
-                            <button
-                                onClick={() => toggleGrid?.(!grid)}
-                                className={`grid-toggle-btn ${grid ? 'active' : ''}`}
-                                title={grid ? 'Switch to List View' : 'Switch to Grid View'}
-                                aria-label={grid ? 'Switch to list view' : 'Switch to grid view'}
-                            >
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <rect x="3" y="3" width="7" height="7" />
-                                    <rect x="14" y="3" width="7" height="7" />
-                                    <rect x="14" y="14" width="7" height="7" />
-                                    <rect x="3" y="14" width="7" height="7" />
-                                </svg>
-                                <span className="toggle-label">
-                                    {grid ? 'Grid View' : 'List View'}
-                                </span>
-                            </button>
-                        </div>
-                    </div>
+                    
                 </div>
             )}
         </div>
