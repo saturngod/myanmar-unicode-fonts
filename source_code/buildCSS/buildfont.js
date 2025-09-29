@@ -38,7 +38,7 @@ function typesCSS(path) {
 
 
 }
-var text = typesCSS("KhmerType") + "\n" + typesCSS("unknown") + "\n" + typesCSS("other") + "\n" + typesCSS("masterpiece")
+var text = typesCSS("KhmerType") + "\n" + typesCSS("unknown") + "\n" + typesCSS("masterpiece") + "\n" + typesCSS("PhoenixDigitalArt") + "\n" + typesCSS("other")
 fs.writeFileSync(cssFile, text)
 
 
