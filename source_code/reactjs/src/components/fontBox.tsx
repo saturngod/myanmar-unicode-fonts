@@ -48,7 +48,7 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontName }) => {
         ];
 
         const phoenixDigitalArt = [
-            "ThitSarShweSi.ttf"
+            "ThitSarShweSi"
         ]
 
         if (khmerFonts.includes(fontName)) {
