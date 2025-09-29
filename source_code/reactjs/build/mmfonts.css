@@ -282,87 +282,6 @@
         
 
 @font-face {
-    font-family:"Mon3";
-    src:local('Mon3'),url('./other/Mon3.ttf') format('truetype');
-}
-.Mon3 {
-    font-family: "Mon3";
-}
-        
-@font-face {
-    font-family:"MyMyanmarUniversal";
-    src:local('MyMyanmarUniversal'),url('./other/MyMyanmarUniversal.ttf') format('truetype');
-}
-.MyMyanmarUniversal {
-    font-family: "MyMyanmarUniversal";
-}
-        
-@font-face {
-    font-family:"MyanmarSansPro";
-    src:local('MyanmarSansPro'),url('./other/MyanmarSansPro.ttf') format('truetype');
-}
-.MyanmarSansPro {
-    font-family: "MyanmarSansPro";
-}
-        
-@font-face {
-    font-family:"NotoSanMyanmar";
-    src:local('NotoSanMyanmar'),url('./other/NotoSanMyanmar.ttf') format('truetype');
-}
-.NotoSanMyanmar {
-    font-family: "NotoSanMyanmar";
-}
-        
-@font-face {
-    font-family:"NotoSansMyanmarUI-Regular-ZawDecode";
-    src:local('NotoSansMyanmarUI-Regular-ZawDecode'),url('./other/NotoSansMyanmarUI-Regular-ZawDecode.ttf') format('truetype');
-}
-.NotoSansMyanmarUI-Regular-ZawDecode {
-    font-family: "NotoSansMyanmarUI-Regular-ZawDecode";
-}
-        
-@font-face {
-    font-family:"NotoSansMyanmarUI";
-    src:local('NotoSansMyanmarUI'),url('./other/NotoSansMyanmarUI.ttf') format('truetype');
-}
-.NotoSansMyanmarUI {
-    font-family: "NotoSansMyanmarUI";
-}
-        
-@font-face {
-    font-family:"NotoSerifMyanmar";
-    src:local('NotoSerifMyanmar'),url('./other/NotoSerifMyanmar.ttf') format('truetype');
-}
-.NotoSerifMyanmar {
-    font-family: "NotoSerifMyanmar";
-}
-        
-@font-face {
-    font-family:"Ours-Unicode";
-    src:local('Ours-Unicode'),url('./other/Ours-Unicode.ttf') format('truetype');
-}
-.Ours-Unicode {
-    font-family: "Ours-Unicode";
-}
-        
-@font-face {
-    font-family:"Pyidaungsu";
-    src:local('Pyidaungsu'),url('./other/Pyidaungsu.ttf') format('truetype');
-}
-.Pyidaungsu {
-    font-family: "Pyidaungsu";
-}
-        
-@font-face {
-    font-family:"Yunghkio";
-    src:local('Yunghkio'),url('./other/Yunghkio.ttf') format('truetype');
-}
-.Yunghkio {
-    font-family: "Yunghkio";
-}
-        
-
-@font-face {
     font-family:"MasterpieceCTL";
     src:local('MasterpieceCTL'),url('./masterpiece/MasterpieceCTL.ttf') format('truetype');
 }
@@ -440,5 +359,95 @@
 }
 .MasterpieceYayChanZin {
     font-family: "MasterpieceYayChanZin";
+}
+        
+
+@font-face {
+    font-family:"ThitSarShweSi";
+    src:local('ThitSarShweSi'),url('./PhoenixDigitalArt/ThitSarShweSi.ttf') format('truetype');
+}
+.ThitSarShweSi {
+    font-family: "ThitSarShweSi";
+}
+        
+
+@font-face {
+    font-family:"Mon3";
+    src:local('Mon3'),url('./other/Mon3.ttf') format('truetype');
+}
+.Mon3 {
+    font-family: "Mon3";
+}
+        
+@font-face {
+    font-family:"MyMyanmarUniversal";
+    src:local('MyMyanmarUniversal'),url('./other/MyMyanmarUniversal.ttf') format('truetype');
+}
+.MyMyanmarUniversal {
+    font-family: "MyMyanmarUniversal";
+}
+        
+@font-face {
+    font-family:"MyanmarSansPro";
+    src:local('MyanmarSansPro'),url('./other/MyanmarSansPro.ttf') format('truetype');
+}
+.MyanmarSansPro {
+    font-family: "MyanmarSansPro";
+}
+        
+@font-face {
+    font-family:"NotoSanMyanmar";
+    src:local('NotoSanMyanmar'),url('./other/NotoSanMyanmar.ttf') format('truetype');
+}
+.NotoSanMyanmar {
+    font-family: "NotoSanMyanmar";
+}
+        
+@font-face {
+    font-family:"NotoSansMyanmarUI-Regular-ZawDecode";
+    src:local('NotoSansMyanmarUI-Regular-ZawDecode'),url('./other/NotoSansMyanmarUI-Regular-ZawDecode.ttf') format('truetype');
+}
+.NotoSansMyanmarUI-Regular-ZawDecode {
+    font-family: "NotoSansMyanmarUI-Regular-ZawDecode";
+}
+        
+@font-face {
+    font-family:"NotoSansMyanmarUI";
+    src:local('NotoSansMyanmarUI'),url('./other/NotoSansMyanmarUI.ttf') format('truetype');
+}
+.NotoSansMyanmarUI {
+    font-family: "NotoSansMyanmarUI";
+}
+        
+@font-face {
+    font-family:"NotoSerifMyanmar";
+    src:local('NotoSerifMyanmar'),url('./other/NotoSerifMyanmar.ttf') format('truetype');
+}
+.NotoSerifMyanmar {
+    font-family: "NotoSerifMyanmar";
+}
+        
+@font-face {
+    font-family:"Ours-Unicode";
+    src:local('Ours-Unicode'),url('./other/Ours-Unicode.ttf') format('truetype');
+}
+.Ours-Unicode {
+    font-family: "Ours-Unicode";
+}
+        
+@font-face {
+    font-family:"Pyidaungsu";
+    src:local('Pyidaungsu'),url('./other/Pyidaungsu.ttf') format('truetype');
+}
+.Pyidaungsu {
+    font-family: "Pyidaungsu";
+}
+        
+@font-face {
+    font-family:"Yunghkio";
+    src:local('Yunghkio'),url('./other/Yunghkio.ttf') format('truetype');
+}
+.Yunghkio {
+    font-family: "Yunghkio";
 }
         
