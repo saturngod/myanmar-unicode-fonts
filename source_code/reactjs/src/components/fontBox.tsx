@@ -47,6 +47,10 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontName }) => {
             "Pyidaungsu", "Yunghkio", "MyMyanmarUniversal", "NotoZawDecode"
         ];
 
+        const phoenixDigitalArt = [
+            "ThitSarShweSi.ttf"
+        ]
+
         if (khmerFonts.includes(fontName)) {
             fontPath = `/KhmerType/${fontName}.ttf`;
         } else if (masterpieceFonts.includes(fontName)) {
@@ -55,7 +59,10 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontName }) => {
             fontPath = `/unknown/${fontName}.ttf`;
         } else if (otherFonts.includes(fontName)) {
             fontPath = `/other/${fontName}.ttf`;
-        } else {
+        } else if (phoenixDigitalArt.includes(fontName)) {
+            fontPath = `/PhoenixDigitalArt/${fontName}.ttf`;
+        }
+        else {
             fontPath = `/${fontName}.ttf`;
         }
 
