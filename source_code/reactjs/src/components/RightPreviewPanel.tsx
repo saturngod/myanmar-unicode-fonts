@@ -3,6 +3,7 @@ import { KhmerFont } from './khmerfont';
 import { MasterPieceFont } from './masterpieceFont';
 import { UnknwonFont } from './unknownFont';
 import { OtherFont } from './otherFont';
+import { PhoenixDigitalArtFont } from './phoenixDigitalArt';
 import { SearchBox } from './SearchBox';
 
 interface RightPreviewPanelProps {
@@ -23,6 +24,7 @@ export const RightPreviewPanel: React.FC<RightPreviewPanelProps> = ({
             <div className="font-preview-sections">
                 <KhmerFont />
                 <MasterPieceFont />
+                <PhoenixDigitalArtFont />
                 <UnknwonFont />
                 <OtherFont />
             </div>
