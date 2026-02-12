@@ -1,7 +1,7 @@
 import React from "react";
 import { FontList } from "./fontList";
 
-export const KhmerFont = ({}) => {
+export const KhmerFont: React.FC = () => {
 
     const fonts = [
         "MyanmarAngoun",
@@ -26,6 +26,6 @@ export const KhmerFont = ({}) => {
         "MyanmarYinmar"];
 
     return (
-        <FontList title="Khmer Font Preview" data={fonts}/>
+        <FontList title="Khmer Font Preview" data={fonts} categoryKey="khmer" />
     );
 };

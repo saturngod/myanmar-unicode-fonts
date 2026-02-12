@@ -23,6 +23,10 @@ jest.mock('../components/masterpieceFont', () => ({
     MasterPieceFont: () => <div data-testid="masterpiece-font">MasterPieceFont Component</div>
 }));
 
+jest.mock('../components/phoenixDigitalArt', () => ({
+    PhoenixDigitalArtFont: () => <div data-testid="phoenix-font">PhoenixDigitalArtFont Component</div>
+}));
+
 jest.mock('../components/unknownFont', () => ({
     UnknwonFont: () => <div data-testid="unknown-font">UnknownFont Component</div>
 }));
@@ -58,6 +62,7 @@ describe('App Integration Tests', () => {
         expect(screen.getByRole('textbox', { name: /search fonts/i })).toBeInTheDocument();
         expect(screen.getByTestId('khmer-font')).toBeInTheDocument();
         expect(screen.getByTestId('masterpiece-font')).toBeInTheDocument();
+        expect(screen.getByTestId('phoenix-font')).toBeInTheDocument();
         expect(screen.getByTestId('unknown-font')).toBeInTheDocument();
         expect(screen.getByTestId('other-font')).toBeInTheDocument();
     });
@@ -75,7 +80,7 @@ describe('App Integration Tests', () => {
         fireEvent.click(collapseButton);
 
         await waitFor(() => {
-            expect(screen.queryByText('Myanmar Fonts')).not.toBeInTheDocument();
+            expect(screen.getByText('Myanmar Fonts')).toBeInTheDocument();
             expect(screen.queryByLabelText('Preview Text')).not.toBeInTheDocument();
         });
 
@@ -131,11 +136,11 @@ describe('App Integration Tests', () => {
         });
 
         // Test grid toggle
-        const gridToggle = screen.getByRole('button', { name: /switch to grid view/i });
+        const gridToggle = screen.getByRole('button', { name: /grid view/i });
         fireEvent.click(gridToggle);
 
         await waitFor(() => {
-            expect(screen.getByRole('button', { name: /switch to list view/i })).toBeInTheDocument();
+            expect(screen.getByRole('button', { name: /list view/i })).toBeInTheDocument();
         });
     });
 

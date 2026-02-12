@@ -290,6 +290,22 @@
 }
         
 @font-face {
+    font-family:"MasterpieceDaung";
+    src:local('MasterpieceDaung'),url('./masterpiece/MasterpieceDaung.ttf') format('truetype');
+}
+.MasterpieceDaung {
+    font-family: "MasterpieceDaung";
+}
+        
+@font-face {
+    font-family:"MasterpieceDaungRound";
+    src:local('MasterpieceDaungRound'),url('./masterpiece/MasterpieceDaungRound.ttf') format('truetype');
+}
+.MasterpieceDaungRound {
+    font-family: "MasterpieceDaungRound";
+}
+        
+@font-face {
     font-family:"MasterpieceLakwel";
     src:local('MasterpieceLakwel'),url('./masterpiece/MasterpieceLakwel.ttf') format('truetype');
 }
