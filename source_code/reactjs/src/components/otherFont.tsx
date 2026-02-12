@@ -1,9 +1,7 @@
 import React from "react";
-import { HeaderFontPreview } from "./headerFont";
 import { FontList } from "./fontList";
-import {FontPreviewProps} from "./fontPreviewProps";
 
-export const OtherFont= ({}) => {
+export const OtherFont: React.FC = () => {
 
     const fonts = [
         "Mon3",
@@ -20,6 +18,6 @@ export const OtherFont= ({}) => {
     ];
 
     return (
-        <FontList title="Other Font Preview" data={fonts} />
+        <FontList title="Other Font Preview" data={fonts} categoryKey="other" />
     );
 };

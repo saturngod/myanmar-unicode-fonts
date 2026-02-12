@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "https://font.saturngod.net/static/css/main.ff81774c.css",
-    "main.js": "https://font.saturngod.net/static/js/main.a78bb2ec.js",
+    "main.js": "https://font.saturngod.net/static/js/main.48747302.js",
     "static/js/488.277e3768.chunk.js": "https://font.saturngod.net/static/js/488.277e3768.chunk.js",
     "index.html": "https://font.saturngod.net/index.html",
     "main.ff81774c.css.map": "https://font.saturngod.net/static/css/main.ff81774c.css.map",
-    "main.a78bb2ec.js.map": "https://font.saturngod.net/static/js/main.a78bb2ec.js.map",
+    "main.48747302.js.map": "https://font.saturngod.net/static/js/main.48747302.js.map",
     "488.277e3768.chunk.js.map": "https://font.saturngod.net/static/js/488.277e3768.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff81774c.css",
-    "static/js/main.a78bb2ec.js"
+    "static/js/main.48747302.js"
   ]
 }

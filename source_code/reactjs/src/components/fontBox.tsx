@@ -1,18 +1,57 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import { FontContext } from "../Context/mmfontContext";
 import { useToast } from "../Context/toastContext";
+import { FontCategoryKey, FontDefinition, getCdnFontUrl, getFontsByCategory, getPublicFontUrl } from "../data/fontCatalog";
 
 interface FontBoxProps {
     fontName: string;
+    categoryKey: FontCategoryKey;
 }
 
-export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontName }) => {
+const FONT_STYLE_TAG_ID = 'mmfont-preview-faces';
+const injectedPreviewFamilies = new Set<string>();
+
+const ensurePreviewFace = (fontDefinition: FontDefinition) => {
+    if (typeof document === 'undefined' || injectedPreviewFamilies.has(fontDefinition.previewFamily)) {
+        return;
+    }
+
+    let styleTag = document.getElementById(FONT_STYLE_TAG_ID) as HTMLStyleElement | null;
+    if (!styleTag) {
+        styleTag = document.createElement('style');
+        styleTag.id = FONT_STYLE_TAG_ID;
+        document.head.appendChild(styleTag);
+    }
+
+    styleTag.appendChild(
+        document.createTextNode(
+            `@font-face{font-family:"${fontDefinition.previewFamily}";src:local("${fontDefinition.displayName}"),url("${getPublicFontUrl(fontDefinition.filePath)}") format("truetype");font-display:swap;}`
+        )
+    );
+    injectedPreviewFamilies.add(fontDefinition.previewFamily);
+};
+
+export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontName, categoryKey }) => {
 
     const { fontSize, lineHeight, previewText } = useContext(FontContext) || {};
     const { showToast } = useToast();
     const [copied, setCopied] = useState(false);
+    const fontDefinition = useMemo(
+        () => getFontsByCategory(categoryKey).find(font => font.displayName === fontName),
+        [categoryKey, fontName]
+    );
+
+    useEffect(() => {
+        if (fontDefinition) {
+            ensurePreviewFace(fontDefinition);
+        }
+    }, [fontDefinition]);
 
     const getFontPath = () => {
+        if (fontDefinition) {
+            return getCdnFontUrl(fontDefinition.filePath);
+        }
+
         // Determine the font path based on font name
         let fontPath = '';
 
@@ -30,7 +69,7 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontName }) => {
             "MasterpieceCTL", "MasterpieceLakwel", "MasterpieceSpringRev",
             "MasterpieceStadium", "MasterpieceTawWin", "MasterpieceUniHand",
             "MasterpieceUniRound", "MasterpieceUniSerif", "MasterpieceUniType",
-            "MasterpieceYayChanZin"
+            "MasterpieceYayChanZin", "MasterpieceDaung", "MasterpieceDaungRound"
         ];
 
         // Unknown fonts are in unknown folder
@@ -71,7 +110,8 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontName }) => {
 
     const copyCSS = async () => {
         const fontPath = getFontPath();
-        const cssText = `@font-face {font-family:"${fontName}";src:local('${fontName}'),url('${fontPath}') format('truetype');}`;
+        const cssFamily = fontDefinition?.cssFamily || fontName;
+        const cssText = `@font-face {font-family:"${cssFamily}";src:local('${fontName}'),url('${fontPath}') format('truetype');}`;
 
         try {
             await navigator.clipboard.writeText(cssText);
@@ -97,7 +137,7 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontName }) => {
             const url = window.URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
-            link.download = `${fontName}.ttf`;
+            link.download = fontDefinition?.downloadFileName || `${fontName}.ttf`;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -144,6 +184,7 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontName }) => {
             <div
                 className={`${fontName} text-primary`}
                 style={{
+                    fontFamily: fontDefinition ? `"${fontDefinition.previewFamily}", "${fontName}", sans-serif` : undefined,
                     fontSize: fontSize + "px",
                     lineHeight: lineHeight,
                     whiteSpace: "pre-wrap"

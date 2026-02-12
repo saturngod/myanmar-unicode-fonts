@@ -8,6 +8,6 @@ export const PhoenixDigitalArtFont = () => {
     ];
 
     return (
-        <FontList title="Phoenix Digital Art Font Preview" data={fonts} />
+        <FontList title="Phoenix Digital Art Font Preview" data={fonts} categoryKey="phoenix-digital-art" />
     );
 };

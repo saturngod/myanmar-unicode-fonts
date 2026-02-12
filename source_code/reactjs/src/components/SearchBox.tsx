@@ -1,4 +1,4 @@
-import React, { useContext, useCallback, useEffect } from 'react';
+import React, { useContext, useCallback } from 'react';
 import { FontContext } from '../Context/mmfontContext';
 
 interface SearchBoxProps {

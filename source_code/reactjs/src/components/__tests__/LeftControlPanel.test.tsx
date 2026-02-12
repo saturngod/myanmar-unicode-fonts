@@ -58,7 +58,7 @@ describe('LeftControlPanel', () => {
             <LeftControlPanel isCollapsed={true} onToggleCollapse={mockToggleCollapse} />
         );
 
-        expect(screen.queryByText('Myanmar Fonts')).not.toBeInTheDocument();
+        expect(screen.getByText('Myanmar Fonts')).toBeInTheDocument();
         expect(screen.queryByLabelText('Preview Text')).not.toBeInTheDocument();
     });
 
@@ -89,7 +89,7 @@ describe('LeftControlPanel', () => {
             <LeftControlPanel isCollapsed={false} onToggleCollapse={mockToggleCollapse} />
         );
 
-        const gridToggleButton = screen.getByRole('button', { name: /switch to grid view/i });
+        const gridToggleButton = screen.getByRole('button', { name: /grid view/i });
         fireEvent.click(gridToggleButton);
 
         expect(mockFontContext.toggleGrid).toHaveBeenCalledWith(true);

@@ -1,13 +1,15 @@
-import React, { useContext } from "react";
-import { HeaderFontPreview } from "./headerFont";
-import { FontBox } from "./fontBox";
-import { FontContext } from "../Context/mmfontContext";
+import React, { useContext } from 'react';
+import { HeaderFontPreview } from './headerFont';
+import { FontBox } from './fontBox';
+import { FontContext } from '../Context/mmfontContext';
+import { FontCategoryKey } from '../data/fontCatalog';
 interface FontListProps {
     title: string;
     data: string[];
+    categoryKey: FontCategoryKey;
 }
 
-export const FontList: React.FC<FontListProps> = React.memo(({ title, data }) => {
+export const FontList: React.FC<FontListProps> = React.memo(({ title, data, categoryKey }) => {
 
     const { grid, searchTerm } = useContext(FontContext) || {};
 
@@ -26,9 +28,9 @@ export const FontList: React.FC<FontListProps> = React.memo(({ title, data }) =>
             <HeaderFontPreview title={title} />
 
             <ul className={`transition-normal ${grid ? "grid-responsive" : "flex flex-col space-md"}`}>
-                {filteredFonts.map((font, index) => (
+                {filteredFonts.map(font => (
                     <li key={font} className={`transition-normal ${grid ? "" : "mb-md"}`}>
-                        <FontBox fontName={font} />
+                        <FontBox fontName={font} categoryKey={categoryKey} />
                     </li>
                 ))}
             </ul>

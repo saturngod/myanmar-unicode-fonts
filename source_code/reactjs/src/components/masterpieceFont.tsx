@@ -1,7 +1,5 @@
 import React from "react";
-import { HeaderFontPreview } from "./headerFont";
 import { FontList } from "./fontList";
-import { FontPreviewProps } from "./fontPreviewProps";
 
 export const MasterPieceFont = () => {
   const fonts = [
@@ -19,5 +17,5 @@ export const MasterPieceFont = () => {
     "MasterpieceDaungRound",
   ];
 
-  return <FontList title="Masterpieces Font Preview" data={fonts} />;
+  return <FontList title="Masterpieces Font Preview" data={fonts} categoryKey="masterpiece" />;
 };

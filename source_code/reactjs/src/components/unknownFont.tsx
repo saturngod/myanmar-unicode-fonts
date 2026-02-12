@@ -1,9 +1,7 @@
 import React from "react";
-import { HeaderFontPreview } from "./headerFont";
 import { FontList } from "./fontList";
-import {FontPreviewProps} from "./fontPreviewProps";
 
-export const UnknwonFont  = ({}) => {
+export const UnknwonFont: React.FC = () => {
 
     const fonts = [
         "CherryUnicode",
@@ -22,6 +20,6 @@ export const UnknwonFont  = ({}) => {
     ];
 
     return (
-        <FontList title="Unknown Author Font Preview" data={fonts}/>
+        <FontList title="Unknown Author Font Preview" data={fonts} categoryKey="unknown" />
     );
 };

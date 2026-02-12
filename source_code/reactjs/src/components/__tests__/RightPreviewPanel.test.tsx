@@ -43,6 +43,10 @@ jest.mock('../otherFont', () => ({
     OtherFont: () => <div data-testid="other-font">OtherFont</div>
 }));
 
+jest.mock('../phoenixDigitalArt', () => ({
+    PhoenixDigitalArtFont: () => <div data-testid="phoenix-font">PhoenixDigitalArtFont</div>
+}));
+
 jest.mock('../SearchBox', () => ({
     SearchBox: () => <div data-testid="search-box">SearchBox</div>
 }));
@@ -59,6 +63,7 @@ describe('RightPreviewPanel', () => {
 
         expect(screen.getByTestId('khmer-font')).toBeInTheDocument();
         expect(screen.getByTestId('masterpiece-font')).toBeInTheDocument();
+        expect(screen.getByTestId('phoenix-font')).toBeInTheDocument();
         expect(screen.getByTestId('unknown-font')).toBeInTheDocument();
         expect(screen.getByTestId('other-font')).toBeInTheDocument();
     });
