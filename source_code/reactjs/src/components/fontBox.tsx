@@ -88,8 +88,8 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) =
                         className={`
                             p-2 rounded-lg transition-all duration-200
                             ${copied
-                                ? 'bg-gray-100 text-black'
-                                : 'text-gray-400 hover:text-gray-600 hover:bg-gray-50'
+                                ? 'bg-blue-50 text-blue-600'
+                                : 'text-blue-500 hover:text-blue-700 hover:bg-blue-50'
                             }
                         `}
                         title="Copy CSS"
@@ -106,7 +106,7 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) =
                     </button>
                     <button
                         onClick={downloadFont}
-                        className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-50 rounded-lg transition-all duration-200"
+                        className="p-2 text-blue-500 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-all duration-200"
                         title="Download Font"
                     >
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
