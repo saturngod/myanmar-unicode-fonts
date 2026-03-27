@@ -22,53 +22,60 @@ export const Toast: React.FC<ToastProps> = ({
             setIsAnimating(true);
             const timer = setTimeout(() => {
                 setIsAnimating(false);
-                setTimeout(onClose, 300); // Wait for fade out animation
+                setTimeout(onClose, 300);
             }, duration);
-
             return () => clearTimeout(timer);
         }
     }, [isVisible, duration, onClose]);
 
     if (!isVisible && !isAnimating) return null;
 
-    const getTypeStyles = () => {
-        switch (type) {
-            case 'success':
-                return 'bg-accent-success text-white';
-            case 'error':
-                return 'bg-accent-error text-white';
-            default:
-                return 'bg-primary text-white';
-        }
-    };
+    const typeStyles = {
+        success: 'bg-emerald-600',
+        error: 'bg-red-600',
+        info: 'bg-gray-800',
+    }[type];
+
+    const icons = {
+        success: (
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+        ),
+        error: (
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        ),
+        info: (
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+        ),
+    }[type];
 
     return (
         <div
             className={`
-        fixed top-4 right-4 z-50 p-md rounded-md shadow-lg transition-all duration-300
-        ${getTypeStyles()}
-        ${isAnimating ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2'}
-      `}
+                fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-xl shadow-2xl text-white
+                ${typeStyles}
+                transition-all duration-300 ease-out
+                ${isAnimating ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-95'}
+            `}
             role="alert"
             aria-live="polite"
         >
-            <div className="flex items-center space-sm">
-                {type === 'success' && (
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                )}
-                <span className="text-scale-sm font-weight-medium">{message}</span>
-                <button
-                    onClick={onClose}
-                    className="ml-2 hover:opacity-75 transition-fast"
-                    aria-label="Close notification"
-                >
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                </button>
-            </div>
+            {icons}
+            <span className="text-sm font-medium">{message}</span>
+            <button
+                onClick={onClose}
+                className="ml-2 p-1 hover:bg-white/20 rounded-lg transition-colors"
+                aria-label="Close"
+            >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
         </div>
     );
 };

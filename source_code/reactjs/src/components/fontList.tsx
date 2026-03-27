@@ -1,40 +1,26 @@
 import React, { useContext } from 'react';
-import { HeaderFontPreview } from './headerFont';
 import { FontBox } from './fontBox';
 import { FontContext } from '../Context/mmfontContext';
-import { FontCategoryKey } from '../data/fontCatalog';
+import { FontDefinition } from '../data/fontCatalog';
+
 interface FontListProps {
-    title: string;
-    data: string[];
-    categoryKey: FontCategoryKey;
+    fonts: FontDefinition[];
 }
 
-export const FontList: React.FC<FontListProps> = React.memo(({ title, data, categoryKey }) => {
+export const FontList: React.FC<FontListProps> = React.memo(({ fonts }) => {
+    const { grid } = useContext(FontContext) || {};
 
-    const { grid, searchTerm } = useContext(FontContext) || {};
-
-    // Filter fonts based on search term
-    const filteredFonts = data.filter(font =>
-        font.toLowerCase().includes(searchTerm?.toLowerCase() || '')
-    );
-
-    // Don't render the section if no fonts match the search
-    if (filteredFonts.length === 0 && searchTerm && searchTerm.trim() !== '') {
-        return null;
-    }
+    if (fonts.length === 0) return null;
 
     return (
-        <>
-            <HeaderFontPreview title={title} />
-
-            <ul className={`transition-normal ${grid ? "grid-responsive" : "flex flex-col space-md"}`}>
-                {filteredFonts.map(font => (
-                    <li key={font} className={`transition-normal ${grid ? "" : "mb-md"}`}>
-                        <FontBox fontName={font} categoryKey={categoryKey} />
-                    </li>
-                ))}
-            </ul>
-
-        </>
+        <div className={
+            grid
+                ? "grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4"
+                : "flex flex-col gap-4"
+        }>
+            {fonts.map(font => (
+                <FontBox key={font.id} fontDefinition={font} />
+            ))}
+        </div>
     );
 });

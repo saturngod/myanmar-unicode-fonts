@@ -1,38 +1,26 @@
-import { useContext } from 'react';
-import './App.css';
-import { FontContext } from './Context/mmfontContext';
+import React, { useState } from 'react';
 import { ToastProvider } from './Context/toastContext';
-import { LeftControlPanel } from './components/LeftControlPanel';
-import { RightPreviewPanel } from './components/RightPreviewPanel';
+import { Header } from './components/Header';
+import { Sidebar } from './components/Sidebar';
+import { MainContent } from './components/MainContent';
 
-function App() {
-  const { leftPanelCollapsed, toggleLeftPanel } = useContext(FontContext) || {};
-
-  const handleTogglePanel = () => {
-    toggleLeftPanel?.(!leftPanelCollapsed);
-  };
+const App: React.FC = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <ToastProvider>
-      <div className="app-container">
-
-
-        {/* Two-Panel Layout */}
-        <div className="two-panel-layout" role="main">
-          {/* Left Control Panel */}
-          <LeftControlPanel
-            isCollapsed={leftPanelCollapsed || false}
-            onToggleCollapse={handleTogglePanel}
+      <div className="min-h-screen bg-gray-50 flex flex-col">
+        <Header onMenuToggle={() => setSidebarOpen(!sidebarOpen)} />
+        <div className="flex flex-1">
+          <Sidebar
+            isOpen={sidebarOpen}
+            onClose={() => setSidebarOpen(false)}
           />
-
-          {/* Right Preview Panel */}
-          <RightPreviewPanel
-            isLeftPanelCollapsed={leftPanelCollapsed || false}
-          />
+          <MainContent />
         </div>
       </div>
     </ToastProvider>
   );
-}
+};
 
 export default App;

@@ -7,12 +7,14 @@ interface FontContextProps {
     grid: boolean;
     searchTerm: string;
     leftPanelCollapsed: boolean;
+    selectedStyleCategory: string;
     changeFontSize: (newFontSize: number) => void;
     changeLineHeight: (newLineHeight: number) => void;
     changePreviewText: (newPreviewText: string) => void;
     toggleGrid: (gird: boolean) => void;
     changeSearchTerm: (searchTerm: string) => void;
     toggleLeftPanel: (collapsed: boolean) => void;
+    changeSelectedStyleCategory: (category: string) => void;
 }
 
 export const FontContext = createContext<FontContextProps | undefined>(undefined);
@@ -26,7 +28,6 @@ enum StorageType {
     LeftPanelCollapsed = 'leftPanelCollapsed'
 }
 
-
 export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
     const defaultFontSize = (): number => {
@@ -38,7 +39,6 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         const storedLineHeight = localStorage.getItem(StorageType.LineHeight);
         return storedLineHeight ? parseFloat(storedLineHeight) : 1.5;
     }
-
 
     const defaultPreviewText = (): string => {
         const storedPreviewText = localStorage.getItem(StorageType.PreviewText);
@@ -60,15 +60,13 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         return storedLeftPanelCollapsed ? storedLeftPanelCollapsed === 'true' : false;
     }
 
-
     const [fontSize, setFontSize] = useState<number>(defaultFontSize());
     const [lineHeight, setLineHeight] = useState<number>(defaultLineHeight());
     const [previewText, setPreviewText] = useState<string>(defaultPreviewText());
     const [grid, setGrid] = useState<boolean>(defaultGrid());
     const [searchTerm, setSearchTerm] = useState<string>(defaultSearchTerm());
     const [leftPanelCollapsed, setLeftPanelCollapsed] = useState<boolean>(defaultLeftPanelCollapsed());
-
-
+    const [selectedStyleCategory, setSelectedStyleCategory] = useState<string>('all');
 
     const changeFontSize = (newFontSize: number) => {
         setFontSize(newFontSize);
@@ -100,6 +98,10 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         localStorage.setItem(StorageType.LeftPanelCollapsed, collapsed.toString());
     };
 
+    const changeSelectedStyleCategory = (category: string) => {
+        setSelectedStyleCategory(category);
+    };
+
     const contextValue: FontContextProps = {
         fontSize,
         lineHeight,
@@ -107,12 +109,14 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         grid,
         searchTerm,
         leftPanelCollapsed,
+        selectedStyleCategory,
         changeFontSize,
         changeLineHeight,
         changePreviewText,
         toggleGrid,
         changeSearchTerm,
-        toggleLeftPanel
+        toggleLeftPanel,
+        changeSelectedStyleCategory
     };
 
     return (
