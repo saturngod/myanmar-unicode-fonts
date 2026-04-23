@@ -9,7 +9,8 @@ import {
 import { fontStyleCategories } from "../data/styleCategories";
 
 export const MainContent: React.FC = () => {
-  const { searchTerm, selectedStyleCategory } = useContext(FontContext) || {};
+  const { searchTerm, selectedStyleCategory, selectedAuthorCategory } =
+    useContext(FontContext) || {};
 
   const filteredCatalog = useMemo(() => {
     const search = (searchTerm || "").toLowerCase().trim();
@@ -27,8 +28,13 @@ export const MainContent: React.FC = () => {
       }
     }
 
-    // Step 2: map over author categories, filter fonts within each
-    const result = fontCatalog
+    // Step 2: narrow author categories by the author filter, then filter fonts
+    const authorFiltered =
+      selectedAuthorCategory && selectedAuthorCategory !== "all"
+        ? fontCatalog.filter((c) => c.key === selectedAuthorCategory)
+        : fontCatalog;
+
+    const result = authorFiltered
       .map((authorCat) => {
         let fonts = authorCat.fonts;
 
@@ -49,17 +55,27 @@ export const MainContent: React.FC = () => {
       .filter((cat) => cat.fonts.length > 0);
 
     return result;
-  }, [selectedStyleCategory, searchTerm]);
+  }, [selectedStyleCategory, selectedAuthorCategory, searchTerm]);
 
   const totalFontCount = useMemo(
     () => filteredCatalog.reduce((sum, cat) => sum + cat.fonts.length, 0),
     [filteredCatalog],
   );
 
+  const authorTitle =
+    selectedAuthorCategory && selectedAuthorCategory !== "all"
+      ? fontCatalog.find((c) => c.key === selectedAuthorCategory)?.title
+      : null;
+
+  const styleTitle =
+    selectedStyleCategory && selectedStyleCategory !== "all"
+      ? selectedStyleCategory
+      : null;
+
   const styleLabel =
-    selectedStyleCategory === "all" || !selectedStyleCategory
-      ? "All Fonts"
-      : selectedStyleCategory;
+    authorTitle && styleTitle
+      ? `${authorTitle} · ${styleTitle}`
+      : authorTitle || styleTitle || "All Fonts";
 
   return (
     <main className="flex-1 min-w-0">

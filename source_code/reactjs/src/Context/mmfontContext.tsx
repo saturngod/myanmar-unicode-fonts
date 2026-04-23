@@ -8,6 +8,7 @@ interface FontContextProps {
     searchTerm: string;
     leftPanelCollapsed: boolean;
     selectedStyleCategory: string;
+    selectedAuthorCategory: string;
     changeFontSize: (newFontSize: number) => void;
     changeLineHeight: (newLineHeight: number) => void;
     changePreviewText: (newPreviewText: string) => void;
@@ -15,6 +16,7 @@ interface FontContextProps {
     changeSearchTerm: (searchTerm: string) => void;
     toggleLeftPanel: (collapsed: boolean) => void;
     changeSelectedStyleCategory: (category: string) => void;
+    changeSelectedAuthorCategory: (category: string) => void;
 }
 
 export const FontContext = createContext<FontContextProps | undefined>(undefined);
@@ -67,6 +69,7 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const [searchTerm, setSearchTerm] = useState<string>(defaultSearchTerm());
     const [leftPanelCollapsed, setLeftPanelCollapsed] = useState<boolean>(defaultLeftPanelCollapsed());
     const [selectedStyleCategory, setSelectedStyleCategory] = useState<string>('all');
+    const [selectedAuthorCategory, setSelectedAuthorCategory] = useState<string>('all');
 
     const changeFontSize = (newFontSize: number) => {
         setFontSize(newFontSize);
@@ -102,6 +105,10 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setSelectedStyleCategory(category);
     };
 
+    const changeSelectedAuthorCategory = (category: string) => {
+        setSelectedAuthorCategory(category);
+    };
+
     const contextValue: FontContextProps = {
         fontSize,
         lineHeight,
@@ -110,13 +117,15 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         searchTerm,
         leftPanelCollapsed,
         selectedStyleCategory,
+        selectedAuthorCategory,
         changeFontSize,
         changeLineHeight,
         changePreviewText,
         toggleGrid,
         changeSearchTerm,
         toggleLeftPanel,
-        changeSelectedStyleCategory
+        changeSelectedStyleCategory,
+        changeSelectedAuthorCategory
     };
 
     return (

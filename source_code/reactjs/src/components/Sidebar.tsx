@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { FontContext } from '../Context/mmfontContext';
 import { fontStyleCategories } from '../data/styleCategories';
-import { allFonts } from '../data/fontCatalog';
+import { allFonts, fontCatalog } from '../data/fontCatalog';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -20,6 +20,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     toggleGrid,
     selectedStyleCategory,
     changeSelectedStyleCategory,
+    selectedAuthorCategory,
+    changeSelectedAuthorCategory,
     changeSearchTerm,
   } = useContext(FontContext) || {};
 
@@ -165,6 +167,36 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </div>
             </div>
 
+            {/* Author Categories */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                Author
+              </label>
+              <nav className="space-y-1">
+                <CategoryItem
+                  label="All Authors"
+                  count={totalFontCount}
+                  active={selectedAuthorCategory === 'all' || !selectedAuthorCategory}
+                  onClick={() => {
+                    changeSelectedAuthorCategory?.('all');
+                    changeSearchTerm?.('');
+                  }}
+                />
+                {fontCatalog.map(cat => (
+                  <CategoryItem
+                    key={cat.key}
+                    label={cat.title}
+                    count={cat.fonts.length}
+                    active={selectedAuthorCategory === cat.key}
+                    onClick={() => {
+                      changeSelectedAuthorCategory?.(cat.key);
+                      changeSearchTerm?.('');
+                    }}
+                  />
+                ))}
+              </nav>
+            </div>
+
             {/* Style Categories */}
             <div>
               <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
@@ -202,6 +234,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 changeLineHeight?.(1.5);
                 changePreviewText?.('သင်္ကြန်ဟူသော ဝေါဟာရသည် သင်္ကန္တခေါ် ပါဠိဘာသာ၊ သင်္ကြန္တခေါ် သက္ကတဘာသာမှ သက်ဆင်းလာသော ဝေါဟာရဖြစ်သည်။');
                 toggleGrid?.(false);
+                changeSelectedAuthorCategory?.('all');
+                changeSelectedStyleCategory?.('all');
               }}
               className="w-full py-2 px-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-xl transition-colors flex items-center justify-center gap-2"
             >

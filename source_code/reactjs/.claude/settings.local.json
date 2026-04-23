@@ -2,7 +2,10 @@
   "permissions": {
     "allow": [
       "Bash(npx tsc *)",
-      "Bash(node buildfont.js)"
+      "Bash(node buildfont.js)",
+      "Bash(npx react-scripts *)",
+      "Bash(git stash *)",
+      "Bash(BROWSER=none PORT=3000 npx react-scripts *)"
     ]
   }
 }
