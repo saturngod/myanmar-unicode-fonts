@@ -1,7 +1,7 @@
 
 @font-face {
     font-family:"MyanmarAngoun";
-    src:local('MyanmarAngoun'),url('./KhmerType/MyanmarAngoun.ttf') format('truetype');
+    src:local('Myanmar Angoun'),url('./KhmerType/MyanmarAngoun.ttf') format('truetype');
 }
 .MyanmarAngoun {
     font-family: "MyanmarAngoun";
@@ -9,7 +9,7 @@
         
 @font-face {
     font-family:"MyanmarChatu";
-    src:local('MyanmarChatu'),url('./KhmerType/MyanmarChatu.ttf') format('truetype');
+    src:local('Myanmar Chatu'),url('./KhmerType/MyanmarChatu.ttf') format('truetype');
 }
 .MyanmarChatu {
     font-family: "MyanmarChatu";
@@ -17,7 +17,7 @@
         
 @font-face {
     font-family:"MyanmarChatuLight";
-    src:local('MyanmarChatuLight'),url('./KhmerType/MyanmarChatuLight.ttf') format('truetype');
+    src:local('Myanmar Chatu Light'),url('./KhmerType/MyanmarChatuLight.ttf') format('truetype');
 }
 .MyanmarChatuLight {
     font-family: "MyanmarChatuLight";
@@ -25,7 +25,7 @@
         
 @font-face {
     font-family:"MyanmarGantgaw";
-    src:local('MyanmarGantgaw'),url('./KhmerType/MyanmarGantgaw.ttf') format('truetype');
+    src:local('Myanmar Gantgaw'),url('./KhmerType/MyanmarGantgaw.ttf') format('truetype');
 }
 .MyanmarGantgaw {
     font-family: "MyanmarGantgaw";
@@ -33,7 +33,7 @@
         
 @font-face {
     font-family:"MyanmarKhyay";
-    src:local('MyanmarKhyay'),url('./KhmerType/MyanmarKhyay.ttf') format('truetype');
+    src:local('Myanmar Khyay'),url('./KhmerType/MyanmarKhyay.ttf') format('truetype');
 }
 .MyanmarKhyay {
     font-family: "MyanmarKhyay";
@@ -41,7 +41,7 @@
         
 @font-face {
     font-family:"MyanmarKuttar";
-    src:local('MyanmarKuttar'),url('./KhmerType/MyanmarKuttar.ttf') format('truetype');
+    src:local('Myanmar Kuttar'),url('./KhmerType/MyanmarKuttar.ttf') format('truetype');
 }
 .MyanmarKuttar {
     font-family: "MyanmarKuttar";
@@ -49,7 +49,7 @@
         
 @font-face {
     font-family:"MyanmarNayone";
-    src:local('MyanmarNayone'),url('./KhmerType/MyanmarNayone.ttf') format('truetype');
+    src:local('Myanmar Nayone'),url('./KhmerType/MyanmarNayone.ttf') format('truetype');
 }
 .MyanmarNayone {
     font-family: "MyanmarNayone";
@@ -57,7 +57,7 @@
         
 @font-face {
     font-family:"MyanmarNjaun";
-    src:local('MyanmarNjaun'),url('./KhmerType/MyanmarNjaun.ttf') format('truetype');
+    src:local('Myanmar Njaun'),url('./KhmerType/MyanmarNjaun.ttf') format('truetype');
 }
 .MyanmarNjaun {
     font-family: "MyanmarNjaun";
@@ -65,7 +65,7 @@
         
 @font-face {
     font-family:"MyanmarPauklay";
-    src:local('MyanmarPauklay'),url('./KhmerType/MyanmarPauklay.ttf') format('truetype');
+    src:local('Myanmar Pauklay'),url('./KhmerType/MyanmarPauklay.ttf') format('truetype');
 }
 .MyanmarPauklay {
     font-family: "MyanmarPauklay";
@@ -73,7 +73,7 @@
         
 @font-face {
     font-family:"MyanmarPhetsot";
-    src:local('MyanmarPhetsot'),url('./KhmerType/MyanmarPhetsot.ttf') format('truetype');
+    src:local('Myanmar Phetsot'),url('./KhmerType/MyanmarPhetsot.ttf') format('truetype');
 }
 .MyanmarPhetsot {
     font-family: "MyanmarPhetsot";
@@ -81,7 +81,7 @@
         
 @font-face {
     font-family:"MyanmarPhiksel";
-    src:local('MyanmarPhiksel'),url('./KhmerType/MyanmarPhiksel.ttf') format('truetype');
+    src:local('Myanmar Phiksel'),url('./KhmerType/MyanmarPhiksel.ttf') format('truetype');
 }
 .MyanmarPhiksel {
     font-family: "MyanmarPhiksel";
@@ -89,7 +89,7 @@
         
 @font-face {
     font-family:"MyanmarPhikselSmooth";
-    src:local('MyanmarPhikselSmooth'),url('./KhmerType/MyanmarPhikselSmooth.ttf') format('truetype');
+    src:local('Myanmar Phiksel Smooth'),url('./KhmerType/MyanmarPhikselSmooth.ttf') format('truetype');
 }
 .MyanmarPhikselSmooth {
     font-family: "MyanmarPhikselSmooth";
@@ -97,7 +97,7 @@
         
 @font-face {
     font-family:"MyanmarPonenyet";
-    src:local('MyanmarPonenyet'),url('./KhmerType/MyanmarPonenyet.ttf') format('truetype');
+    src:local('Myanmar Ponenyet'),url('./KhmerType/MyanmarPonenyet.ttf') format('truetype');
 }
 .MyanmarPonenyet {
     font-family: "MyanmarPonenyet";
@@ -105,7 +105,7 @@
         
 @font-face {
     font-family:"MyanmarSabae";
-    src:local('MyanmarSabae'),url('./KhmerType/MyanmarSabae.ttf') format('truetype');
+    src:local('Myanmar Sabae'),url('./KhmerType/MyanmarSabae.ttf') format('truetype');
 }
 .MyanmarSabae {
     font-family: "MyanmarSabae";
@@ -113,7 +113,7 @@
         
 @font-face {
     font-family:"MyanmarSagar";
-    src:local('MyanmarSagar'),url('./KhmerType/MyanmarSagar.ttf') format('truetype');
+    src:local('Myanmar Sagar'),url('./KhmerType/MyanmarSagar.ttf') format('truetype');
 }
 .MyanmarSagar {
     font-family: "MyanmarSagar";
@@ -121,7 +121,7 @@
         
 @font-face {
     font-family:"MyanmarSanpya";
-    src:local('MyanmarSanpya'),url('./KhmerType/MyanmarSanpya.ttf') format('truetype');
+    src:local('Myanmar Sanpya'),url('./KhmerType/MyanmarSanpya.ttf') format('truetype');
 }
 .MyanmarSanpya {
     font-family: "MyanmarSanpya";
@@ -129,7 +129,7 @@
         
 @font-face {
     font-family:"MyanmarTagu";
-    src:local('MyanmarTagu'),url('./KhmerType/MyanmarTagu.ttf') format('truetype');
+    src:local('Myanmar Tagu'),url('./KhmerType/MyanmarTagu.ttf') format('truetype');
 }
 .MyanmarTagu {
     font-family: "MyanmarTagu";
@@ -137,7 +137,7 @@
         
 @font-face {
     font-family:"MyanmarThuriya";
-    src:local('MyanmarThuriya'),url('./KhmerType/MyanmarThuriya.ttf') format('truetype');
+    src:local('Myanmar Thuriya'),url('./KhmerType/MyanmarThuriya.ttf') format('truetype');
 }
 .MyanmarThuriya {
     font-family: "MyanmarThuriya";
@@ -145,7 +145,7 @@
         
 @font-face {
     font-family:"MyanmarWaso";
-    src:local('MyanmarWaso'),url('./KhmerType/MyanmarWaso.ttf') format('truetype');
+    src:local('Myanmar Waso'),url('./KhmerType/MyanmarWaso.ttf') format('truetype');
 }
 .MyanmarWaso {
     font-family: "MyanmarWaso";
@@ -153,7 +153,7 @@
         
 @font-face {
     font-family:"MyanmarYinmar";
-    src:local('MyanmarYinmar'),url('./KhmerType/MyanmarYinmar.ttf') format('truetype');
+    src:local('Myanmar Yinmar'),url('./KhmerType/MyanmarYinmar.ttf') format('truetype');
 }
 .MyanmarYinmar {
     font-family: "MyanmarYinmar";
@@ -162,7 +162,7 @@
 
 @font-face {
     font-family:"CherryUnicode";
-    src:local('CherryUnicode'),url('./unknown/CherryUnicode.ttf') format('truetype');
+    src:local('Cherry Unicode'),url('./unknown/CherryUnicode.ttf') format('truetype');
 }
 .CherryUnicode {
     font-family: "CherryUnicode";
@@ -170,7 +170,7 @@
         
 @font-face {
     font-family:"Kamjing";
-    src:local('Kamjing'),url('./unknown/Kamjing.ttf') format('truetype');
+    src:local('Kamjing-2'),url('./unknown/Kamjing.ttf') format('truetype');
 }
 .Kamjing {
     font-family: "Kamjing";
@@ -178,7 +178,7 @@
         
 @font-face {
     font-family:"MyanmarAngoun";
-    src:local('MyanmarAngoun'),url('./unknown/MyanmarAngoun.ttf') format('truetype');
+    src:local('Myanmar Angoun'),url('./unknown/MyanmarAngoun.ttf') format('truetype');
 }
 .MyanmarAngoun {
     font-family: "MyanmarAngoun";
@@ -186,7 +186,7 @@
         
 @font-face {
     font-family:"MyanmarBlack";
-    src:local('MyanmarBlack'),url('./unknown/MyanmarBlack.ttf') format('truetype');
+    src:local('Myanmar Black'),url('./unknown/MyanmarBlack.ttf') format('truetype');
 }
 .MyanmarBlack {
     font-family: "MyanmarBlack";
@@ -194,7 +194,7 @@
         
 @font-face {
     font-family:"MyanmarHeadOne";
-    src:local('MyanmarHeadOne'),url('./unknown/MyanmarHeadOne.ttf') format('truetype');
+    src:local('Myanmar Head One'),url('./unknown/MyanmarHeadOne.ttf') format('truetype');
 }
 .MyanmarHeadOne {
     font-family: "MyanmarHeadOne";
@@ -202,7 +202,7 @@
         
 @font-face {
     font-family:"MyanmarSabae";
-    src:local('MyanmarSabae'),url('./unknown/MyanmarSabae.ttf') format('truetype');
+    src:local('Myanmar Sabae'),url('./unknown/MyanmarSabae.ttf') format('truetype');
 }
 .MyanmarSabae {
     font-family: "MyanmarSabae";
@@ -210,7 +210,7 @@
         
 @font-face {
     font-family:"MyanmarSansPro";
-    src:local('MyanmarSansPro'),url('./unknown/MyanmarSansPro.ttf') format('truetype');
+    src:local('Myanmar Sans Pro'),url('./unknown/MyanmarSansPro.ttf') format('truetype');
 }
 .MyanmarSansPro {
     font-family: "MyanmarSansPro";
@@ -218,7 +218,7 @@
         
 @font-face {
     font-family:"MyanmarSquare";
-    src:local('MyanmarSquare'),url('./unknown/MyanmarSquare.ttf') format('truetype');
+    src:local('Myanmar Square'),url('./unknown/MyanmarSquare.ttf') format('truetype');
 }
 .MyanmarSquare {
     font-family: "MyanmarSquare";
@@ -226,7 +226,7 @@
         
 @font-face {
     font-family:"MyanmarSquareLight";
-    src:local('MyanmarSquareLight'),url('./unknown/MyanmarSquareLight.ttf') format('truetype');
+    src:local('Myanmar Square Light'),url('./unknown/MyanmarSquareLight.ttf') format('truetype');
 }
 .MyanmarSquareLight {
     font-family: "MyanmarSquareLight";
@@ -234,7 +234,7 @@
         
 @font-face {
     font-family:"NKSSmart2";
-    src:local('NKSSmart2'),url('./unknown/NKSSmart2.ttf') format('truetype');
+    src:local('NK SSmart2'),url('./unknown/NKSSmart2.ttf') format('truetype');
 }
 .NKSSmart2 {
     font-family: "NKSSmart2";
@@ -242,7 +242,7 @@
         
 @font-face {
     font-family:"NKSSmart3";
-    src:local('NKSSmart3'),url('./unknown/NKSSmart3.ttf') format('truetype');
+    src:local('NK SSmart3'),url('./unknown/NKSSmart3.ttf') format('truetype');
 }
 .NKSSmart3 {
     font-family: "NKSSmart3";
@@ -250,7 +250,7 @@
         
 @font-face {
     font-family:"NKSSmart4";
-    src:local('NKSSmart4'),url('./unknown/NKSSmart4.ttf') format('truetype');
+    src:local('NK SSmart4'),url('./unknown/NKSSmart4.ttf') format('truetype');
 }
 .NKSSmart4 {
     font-family: "NKSSmart4";
@@ -283,15 +283,31 @@
 
 @font-face {
     font-family:"MasterpieceCTL";
-    src:local('MasterpieceCTL'),url('./masterpiece/MasterpieceCTL.ttf') format('truetype');
+    src:local('Masterpiece CTL'),url('./masterpiece/MasterpieceCTL.ttf') format('truetype');
 }
 .MasterpieceCTL {
     font-family: "MasterpieceCTL";
 }
         
 @font-face {
+    font-family:"MasterpieceDaung";
+    src:local('Masterpiece Daung'),url('./masterpiece/MasterpieceDaung.ttf') format('truetype');
+}
+.MasterpieceDaung {
+    font-family: "MasterpieceDaung";
+}
+        
+@font-face {
+    font-family:"MasterpieceDaungRound";
+    src:local('Masterpiece Daung Round'),url('./masterpiece/MasterpieceDaungRound.ttf') format('truetype');
+}
+.MasterpieceDaungRound {
+    font-family: "MasterpieceDaungRound";
+}
+        
+@font-face {
     font-family:"MasterpieceLakwel";
-    src:local('MasterpieceLakwel'),url('./masterpiece/MasterpieceLakwel.ttf') format('truetype');
+    src:local('Masterpiece Lakwel'),url('./masterpiece/MasterpieceLakwel.ttf') format('truetype');
 }
 .MasterpieceLakwel {
     font-family: "MasterpieceLakwel";
@@ -299,7 +315,7 @@
         
 @font-face {
     font-family:"MasterpieceSpringRev";
-    src:local('MasterpieceSpringRev'),url('./masterpiece/MasterpieceSpringRev.ttf') format('truetype');
+    src:local('Masterpiece Spring Revolution'),url('./masterpiece/MasterpieceSpringRev.ttf') format('truetype');
 }
 .MasterpieceSpringRev {
     font-family: "MasterpieceSpringRev";
@@ -307,7 +323,7 @@
         
 @font-face {
     font-family:"MasterpieceStadium";
-    src:local('MasterpieceStadium'),url('./masterpiece/MasterpieceStadium.ttf') format('truetype');
+    src:local('Masterpiece Stadium'),url('./masterpiece/MasterpieceStadium.ttf') format('truetype');
 }
 .MasterpieceStadium {
     font-family: "MasterpieceStadium";
@@ -315,7 +331,7 @@
         
 @font-face {
     font-family:"MasterpieceTawWin";
-    src:local('MasterpieceTawWin'),url('./masterpiece/MasterpieceTawWin.ttf') format('truetype');
+    src:local('Masterpiece Taw Win'),url('./masterpiece/MasterpieceTawWin.ttf') format('truetype');
 }
 .MasterpieceTawWin {
     font-family: "MasterpieceTawWin";
@@ -323,7 +339,7 @@
         
 @font-face {
     font-family:"MasterpieceUniHand";
-    src:local('MasterpieceUniHand'),url('./masterpiece/MasterpieceUniHand.ttf') format('truetype');
+    src:local('Masterpiece Uni HandScript'),url('./masterpiece/MasterpieceUniHand.ttf') format('truetype');
 }
 .MasterpieceUniHand {
     font-family: "MasterpieceUniHand";
@@ -331,7 +347,7 @@
         
 @font-face {
     font-family:"MasterpieceUniRound";
-    src:local('MasterpieceUniRound'),url('./masterpiece/MasterpieceUniRound.ttf') format('truetype');
+    src:local('Masterpiece Uni Round'),url('./masterpiece/MasterpieceUniRound.ttf') format('truetype');
 }
 .MasterpieceUniRound {
     font-family: "MasterpieceUniRound";
@@ -339,7 +355,7 @@
         
 @font-face {
     font-family:"MasterpieceUniSerif";
-    src:local('MasterpieceUniSerif'),url('./masterpiece/MasterpieceUniSerif.ttf') format('truetype');
+    src:local('Masterpiece Uni Serif'),url('./masterpiece/MasterpieceUniSerif.ttf') format('truetype');
 }
 .MasterpieceUniSerif {
     font-family: "MasterpieceUniSerif";
@@ -347,7 +363,7 @@
         
 @font-face {
     font-family:"MasterpieceUniType";
-    src:local('MasterpieceUniType'),url('./masterpiece/MasterpieceUniType.ttf') format('truetype');
+    src:local('Masterpiece Uni Type'),url('./masterpiece/MasterpieceUniType.ttf') format('truetype');
 }
 .MasterpieceUniType {
     font-family: "MasterpieceUniType";
@@ -355,7 +371,7 @@
         
 @font-face {
     font-family:"MasterpieceYayChanZin";
-    src:local('MasterpieceYayChanZin'),url('./masterpiece/MasterpieceYayChanZin.ttf') format('truetype');
+    src:local('Masterpiece Yay Chan Zin'),url('./masterpiece/MasterpieceYayChanZin.ttf') format('truetype');
 }
 .MasterpieceYayChanZin {
     font-family: "MasterpieceYayChanZin";
@@ -364,7 +380,7 @@
 
 @font-face {
     font-family:"ThitSarShweSi";
-    src:local('ThitSarShweSi'),url('./PhoenixDigitalArt/ThitSarShweSi.ttf') format('truetype');
+    src:local('Thit Sar Shwe Si'),url('./PhoenixDigitalArt/ThitSarShweSi.ttf') format('truetype');
 }
 .ThitSarShweSi {
     font-family: "ThitSarShweSi";
@@ -372,8 +388,25 @@
         
 
 @font-face {
+    font-family:"OneTypeChiangMai";
+    src:local('OT Free01_ChiangMai'),url('./OneType/OneTypeChiangMai.ttf') format('truetype');
+}
+.OneTypeChiangMai {
+    font-family: "OneTypeChiangMai";
+}
+        
+@font-face {
+    font-family:"OneTypeMMDot";
+    src:local('OT Free02_mmDot'),url('./OneType/OneTypeMMDot.ttf') format('truetype');
+}
+.OneTypeMMDot {
+    font-family: "OneTypeMMDot";
+}
+        
+
+@font-face {
     font-family:"Mon3";
-    src:local('Mon3'),url('./other/Mon3.ttf') format('truetype');
+    src:local('MON3 Anonta 1'),url('./other/Mon3.ttf') format('truetype');
 }
 .Mon3 {
     font-family: "Mon3";
@@ -381,7 +414,7 @@
         
 @font-face {
     font-family:"MyMyanmarUniversal";
-    src:local('MyMyanmarUniversal'),url('./other/MyMyanmarUniversal.ttf') format('truetype');
+    src:local('!MyMyanmar Universal'),url('./other/MyMyanmarUniversal.ttf') format('truetype');
 }
 .MyMyanmarUniversal {
     font-family: "MyMyanmarUniversal";
@@ -389,7 +422,7 @@
         
 @font-face {
     font-family:"MyanmarSansPro";
-    src:local('MyanmarSansPro'),url('./other/MyanmarSansPro.ttf') format('truetype');
+    src:local('Myanmar Sans Pro'),url('./other/MyanmarSansPro.ttf') format('truetype');
 }
 .MyanmarSansPro {
     font-family: "MyanmarSansPro";
@@ -397,7 +430,7 @@
         
 @font-face {
     font-family:"NotoSanMyanmar";
-    src:local('NotoSanMyanmar'),url('./other/NotoSanMyanmar.ttf') format('truetype');
+    src:local('NotoSansMyanmarRegular'),url('./other/NotoSanMyanmar.ttf') format('truetype');
 }
 .NotoSanMyanmar {
     font-family: "NotoSanMyanmar";
@@ -405,7 +438,7 @@
         
 @font-face {
     font-family:"NotoSansMyanmarUI-Regular-ZawDecode";
-    src:local('NotoSansMyanmarUI-Regular-ZawDecode'),url('./other/NotoSansMyanmarUI-Regular-ZawDecode.ttf') format('truetype');
+    src:local('Noto Sans Myanmar UI'),url('./other/NotoSansMyanmarUI-Regular-ZawDecode.ttf') format('truetype');
 }
 .NotoSansMyanmarUI-Regular-ZawDecode {
     font-family: "NotoSansMyanmarUI-Regular-ZawDecode";
@@ -413,7 +446,7 @@
         
 @font-face {
     font-family:"NotoSansMyanmarUI";
-    src:local('NotoSansMyanmarUI'),url('./other/NotoSansMyanmarUI.ttf') format('truetype');
+    src:local('Noto Sans Myanmar UI'),url('./other/NotoSansMyanmarUI.ttf') format('truetype');
 }
 .NotoSansMyanmarUI {
     font-family: "NotoSansMyanmarUI";
@@ -421,7 +454,7 @@
         
 @font-face {
     font-family:"NotoSerifMyanmar";
-    src:local('NotoSerifMyanmar'),url('./other/NotoSerifMyanmar.ttf') format('truetype');
+    src:local('Noto Serif Myanmar'),url('./other/NotoSerifMyanmar.ttf') format('truetype');
 }
 .NotoSerifMyanmar {
     font-family: "NotoSerifMyanmar";

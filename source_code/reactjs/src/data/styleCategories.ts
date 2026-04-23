@@ -10,8 +10,8 @@ export const fontStyleCategories: StyleCategory[] = [
       "ThitSarShweSi",
       "MasterpieceLakwel",
       "MasterpieceUniHand",
-      "MasterpieceYayChanZin"
-    ]
+      "MasterpieceYayChanZin",
+    ],
   },
   {
     name: "Sans-Serif / Clean UI",
@@ -45,23 +45,16 @@ export const fontStyleCategories: StyleCategory[] = [
       "NKSSmart4",
       "CherryUnicode",
       "Kamjing",
-      "Yangon"
-    ]
+      "Yangon",
+    ],
   },
   {
     name: "Serif / Traditional",
-    fonts: [
-      "MasterpieceTawWin",
-      "MasterpieceUniSerif",
-      "NotoSerifMyanmar"
-    ]
+    fonts: ["MasterpieceTawWin", "MasterpieceUniSerif", "NotoSerifMyanmar"],
   },
   {
     name: "Rounded",
-    fonts: [
-      "MasterpieceUniRound",
-      "MasterpieceDaungRound"
-    ]
+    fonts: ["MasterpieceUniRound", "MasterpieceDaungRound"],
   },
   {
     name: "Square / Blocky",
@@ -72,14 +65,12 @@ export const fontStyleCategories: StyleCategory[] = [
       "MyanmarKuttar",
       "MyanmarPonenyet",
       "MyanmarSquare",
-      "MyanmarSquareLight"
-    ]
+      "MyanmarSquareLight",
+    ],
   },
   {
     name: "Typewriter / Monospaced",
-    fonts: [
-      "MasterpieceUniType"
-    ]
+    fonts: ["MasterpieceUniType"],
   },
   {
     name: "Display / Decorative",
@@ -91,7 +82,9 @@ export const fontStyleCategories: StyleCategory[] = [
       "MyanmarPhiksel",
       "MyanmarBlack",
       "MyanmarHeadOne",
-      "YoeYar-One"
-    ]
-  }
+      "YoeYar-One",
+      "OneTypeChiangMai",
+      "OneTypeMMDot",
+    ],
+  },
 ];

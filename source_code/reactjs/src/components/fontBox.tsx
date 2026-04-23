@@ -24,7 +24,7 @@ const ensurePreviewFace = (fontDefinition: FontDefinition) => {
 
     styleTag.appendChild(
         document.createTextNode(
-            `@font-face{font-family:"${fontDefinition.previewFamily}";src:local("${fontDefinition.displayName}"),url("${getPublicFontUrl(fontDefinition.filePath)}") format("truetype");font-display:swap;}`
+            `@font-face{font-family:"${fontDefinition.previewFamily}";src:local("${fontDefinition.localName}"),url("${getPublicFontUrl(fontDefinition.filePath)}") format("truetype");font-display:swap;}`
         )
     );
     injectedPreviewFamilies.add(fontDefinition.previewFamily);
@@ -42,7 +42,7 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) =
     const cdnUrl = getCdnFontUrl(fontDefinition.filePath);
 
     const copyCSS = async () => {
-        const cssText = `@font-face {font-family:"${fontDefinition.cssFamily}";src:local('${fontDefinition.displayName}'),url('${cdnUrl}') format('truetype');}`;
+        const cssText = `@font-face {font-family:"${fontDefinition.cssFamily}";src:local('${fontDefinition.localName}'),url('${cdnUrl}') format('truetype');}`;
 
         try {
             await navigator.clipboard.writeText(cssText);
