@@ -25,12 +25,45 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     changeSearchTerm,
   } = useContext(FontContext) || {};
 
-  const totalFontCount = allFonts.length;
+  // Build the set of font-name keys allowed by the currently selected style filter.
+  // When no style is selected, null means "no restriction".
+  const styleAllowedNames = (() => {
+    if (!selectedStyleCategory || selectedStyleCategory === 'all') return null;
+    const styleCat = fontStyleCategories.find(c => c.name === selectedStyleCategory);
+    if (!styleCat) return null;
+    return new Set(styleCat.fonts.map(f => f.replace(/\s+/g, '')));
+  })();
 
-  const getCategoryCount = (categoryFonts: string[]) => {
-    const normalized = new Set(allFonts.map(f => f.displayName.replace(/\s+/g, '')));
-    return categoryFonts.filter(f => normalized.has(f.replace(/\s+/g, ''))).length;
+  // Fonts visible under the currently selected author filter (used to narrow style counts).
+  const authorScopedFonts = (selectedAuthorCategory && selectedAuthorCategory !== 'all')
+    ? fontCatalog.find(c => c.key === selectedAuthorCategory)?.fonts ?? []
+    : allFonts;
+  const authorScopedNameSet = new Set(
+    authorScopedFonts.map(f => f.displayName.replace(/\s+/g, ''))
+  );
+
+  // Count shown next to each Author row — respects the active style filter.
+  const getAuthorCount = (authorFonts: { displayName: string }[]) => {
+    if (!styleAllowedNames) return authorFonts.length;
+    return authorFonts.filter(f =>
+      styleAllowedNames.has(f.displayName.replace(/\s+/g, ''))
+    ).length;
   };
+
+  // "All Authors" count — fonts matching the active style filter (or total if none).
+  const allAuthorsCount = styleAllowedNames
+    ? fontCatalog.reduce((sum, cat) => sum + getAuthorCount(cat.fonts), 0)
+    : allFonts.length;
+
+  // Count shown next to each Style row — respects the active author filter.
+  const getCategoryCount = (categoryFonts: string[]) => {
+    return categoryFonts.filter(f =>
+      authorScopedNameSet.has(f.replace(/\s+/g, ''))
+    ).length;
+  };
+
+  // "All Fonts" count — fonts within the active author filter.
+  const allStyleCount = authorScopedFonts.length;
 
   return (
     <>
@@ -175,7 +208,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <nav className="space-y-1">
                 <CategoryItem
                   label="All Authors"
-                  count={totalFontCount}
+                  count={allAuthorsCount}
                   active={selectedAuthorCategory === 'all' || !selectedAuthorCategory}
                   onClick={() => {
                     changeSelectedAuthorCategory?.('all');
@@ -186,7 +219,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   <CategoryItem
                     key={cat.key}
                     label={cat.title}
-                    count={cat.fonts.length}
+                    count={getAuthorCount(cat.fonts)}
                     active={selectedAuthorCategory === cat.key}
                     onClick={() => {
                       changeSelectedAuthorCategory?.(cat.key);
@@ -205,7 +238,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <nav className="space-y-1">
                 <CategoryItem
                   label="All Fonts"
-                  count={totalFontCount}
+                  count={allStyleCount}
                   active={selectedStyleCategory === 'all'}
                   onClick={() => {
                     changeSelectedStyleCategory?.('all');
