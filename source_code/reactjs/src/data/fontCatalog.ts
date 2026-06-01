@@ -249,8 +249,8 @@ const BASE_CATEGORY_DATA: Array<
     },
     {
       key: "aka",
-      title: "Aka",
-      description: "Aka Myanmar Unicode font family.",
+      title: "A Ka",
+      description: "A Ka Myanmar Unicode font family.",
       fonts: [
         {
           displayName: "Aka01-Bold",
