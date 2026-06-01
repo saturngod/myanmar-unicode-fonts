@@ -151,6 +151,7 @@ const categoryColors: Record<
     text: "text-amber-700",
     dot: "bg-amber-400",
   },
+  aka: { bg: "bg-teal-50", text: "text-teal-700", dot: "bg-teal-400" },
   unknown: { bg: "bg-gray-50", text: "text-gray-600", dot: "bg-gray-400" },
   other: {
     bg: "bg-emerald-50",

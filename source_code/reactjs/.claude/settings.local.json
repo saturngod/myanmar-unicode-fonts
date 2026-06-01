@@ -5,7 +5,9 @@
       "Bash(node buildfont.js)",
       "Bash(npx react-scripts *)",
       "Bash(git stash *)",
-      "Bash(BROWSER=none PORT=3000 npx react-scripts *)"
+      "Bash(BROWSER=none PORT=3000 npx react-scripts *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(./node_modules/.bin/tsc --noEmit)"
     ]
   }
 }

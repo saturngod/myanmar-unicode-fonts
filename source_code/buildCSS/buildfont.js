@@ -86,5 +86,7 @@ var text =
   "\n" +
   typesCSS("OneType") +
   "\n" +
+  typesCSS("Aka") +
+  "\n" +
   typesCSS("other");
 fs.writeFileSync(cssFile, text);

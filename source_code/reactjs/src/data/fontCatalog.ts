@@ -4,6 +4,7 @@ export type FontCategoryKey =
   | "phoenix-digital-art"
   | "unknown"
   | "one-type"
+  | "aka"
   | "other";
 
 interface BaseFontDefinition {
@@ -36,356 +37,429 @@ const CATEGORY_CSS_SUFFIX: Record<FontCategoryKey, string> = {
   "phoenix-digital-art": "PhoenixDigitalArt",
   unknown: "UnknownAuthor",
   "one-type": "OneType",
+  aka: "Aka",
   other: "Other",
 };
 
 const BASE_CATEGORY_DATA: Array<
   Omit<FontCategory, "fonts"> & { fonts: BaseFontDefinition[] }
 > = [
-  {
-    key: "khmer",
-    title: "Khmer Type",
-    description: "Modern and legacy Unicode fonts from KhmerType collection.",
-    fonts: [
-      {
-        displayName: "MyanmarAngoun",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarAngoun.ttf",
-      },
-      {
-        displayName: "MyanmarChatu",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarChatu.ttf",
-      },
-      {
-        displayName: "MyanmarChatuLight",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarChatuLight.ttf",
-      },
-      {
-        displayName: "MyanmarGantgaw",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarGantgaw.ttf",
-      },
-      {
-        displayName: "MyanmarKhyay",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarKhyay.ttf",
-      },
-      {
-        displayName: "MyanmarKuttar",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarKuttar.ttf",
-      },
-      {
-        displayName: "MyanmarNayone",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarNayone.ttf",
-      },
-      {
-        displayName: "MyanmarNjaun",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarNjaun.ttf",
-      },
-      {
-        displayName: "MyanmarPauklay",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarPauklay.ttf",
-      },
-      {
-        displayName: "MyanmarPhetsot",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarPhetsot.ttf",
-      },
-      {
-        displayName: "MyanmarPhiksel",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarPhiksel.ttf",
-      },
-      {
-        displayName: "MyanmarPhikselSmooth",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarPhikselSmooth.ttf",
-      },
-      {
-        displayName: "MyanmarPonenyet",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarPonenyet.ttf",
-      },
-      {
-        displayName: "MyanmarSabae",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarSabae.ttf",
-      },
-      {
-        displayName: "MyanmarSagar",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarSagar.ttf",
-      },
-      {
-        displayName: "MyanmarSanpya",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarSanpya.ttf",
-      },
-      {
-        displayName: "MyanmarTagu",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarTagu.ttf",
-      },
-      {
-        displayName: "MyanmarThuriya",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarThuriya.ttf",
-      },
-      {
-        displayName: "MyanmarWaso",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarWaso.ttf",
-      },
-      {
-        displayName: "MyanmarYinmar",
-        category: "khmer",
-        filePath: "/KhmerType/MyanmarYinmar.ttf",
-      },
-    ],
-  },
-  {
-    key: "masterpiece",
-    title: "Masterpiece",
-    description: "Masterpiece Unicode fonts for display and body text.",
-    fonts: [
-      {
-        displayName: "MasterpieceCTL",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceCTL.ttf",
-      },
-      {
-        displayName: "MasterpieceLakwel",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceLakwel.ttf",
-      },
-      {
-        displayName: "MasterpieceSpringRev",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceSpringRev.ttf",
-      },
-      {
-        displayName: "MasterpieceStadium",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceStadium.ttf",
-      },
-      {
-        displayName: "MasterpieceTawWin",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceTawWin.ttf",
-      },
-      {
-        displayName: "MasterpieceUniHand",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceUniHand.ttf",
-      },
-      {
-        displayName: "MasterpieceUniRound",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceUniRound.ttf",
-      },
-      {
-        displayName: "MasterpieceUniSerif",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceUniSerif.ttf",
-      },
-      {
-        displayName: "MasterpieceUniType",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceUniType.ttf",
-      },
-      {
-        displayName: "MasterpieceYayChanZin",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceYayChanZin.ttf",
-      },
-      {
-        displayName: "MasterpieceDaung",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceDaung.ttf",
-      },
-      {
-        displayName: "MasterpieceDaungRound",
-        category: "masterpiece",
-        filePath: "/masterpiece/MasterpieceDaungRound.ttf",
-      },
-    ],
-  },
-  {
-    key: "phoenix-digital-art",
-    title: "Phoenix Digital Art",
-    description: "Special purpose font releases from Phoenix Digital Art.",
-    fonts: [
-      {
-        displayName: "ThitSarShweSi",
-        category: "phoenix-digital-art",
-        filePath: "/PhoenixDigitalArt/ThitSarShweSi.ttf",
-      },
-    ],
-  },
-  {
-    key: "one-type",
-    title: "One Type",
-    description: "Free font releases from One Type.",
-    fonts: [
-      {
-        displayName: "OneTypeChiangMai",
-        category: "one-type",
-        filePath: "/OneType/OneTypeChiangMai.ttf",
-      },
-      {
-        displayName: "OneTypeMMDot",
-        category: "one-type",
-        filePath: "/OneType/OneTypeMMDot.ttf",
-      },
-    ],
-  },
-  {
-    key: "unknown",
-    title: "Unknown Author",
-    description: "Community fonts with unknown or mixed attribution.",
-    fonts: [
-      {
-        displayName: "CherryUnicode",
-        category: "unknown",
-        filePath: "/unknown/CherryUnicode.ttf",
-      },
-      {
-        displayName: "Kamjing",
-        category: "unknown",
-        filePath: "/unknown/Kamjing.ttf",
-      },
-      {
-        displayName: "MyanmarBlack",
-        category: "unknown",
-        filePath: "/unknown/MyanmarBlack.ttf",
-      },
-      {
-        displayName: "MyanmarHeadOne",
-        category: "unknown",
-        filePath: "/unknown/MyanmarHeadOne.ttf",
-      },
-      {
-        displayName: "MyanmarSquare",
-        category: "unknown",
-        filePath: "/unknown/MyanmarSquare.ttf",
-      },
-      {
-        displayName: "MyanmarSquareLight",
-        category: "unknown",
-        filePath: "/unknown/MyanmarSquareLight.ttf",
-      },
-      {
-        displayName: "NKSSmart2",
-        category: "unknown",
-        filePath: "/unknown/NKSSmart2.ttf",
-      },
-      {
-        displayName: "NKSSmart3",
-        category: "unknown",
-        filePath: "/unknown/NKSSmart3.ttf",
-      },
-      {
-        displayName: "NKSSmart4",
-        category: "unknown",
-        filePath: "/unknown/NKSSmart4.ttf",
-      },
-      {
-        displayName: "NamKhoneUnicode",
-        category: "unknown",
-        filePath: "/unknown/NamKhoneUnicode.ttf",
-      },
-      {
-        displayName: "Yangon",
-        category: "unknown",
-        filePath: "/unknown/Yangon.ttf",
-      },
-      {
-        displayName: "YoeYar-One",
-        category: "unknown",
-        filePath: "/unknown/YoeYar-One.ttf",
-      },
-      {
-        displayName: "MyanmarAngoun",
-        category: "unknown",
-        filePath: "/unknown/MyanmarAngoun.ttf",
-      },
-      {
-        displayName: "MyanmarSabae",
-        category: "unknown",
-        filePath: "/unknown/MyanmarSabae.ttf",
-      },
-      {
-        displayName: "MyanmarSansPro",
-        category: "unknown",
-        filePath: "/unknown/MyanmarSansPro.ttf",
-      },
-    ],
-  },
-  {
-    key: "other",
-    title: "Other Fonts",
-    description: "Additional Myanmar Unicode families from multiple sources.",
-    fonts: [
-      { displayName: "Mon3", category: "other", filePath: "/other/Mon3.ttf" },
-      {
-        displayName: "Myanmar3",
-        category: "other",
-        filePath: "/other/Myanmar3.TTF",
-      },
-      {
-        displayName: "MyanmarSansPro",
-        category: "other",
-        filePath: "/other/MyanmarSansPro.ttf",
-      },
-      {
-        displayName: "NotoSanMyanmar",
-        category: "other",
-        filePath: "/other/NotoSanMyanmar.ttf",
-      },
-      {
-        displayName: "NotoSansMyanmarUI",
-        category: "other",
-        filePath: "/other/NotoSansMyanmarUI.ttf",
-      },
-      {
-        displayName: "NotoZawDecode",
-        category: "other",
-        filePath: "/other/NotoSansMyanmarUI-Regular-ZawDecode.ttf",
-      },
-      {
-        displayName: "NotoSerifMyanmar",
-        category: "other",
-        filePath: "/other/NotoSerifMyanmar.ttf",
-      },
-      {
-        displayName: "Ours-Unicode",
-        category: "other",
-        filePath: "/other/Ours-Unicode.ttf",
-      },
-      {
-        displayName: "Pyidaungsu",
-        category: "other",
-        filePath: "/other/Pyidaungsu.ttf",
-      },
-      {
-        displayName: "Yunghkio",
-        category: "other",
-        filePath: "/other/Yunghkio.ttf",
-      },
-      {
-        displayName: "MyMyanmarUniversal",
-        category: "other",
-        filePath: "/other/MyMyanmarUniversal.ttf",
-      },
-    ],
-  },
-];
+    {
+      key: "khmer",
+      title: "Khmer Type",
+      description: "Modern and legacy Unicode fonts from KhmerType collection.",
+      fonts: [
+        {
+          displayName: "MyanmarAngoun",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarAngoun.ttf",
+        },
+        {
+          displayName: "MyanmarChatu",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarChatu.ttf",
+        },
+        {
+          displayName: "MyanmarChatuLight",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarChatuLight.ttf",
+        },
+        {
+          displayName: "MyanmarGantgaw",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarGantgaw.ttf",
+        },
+        {
+          displayName: "MyanmarKhyay",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarKhyay.ttf",
+        },
+        {
+          displayName: "MyanmarKuttar",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarKuttar.ttf",
+        },
+        {
+          displayName: "MyanmarNayone",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarNayone.ttf",
+        },
+        {
+          displayName: "MyanmarNjaun",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarNjaun.ttf",
+        },
+        {
+          displayName: "MyanmarPauklay",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarPauklay.ttf",
+        },
+        {
+          displayName: "MyanmarPhetsot",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarPhetsot.ttf",
+        },
+        {
+          displayName: "MyanmarPhiksel",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarPhiksel.ttf",
+        },
+        {
+          displayName: "MyanmarPhikselSmooth",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarPhikselSmooth.ttf",
+        },
+        {
+          displayName: "MyanmarPonenyet",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarPonenyet.ttf",
+        },
+        {
+          displayName: "MyanmarSabae",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarSabae.ttf",
+        },
+        {
+          displayName: "MyanmarSagar",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarSagar.ttf",
+        },
+        {
+          displayName: "MyanmarSanpya",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarSanpya.ttf",
+        },
+        {
+          displayName: "MyanmarTagu",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarTagu.ttf",
+        },
+        {
+          displayName: "MyanmarThuriya",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarThuriya.ttf",
+        },
+        {
+          displayName: "MyanmarWaso",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarWaso.ttf",
+        },
+        {
+          displayName: "MyanmarYinmar",
+          category: "khmer",
+          filePath: "/KhmerType/MyanmarYinmar.ttf",
+        },
+      ],
+    },
+    {
+      key: "masterpiece",
+      title: "Masterpiece",
+      description: "Masterpiece Unicode fonts for display and body text.",
+      fonts: [
+        {
+          displayName: "MasterpieceCTL",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceCTL.ttf",
+        },
+        {
+          displayName: "MasterpieceLakwel",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceLakwel.ttf",
+        },
+        {
+          displayName: "MasterpieceSpringRev",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceSpringRev.ttf",
+        },
+        {
+          displayName: "MasterpieceStadium",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceStadium.ttf",
+        },
+        {
+          displayName: "MasterpieceTawWin",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceTawWin.ttf",
+        },
+        {
+          displayName: "MasterpieceUniHand",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceUniHand.ttf",
+        },
+        {
+          displayName: "MasterpieceUniRound",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceUniRound.ttf",
+        },
+        {
+          displayName: "MasterpieceUniSerif",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceUniSerif.ttf",
+        },
+        {
+          displayName: "MasterpieceUniType",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceUniType.ttf",
+        },
+        {
+          displayName: "MasterpieceYayChanZin",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceYayChanZin.ttf",
+        },
+        {
+          displayName: "MasterpieceDaung",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceDaung.ttf",
+        },
+        {
+          displayName: "MasterpieceDaungRound",
+          category: "masterpiece",
+          filePath: "/masterpiece/MasterpieceDaungRound.ttf",
+        },
+      ],
+    },
+    {
+      key: "phoenix-digital-art",
+      title: "Phoenix Digital Art",
+      description: "Special purpose font releases from Phoenix Digital Art.",
+      fonts: [
+        {
+          displayName: "ThitSarShweSi",
+          category: "phoenix-digital-art",
+          filePath: "/PhoenixDigitalArt/ThitSarShweSi.ttf",
+        },
+      ],
+    },
+    {
+      key: "one-type",
+      title: "One Type",
+      description: "Free font releases from One Type.",
+      fonts: [
+        {
+          displayName: "OneTypeChiangMai",
+          category: "one-type",
+          filePath: "/OneType/OneTypeChiangMai.ttf",
+        },
+        {
+          displayName: "OneTypeMMDot",
+          category: "one-type",
+          filePath: "/OneType/OneTypeMMDot.ttf",
+        },
+      ],
+    },
+    {
+      key: "aka",
+      title: "Aka",
+      description: "Aka Myanmar Unicode font family.",
+      fonts: [
+        {
+          displayName: "Aka01-Bold",
+          category: "aka",
+          filePath: "/Aka/Aka01-Bold.ttf",
+        },
+        {
+          displayName: "Aka01-Medium",
+          category: "aka",
+          filePath: "/Aka/Aka01-Medium.ttf",
+        },
+        {
+          displayName: "Aka01-Regular",
+          category: "aka",
+          filePath: "/Aka/Aka01-Regular.ttf",
+        },
+        {
+          displayName: "Aka011-Bold",
+          category: "aka",
+          filePath: "/Aka/Aka011-Bold.ttf",
+        },
+        {
+          displayName: "Aka011-Light",
+          category: "aka",
+          filePath: "/Aka/Aka011-Light.ttf",
+        },
+        {
+          displayName: "Aka011-Regular",
+          category: "aka",
+          filePath: "/Aka/Aka011-Regular.ttf",
+        },
+        {
+          displayName: "Aka02-Regular",
+          category: "aka",
+          filePath: "/Aka/Aka02-Regular.ttf",
+        },
+        {
+          displayName: "Aka03-Regular",
+          category: "aka",
+          filePath: "/Aka/Aka03-Regular.ttf",
+        },
+        {
+          displayName: "Aka05-Regular",
+          category: "aka",
+          filePath: "/Aka/Aka05-Regular.ttf",
+        },
+        {
+          displayName: "Aka06-Regular",
+          category: "aka",
+          filePath: "/Aka/Aka06-Regular.ttf",
+        },
+        {
+          displayName: "Aka08-Regular",
+          category: "aka",
+          filePath: "/Aka/Aka08-Regular.ttf",
+        },
+        {
+          displayName: "Aka09-Regular",
+          category: "aka",
+          filePath: "/Aka/Aka09-Regular.ttf",
+        },
+        {
+          displayName: "Aka10-Light",
+          category: "aka",
+          filePath: "/Aka/Aka10-Light.ttf",
+        },
+      ],
+    },
+    {
+      key: "unknown",
+      title: "Unknown Author",
+      description: "Community fonts with unknown or mixed attribution.",
+      fonts: [
+        {
+          displayName: "CherryUnicode",
+          category: "unknown",
+          filePath: "/unknown/CherryUnicode.ttf",
+        },
+        {
+          displayName: "Kamjing",
+          category: "unknown",
+          filePath: "/unknown/Kamjing.ttf",
+        },
+        {
+          displayName: "MyanmarBlack",
+          category: "unknown",
+          filePath: "/unknown/MyanmarBlack.ttf",
+        },
+        {
+          displayName: "MyanmarHeadOne",
+          category: "unknown",
+          filePath: "/unknown/MyanmarHeadOne.ttf",
+        },
+        {
+          displayName: "MyanmarSquare",
+          category: "unknown",
+          filePath: "/unknown/MyanmarSquare.ttf",
+        },
+        {
+          displayName: "MyanmarSquareLight",
+          category: "unknown",
+          filePath: "/unknown/MyanmarSquareLight.ttf",
+        },
+        {
+          displayName: "NKSSmart2",
+          category: "unknown",
+          filePath: "/unknown/NKSSmart2.ttf",
+        },
+        {
+          displayName: "NKSSmart3",
+          category: "unknown",
+          filePath: "/unknown/NKSSmart3.ttf",
+        },
+        {
+          displayName: "NKSSmart4",
+          category: "unknown",
+          filePath: "/unknown/NKSSmart4.ttf",
+        },
+        {
+          displayName: "NamKhoneUnicode",
+          category: "unknown",
+          filePath: "/unknown/NamKhoneUnicode.ttf",
+        },
+        {
+          displayName: "Yangon",
+          category: "unknown",
+          filePath: "/unknown/Yangon.ttf",
+        },
+        {
+          displayName: "YoeYar-One",
+          category: "unknown",
+          filePath: "/unknown/YoeYar-One.ttf",
+        },
+        {
+          displayName: "MyanmarAngoun",
+          category: "unknown",
+          filePath: "/unknown/MyanmarAngoun.ttf",
+        },
+        {
+          displayName: "MyanmarSabae",
+          category: "unknown",
+          filePath: "/unknown/MyanmarSabae.ttf",
+        },
+        {
+          displayName: "MyanmarSansPro",
+          category: "unknown",
+          filePath: "/unknown/MyanmarSansPro.ttf",
+        },
+      ],
+    },
+    {
+      key: "other",
+      title: "Other Fonts",
+      description: "Additional Myanmar Unicode families from multiple sources.",
+      fonts: [
+        { displayName: "Mon3", category: "other", filePath: "/other/Mon3.ttf" },
+        {
+          displayName: "Myanmar3",
+          category: "other",
+          filePath: "/other/Myanmar3.TTF",
+        },
+        {
+          displayName: "MyanmarSansPro",
+          category: "other",
+          filePath: "/other/MyanmarSansPro.ttf",
+        },
+        {
+          displayName: "NotoSanMyanmar",
+          category: "other",
+          filePath: "/other/NotoSanMyanmar.ttf",
+        },
+        {
+          displayName: "NotoSansMyanmarUI",
+          category: "other",
+          filePath: "/other/NotoSansMyanmarUI.ttf",
+        },
+        {
+          displayName: "NotoZawDecode",
+          category: "other",
+          filePath: "/other/NotoSansMyanmarUI-Regular-ZawDecode.ttf",
+        },
+        {
+          displayName: "NotoSerifMyanmar",
+          category: "other",
+          filePath: "/other/NotoSerifMyanmar.ttf",
+        },
+        {
+          displayName: "Ours-Unicode",
+          category: "other",
+          filePath: "/other/Ours-Unicode.ttf",
+        },
+        {
+          displayName: "Pyidaungsu",
+          category: "other",
+          filePath: "/other/Pyidaungsu.ttf",
+        },
+        {
+          displayName: "Yunghkio",
+          category: "other",
+          filePath: "/other/Yunghkio.ttf",
+        },
+        {
+          displayName: "MyMyanmarUniversal",
+          category: "other",
+          filePath: "/other/MyMyanmarUniversal.ttf",
+        },
+      ],
+    },
+  ];
 
 const normalizeForFamily = (value: string): string =>
   value
@@ -435,6 +509,19 @@ const LOCAL_NAMES: Record<string, string> = {
   "/PhoenixDigitalArt/ThitSarShweSi.ttf": "Thit Sar Shwe Si",
   "/OneType/OneTypeChiangMai.ttf": "OT Free01_ChiangMai",
   "/OneType/OneTypeMMDot.ttf": "OT Free02_mmDot",
+  "/Aka/Aka01-Bold.ttf": "A ka 01",
+  "/Aka/Aka01-Medium.ttf": "A ka 01",
+  "/Aka/Aka01-Regular.ttf": "A ka 01",
+  "/Aka/Aka011-Bold.ttf": "A ka -011",
+  "/Aka/Aka011-Light.ttf": "A ka -011",
+  "/Aka/Aka011-Regular.ttf": "A ka -011",
+  "/Aka/Aka02-Regular.ttf": "A ka 02",
+  "/Aka/Aka03-Regular.ttf": "A ka 03",
+  "/Aka/Aka05-Regular.ttf": "A ka 05",
+  "/Aka/Aka06-Regular.ttf": "A ka 06",
+  "/Aka/Aka08-Regular.ttf": "A ka 08",
+  "/Aka/Aka09-Regular.ttf": "A ka 09",
+  "/Aka/Aka10-Light.ttf": "A ka 10",
   "/unknown/CherryUnicode.ttf": "Cherry Unicode",
   "/unknown/Kamjing.ttf": "Kamjing-2",
   "/unknown/MyanmarAngoun.ttf": "Myanmar Angoun",

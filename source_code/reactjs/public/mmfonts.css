@@ -405,6 +405,111 @@
         
 
 @font-face {
+    font-family:"Aka01-Bold";
+    src:local('A ka 01'),url('./Aka/Aka01-Bold.ttf') format('truetype');
+}
+.Aka01-Bold {
+    font-family: "Aka01-Bold";
+}
+        
+@font-face {
+    font-family:"Aka01-Medium";
+    src:local('A ka 01'),url('./Aka/Aka01-Medium.ttf') format('truetype');
+}
+.Aka01-Medium {
+    font-family: "Aka01-Medium";
+}
+        
+@font-face {
+    font-family:"Aka01-Regular";
+    src:local('A ka 01'),url('./Aka/Aka01-Regular.ttf') format('truetype');
+}
+.Aka01-Regular {
+    font-family: "Aka01-Regular";
+}
+        
+@font-face {
+    font-family:"Aka011-Bold";
+    src:local('A ka -011'),url('./Aka/Aka011-Bold.ttf') format('truetype');
+}
+.Aka011-Bold {
+    font-family: "Aka011-Bold";
+}
+        
+@font-face {
+    font-family:"Aka011-Light";
+    src:local('A ka -011'),url('./Aka/Aka011-Light.ttf') format('truetype');
+}
+.Aka011-Light {
+    font-family: "Aka011-Light";
+}
+        
+@font-face {
+    font-family:"Aka011-Regular";
+    src:local('A ka -011'),url('./Aka/Aka011-Regular.ttf') format('truetype');
+}
+.Aka011-Regular {
+    font-family: "Aka011-Regular";
+}
+        
+@font-face {
+    font-family:"Aka02-Regular";
+    src:local('A ka 02'),url('./Aka/Aka02-Regular.ttf') format('truetype');
+}
+.Aka02-Regular {
+    font-family: "Aka02-Regular";
+}
+        
+@font-face {
+    font-family:"Aka03-Regular";
+    src:local('A ka 03'),url('./Aka/Aka03-Regular.ttf') format('truetype');
+}
+.Aka03-Regular {
+    font-family: "Aka03-Regular";
+}
+        
+@font-face {
+    font-family:"Aka05-Regular";
+    src:local('A ka 05'),url('./Aka/Aka05-Regular.ttf') format('truetype');
+}
+.Aka05-Regular {
+    font-family: "Aka05-Regular";
+}
+        
+@font-face {
+    font-family:"Aka06-Regular";
+    src:local('<Localized>'),url('./Aka/Aka06-Regular.ttf') format('truetype');
+}
+.Aka06-Regular {
+    font-family: "Aka06-Regular";
+}
+        
+@font-face {
+    font-family:"Aka08-Regular";
+    src:local('A ka 08'),url('./Aka/Aka08-Regular.ttf') format('truetype');
+}
+.Aka08-Regular {
+    font-family: "Aka08-Regular";
+}
+        
+@font-face {
+    font-family:"Aka09-Regular";
+    src:local('A ka 09'),url('./Aka/Aka09-Regular.ttf') format('truetype');
+}
+.Aka09-Regular {
+    font-family: "Aka09-Regular";
+}
+        
+@font-face {
+    font-family:"Aka10-Light";
+    src:local('A ka 10'),url('./Aka/Aka10-Light.ttf') format('truetype');
+}
+.Aka10-Light {
+    font-family: "Aka10-Light";
+}
+        
+
+@font-face {
     font-family:"Mon3";
     src:local('MON3 Anonta 1'),url('./other/Mon3.ttf') format('truetype');
 }
