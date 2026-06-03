@@ -1,6 +1,11 @@
-import React, { useContext } from 'react';
-import { FontContext } from '../Context/mmfontContext';
-import { fontStyleCategories } from '../data/styleCategories';
+import React from 'react';
+import {
+  DEFAULT_FONT_SIZE,
+  DEFAULT_LINE_HEIGHT,
+  DEFAULT_PREVIEW_TEXT,
+  useFontContext,
+} from '../Context/mmfontContext';
+import { fontStyleCategories, getStyleAllowedNames, normalizeFontName } from '../data/styleCategories';
 import { allFonts, fontCatalog } from '../data/fontCatalog';
 
 interface SidebarProps {
@@ -23,30 +28,25 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     selectedAuthorCategory,
     changeSelectedAuthorCategory,
     changeSearchTerm,
-  } = useContext(FontContext) || {};
+  } = useFontContext();
 
   // Build the set of font-name keys allowed by the currently selected style filter.
   // When no style is selected, null means "no restriction".
-  const styleAllowedNames = (() => {
-    if (!selectedStyleCategory || selectedStyleCategory === 'all') return null;
-    const styleCat = fontStyleCategories.find(c => c.name === selectedStyleCategory);
-    if (!styleCat) return null;
-    return new Set(styleCat.fonts.map(f => f.replace(/\s+/g, '')));
-  })();
+  const styleAllowedNames = getStyleAllowedNames(selectedStyleCategory);
 
   // Fonts visible under the currently selected author filter (used to narrow style counts).
   const authorScopedFonts = (selectedAuthorCategory && selectedAuthorCategory !== 'all')
     ? fontCatalog.find(c => c.key === selectedAuthorCategory)?.fonts ?? []
     : allFonts;
   const authorScopedNameSet = new Set(
-    authorScopedFonts.map(f => f.displayName.replace(/\s+/g, ''))
+    authorScopedFonts.map(f => normalizeFontName(f.displayName))
   );
 
   // Count shown next to each Author row — respects the active style filter.
   const getAuthorCount = (authorFonts: { displayName: string }[]) => {
     if (!styleAllowedNames) return authorFonts.length;
     return authorFonts.filter(f =>
-      styleAllowedNames.has(f.displayName.replace(/\s+/g, ''))
+      styleAllowedNames.has(normalizeFontName(f.displayName))
     ).length;
   };
 
@@ -58,7 +58,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   // Count shown next to each Style row — respects the active author filter.
   const getCategoryCount = (categoryFonts: string[]) => {
     return categoryFonts.filter(f =>
-      authorScopedNameSet.has(f.replace(/\s+/g, ''))
+      authorScopedNameSet.has(normalizeFontName(f))
     ).length;
   };
 
@@ -106,8 +106,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </label>
               <textarea
                 rows={5}
-                value={previewText || ''}
-                onChange={e => changePreviewText?.(e.target.value)}
+                value={previewText}
+                onChange={e => changePreviewText(e.target.value)}
                 placeholder="Type Myanmar text to preview..."
                 className="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent resize-none transition-all"
               />
@@ -128,7 +128,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 min="10"
                 max="32"
                 value={fontSize}
-                onChange={e => changeFontSize?.(Number(e.target.value))}
+                onChange={e => changeFontSize(Number(e.target.value))}
                 className="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-black"
               />
               <div className="flex justify-between mt-1">
@@ -153,7 +153,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 max="3"
                 step={0.1}
                 value={lineHeight}
-                onChange={e => changeLineHeight?.(Number(e.target.value))}
+                onChange={e => changeLineHeight(Number(e.target.value))}
                 className="w-full h-2 bg-gray-200 rounded-full appearance-none cursor-pointer accent-black"
               />
               <div className="flex justify-between mt-1">
@@ -169,7 +169,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </label>
               <div className="flex rounded-xl border border-gray-200 overflow-hidden">
                 <button
-                  onClick={() => toggleGrid?.(false)}
+                  onClick={() => toggleGrid(false)}
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2.5 text-sm font-medium transition-colors ${
                     !grid
                       ? 'bg-black text-white'
@@ -182,7 +182,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   List
                 </button>
                 <button
-                  onClick={() => toggleGrid?.(true)}
+                  onClick={() => toggleGrid(true)}
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2.5 text-sm font-medium transition-colors ${
                     grid
                       ? 'bg-black text-white'
@@ -211,8 +211,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   count={allAuthorsCount}
                   active={selectedAuthorCategory === 'all' || !selectedAuthorCategory}
                   onClick={() => {
-                    changeSelectedAuthorCategory?.('all');
-                    changeSearchTerm?.('');
+                    changeSelectedAuthorCategory('all');
+                    changeSearchTerm('');
                   }}
                 />
                 {fontCatalog.map(cat => (
@@ -222,8 +222,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     count={getAuthorCount(cat.fonts)}
                     active={selectedAuthorCategory === cat.key}
                     onClick={() => {
-                      changeSelectedAuthorCategory?.(cat.key);
-                      changeSearchTerm?.('');
+                      changeSelectedAuthorCategory(cat.key);
+                      changeSearchTerm('');
                     }}
                   />
                 ))}
@@ -241,8 +241,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   count={allStyleCount}
                   active={selectedStyleCategory === 'all'}
                   onClick={() => {
-                    changeSelectedStyleCategory?.('all');
-                    changeSearchTerm?.('');
+                    changeSelectedStyleCategory('all');
+                    changeSearchTerm('');
                   }}
                 />
                 {fontStyleCategories.map(cat => (
@@ -252,8 +252,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     count={getCategoryCount(cat.fonts)}
                     active={selectedStyleCategory === cat.name}
                     onClick={() => {
-                      changeSelectedStyleCategory?.(cat.name);
-                      changeSearchTerm?.('');
+                      changeSelectedStyleCategory(cat.name);
+                      changeSearchTerm('');
                     }}
                   />
                 ))}
@@ -263,12 +263,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             {/* Reset button */}
             <button
               onClick={() => {
-                changeFontSize?.(14);
-                changeLineHeight?.(1.5);
-                changePreviewText?.('သင်္ကြန်ဟူသော ဝေါဟာရသည် သင်္ကန္တခေါ် ပါဠိဘာသာ၊ သင်္ကြန္တခေါ် သက္ကတဘာသာမှ သက်ဆင်းလာသော ဝေါဟာရဖြစ်သည်။');
-                toggleGrid?.(false);
-                changeSelectedAuthorCategory?.('all');
-                changeSelectedStyleCategory?.('all');
+                changeFontSize(DEFAULT_FONT_SIZE);
+                changeLineHeight(DEFAULT_LINE_HEIGHT);
+                changePreviewText(DEFAULT_PREVIEW_TEXT);
+                toggleGrid(false);
+                changeSelectedAuthorCategory('all');
+                changeSelectedStyleCategory('all');
               }}
               className="w-full py-2 px-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-xl transition-colors flex items-center justify-center gap-2"
             >

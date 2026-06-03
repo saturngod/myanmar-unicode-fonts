@@ -7,7 +7,9 @@
       "Bash(git stash *)",
       "Bash(BROWSER=none PORT=3000 npx react-scripts *)",
       "Bash(echo \"exit: $?\")",
-      "Bash(./node_modules/.bin/tsc --noEmit)"
+      "Bash(./node_modules/.bin/tsc --noEmit)",
+      "Bash(git checkout *)",
+      "Bash(git clean *)"
     ]
   }
 }

@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import { FontContext } from "../Context/mmfontContext";
+import React, { useEffect, useState } from "react";
+import { useFontContext } from "../Context/mmfontContext";
 import { useToast } from "../Context/toastContext";
 import { FontDefinition, getCdnFontUrl, getPublicFontUrl } from "../data/fontCatalog";
 
@@ -31,7 +31,7 @@ const ensurePreviewFace = (fontDefinition: FontDefinition) => {
 };
 
 export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) => {
-    const { fontSize, lineHeight, previewText } = useContext(FontContext) || {};
+    const { fontSize, lineHeight, previewText } = useFontContext();
     const { showToast } = useToast();
     const [copied, setCopied] = useState(false);
 
@@ -122,8 +122,8 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) =
                     className="text-gray-900 break-words"
                     style={{
                         fontFamily: `"${fontDefinition.previewFamily}", "${fontDefinition.displayName}", sans-serif`,
-                        fontSize: (fontSize || 14) + "px",
-                        lineHeight: lineHeight || 1.5,
+                        fontSize: fontSize + "px",
+                        lineHeight: lineHeight,
                         whiteSpace: "pre-wrap"
                     }}
                 >

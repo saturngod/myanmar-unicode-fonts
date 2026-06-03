@@ -1,32 +1,22 @@
-import React, { useContext, useMemo } from "react";
-import { FontContext } from "../Context/mmfontContext";
+import React, { useMemo } from "react";
+import { useFontContext } from "../Context/mmfontContext";
 import { FontList } from "./fontList";
 import {
   fontCatalog,
   FontDefinition,
   FontCategoryKey,
 } from "../data/fontCatalog";
-import { fontStyleCategories } from "../data/styleCategories";
+import { getStyleAllowedNames, normalizeFontName } from "../data/styleCategories";
 
 export const MainContent: React.FC = () => {
   const { searchTerm, selectedStyleCategory, selectedAuthorCategory } =
-    useContext(FontContext) || {};
+    useFontContext();
 
   const filteredCatalog = useMemo(() => {
-    const search = (searchTerm || "").toLowerCase().trim();
+    const search = searchTerm.toLowerCase().trim();
 
     // Step 1: build the set of font names allowed by the style filter
-    let allowedNames: Set<string> | null = null;
-    if (selectedStyleCategory && selectedStyleCategory !== "all") {
-      const styleCat = fontStyleCategories.find(
-        (c) => c.name === selectedStyleCategory,
-      );
-      if (styleCat) {
-        allowedNames = new Set(
-          styleCat.fonts.map((f) => f.replace(/\s+/g, "")),
-        );
-      }
-    }
+    const allowedNames = getStyleAllowedNames(selectedStyleCategory);
 
     // Step 2: narrow author categories by the author filter, then filter fonts
     const authorFiltered =
@@ -40,7 +30,7 @@ export const MainContent: React.FC = () => {
 
         if (allowedNames) {
           fonts = fonts.filter((f) =>
-            allowedNames!.has(f.displayName.replace(/\s+/g, "")),
+            allowedNames.has(normalizeFontName(f.displayName)),
           );
         }
 

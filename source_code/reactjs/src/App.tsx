@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FontProvider } from './Context/mmfontContext';
 import { ToastProvider } from './Context/toastContext';
 import { Header } from './components/Header';
 import { Sidebar } from './components/Sidebar';
@@ -8,18 +9,20 @@ const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <ToastProvider>
-      <div className="min-h-screen bg-gray-50 flex flex-col">
-        <Header onMenuToggle={() => setSidebarOpen(!sidebarOpen)} />
-        <div className="flex flex-1">
-          <Sidebar
-            isOpen={sidebarOpen}
-            onClose={() => setSidebarOpen(false)}
-          />
-          <MainContent />
+    <FontProvider>
+      <ToastProvider>
+        <div className="min-h-screen bg-gray-50 flex flex-col">
+          <Header onMenuToggle={() => setSidebarOpen(!sidebarOpen)} />
+          <div className="flex flex-1">
+            <Sidebar
+              isOpen={sidebarOpen}
+              onClose={() => setSidebarOpen(false)}
+            />
+            <MainContent />
+          </div>
         </div>
-      </div>
-    </ToastProvider>
+      </ToastProvider>
+    </FontProvider>
   );
 };
 

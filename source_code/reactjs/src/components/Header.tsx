@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
-import { FontContext } from '../Context/mmfontContext';
+import React from 'react';
+import { useFontContext } from '../Context/mmfontContext';
 
 interface HeaderProps {
   onMenuToggle: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
-  const { searchTerm, changeSearchTerm } = useContext(FontContext) || {};
+  const { searchTerm, changeSearchTerm } = useFontContext();
 
   return (
     <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200">
@@ -45,13 +45,13 @@ export const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
             <input
               type="text"
               placeholder="Search fonts..."
-              value={searchTerm || ''}
-              onChange={(e) => changeSearchTerm?.(e.target.value)}
+              value={searchTerm}
+              onChange={(e) => changeSearchTerm(e.target.value)}
               className="w-full h-10 pl-10 pr-10 bg-gray-100 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent transition-all"
             />
             {searchTerm && (
               <button
-                onClick={() => changeSearchTerm?.('')}
+                onClick={() => changeSearchTerm('')}
                 className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { FontBox } from './fontBox';
-import { FontContext } from '../Context/mmfontContext';
+import { useFontContext } from '../Context/mmfontContext';
 import { FontDefinition } from '../data/fontCatalog';
 
 interface FontListProps {
@@ -8,7 +8,7 @@ interface FontListProps {
 }
 
 export const FontList: React.FC<FontListProps> = React.memo(({ fonts }) => {
-    const { grid } = useContext(FontContext) || {};
+    const { grid } = useFontContext();
 
     if (fonts.length === 0) return null;
 

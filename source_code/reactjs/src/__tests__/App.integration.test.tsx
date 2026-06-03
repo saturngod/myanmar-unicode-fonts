@@ -29,9 +29,10 @@ describe('App Integration Tests', () => {
 
     test('renders style category list in sidebar', () => {
         renderApp();
-        expect(screen.getByText('All Fonts')).toBeInTheDocument();
-        expect(screen.getByText('Sans-Serif / Clean UI')).toBeInTheDocument();
-        expect(screen.getByText('Display / Decorative')).toBeInTheDocument();
+        // Query by button role — these labels also appear in the main title bar.
+        expect(screen.getByRole('button', { name: /All Fonts/ })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /Sans-Serif \/ Clean UI/ })).toBeInTheDocument();
+        expect(screen.getByRole('button', { name: /Display \/ Decorative/ })).toBeInTheDocument();
     });
 
     test('renders font preview controls', () => {
@@ -44,9 +45,12 @@ describe('App Integration Tests', () => {
 
     test('category filter works', () => {
         renderApp();
-        const category = screen.getByText('Handwritten / Script');
+        const category = screen.getByRole('button', { name: /Handwritten \/ Script/ });
         fireEvent.click(category);
-        expect(screen.getByText('Handwritten / Script')).toBeInTheDocument();
+        // Selecting a style updates the main content title bar — proves the filter applied.
+        expect(
+            screen.getByRole('heading', { name: /Handwritten \/ Script/ }),
+        ).toBeInTheDocument();
     });
 
     test('search functionality works', () => {

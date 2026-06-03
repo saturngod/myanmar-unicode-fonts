@@ -1,4 +1,9 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
+
+export const DEFAULT_FONT_SIZE = 14;
+export const DEFAULT_LINE_HEIGHT = 1.5;
+export const DEFAULT_PREVIEW_TEXT =
+    "သင်္ကြန်ဟူသော ဝေါဟာရသည် သင်္ကန္တခေါ် ပါဠိဘာသာ၊ သင်္ကြန္တခေါ် သက္ကတဘာသာမှ သက်ဆင်းလာသော ဝေါဟာရဖြစ်သည်။ သင်္ကန္တ၊ သင်္ကြန္တဟူသည် ကူးပြောင်းခြင်းဟု အနက်အဓိပ္ပာယ်ရသည်။ တပေါင်းလတွင် မြန်မာနှစ် တစ်နှစ်ကုန်ဆုံးကာ နှစ်ဟောင်းကုန်၍ တန်ခူးလတွင် နှစ်သစ်ကြုံရသောကာလ၊ နှစ်သစ်ကူးပြောင်းသောကာလဟု ဆိုလိုရင်းဖြစ်သည်။";
 
 interface FontContextProps {
     fontSize: number;
@@ -21,6 +26,14 @@ interface FontContextProps {
 
 export const FontContext = createContext<FontContextProps | undefined>(undefined);
 
+export const useFontContext = (): FontContextProps => {
+    const context = useContext(FontContext);
+    if (!context) {
+        throw new Error('useFontContext must be used within a FontProvider');
+    }
+    return context;
+};
+
 enum StorageType {
     FontSize = 'fontSize',
     LineHeight = 'lineHeight',
@@ -34,17 +47,17 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     const defaultFontSize = (): number => {
         const storedFontSize = localStorage.getItem(StorageType.FontSize);
-        return storedFontSize ? parseInt(storedFontSize, 10) : 14;
+        return storedFontSize ? parseInt(storedFontSize, 10) : DEFAULT_FONT_SIZE;
     };
 
     const defaultLineHeight = (): number => {
         const storedLineHeight = localStorage.getItem(StorageType.LineHeight);
-        return storedLineHeight ? parseFloat(storedLineHeight) : 1.5;
+        return storedLineHeight ? parseFloat(storedLineHeight) : DEFAULT_LINE_HEIGHT;
     }
 
     const defaultPreviewText = (): string => {
         const storedPreviewText = localStorage.getItem(StorageType.PreviewText);
-        return storedPreviewText ? storedPreviewText : "သင်္ကြန်ဟူသော ဝေါဟာရသည် သင်္ကန္တခေါ် ပါဠိဘာသာ၊ သင်္ကြန္တခေါ် သက္ကတဘာသာမှ သက်ဆင်းလာသော ဝေါဟာရဖြစ်သည်။ သင်္ကန္တ၊ သင်္ကြန္တဟူသည် ကူးပြောင်းခြင်းဟု အနက်အဓိပ္ပာယ်ရသည်။ တပေါင်းလတွင် မြန်မာနှစ် တစ်နှစ်ကုန်ဆုံးကာ နှစ်ဟောင်းကုန်၍ တန်ခူးလတွင် နှစ်သစ်ကြုံရသောကာလ၊ နှစ်သစ်ကူးပြောင်းသောကာလဟု ဆိုလိုရင်းဖြစ်သည်။";
+        return storedPreviewText ? storedPreviewText : DEFAULT_PREVIEW_TEXT;
     }
 
     const defaultGrid = (): boolean => {
