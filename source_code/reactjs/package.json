@@ -17,6 +17,7 @@
     "web-vitals": "^3.5.2"
   },
   "scripts": {
+    "fonts": "bun scripts/generateFonts.ts",
     "start": "react-scripts start",
     "build": "react-scripts build && cp -r build/* ../../docs/",
     "test": "react-scripts test",

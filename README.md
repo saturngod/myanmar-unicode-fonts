@@ -1,12 +1,5 @@
 Rewrite with ReactJS and Tailwind for myanmar font preview. All the source codes are under source code folder.
 
-To build CSS
-
-```
-cd source_code/buildCSS
-node buildfont.js
-```
-
 To run react app
 
 ```
@@ -25,12 +18,29 @@ File will available at docs folder.
 
 ## Add New Font
 
-- Add font in source_code/buildCSS
-- Update in `buildfont.js` , `var text = typesCSS("NewFont")`
-- Run `node buildfont.js`
-- copy `mmfonts.css` to `reactjs/public/mmfonts.css`
-- copy new font folder to `reactjs/public/`
-- clone component `src/components/khmerfont.tsx` to `src/components/newfont.tsx`
-- update fonts in `src/components/newfont.tsx`
-- update `fontBox.tsx` , to add new font file for download
-- rebuild again
+`fonts.json` is the single source of truth. To add a font:
+
+1. Copy the `.ttf` into `source_code/reactjs/public/<AuthorFolder>/`
+   (e.g. `public/KhmerType/`). For a brand-new author, create the folder and
+   add the author to the `authors` array in `fonts.json`.
+2. Add one entry to the `fonts` array in `source_code/reactjs/fonts.json`:
+
+   ```json
+   { "name": "MyNewFont", "author": "khmer", "style": "Sans-Serif / Clean UI", "file": "MyNewFont.ttf" }
+   ```
+
+   `localName` is optional — if omitted it is read from the TTF automatically.
+3. Run the generator:
+
+   ```
+   cd source_code/reactjs
+   bun run fonts
+   ```
+
+   This regenerates `src/data/fontCatalog.generated.ts` and `public/mmfonts.css`,
+   and warns about any `.ttf` on disk that is missing from `fonts.json` or any
+   font without a `style`.
+4. Build: `bun run production` (or `npm run production`).
+
+> The old `buildCSS/buildfont.js` flow and per-category components are no longer
+> used — everything derives from `fonts.json` now.

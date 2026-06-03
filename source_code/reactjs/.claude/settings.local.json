@@ -9,7 +9,11 @@
       "Bash(echo \"exit: $?\")",
       "Bash(./node_modules/.bin/tsc --noEmit)",
       "Bash(git checkout *)",
-      "Bash(git clean *)"
+      "Bash(git clean *)",
+      "Bash(node *)",
+      "Bash(grep -iE \"ts-node|tsx|tsc$\")",
+      "Bash(bun *)",
+      "Bash(git -C /Users/bonjoy/Downloads/myanmar-unicode-fonts status --short)"
     ]
   }
 }

@@ -1,7 +1,12 @@
-export interface StyleCategory {
-  name: string;
-  fonts: string[];
-}
+// Style data is generated from the `style` field in fonts.json — edit that file,
+// then run `bun run fonts`. This module re-exports it plus the name-matching helpers.
+import {
+  fontStyleCategories,
+  type StyleCategory,
+} from "./fontCatalog.generated";
+
+export type { StyleCategory };
+export { fontStyleCategories };
 
 // Style categories reference fonts by displayName. Names are matched after
 // stripping whitespace so "Noto Sans" and "NotoSans" compare equal. This is the
@@ -19,101 +24,3 @@ export const getStyleAllowedNames = (
   if (!styleCat) return null;
   return new Set(styleCat.fonts.map(normalizeFontName));
 };
-
-export const fontStyleCategories: StyleCategory[] = [
-  {
-    name: "Handwritten / Script",
-    fonts: [
-      "ThitSarShweSi",
-      "MasterpieceLakwel",
-      "MasterpieceUniHand",
-      "MasterpieceYayChanZin",
-      "Aka05-Regular",
-      "Aka09-Regular",
-    ],
-  },
-  {
-    name: "Sans-Serif / Clean UI",
-    fonts: [
-      "MyanmarAngoun",
-      "MyanmarGantgaw",
-      "MyanmarNayone",
-      "MyanmarNjaun",
-      "MyanmarPauklay",
-      "MyanmarPhetsot",
-      "MyanmarSabae",
-      "MyanmarSagar",
-      "MyanmarSanpya",
-      "MyanmarTagu",
-      "MyanmarThuriya",
-      "MyanmarWaso",
-      "MyanmarYinmar",
-      "MyanmarSansPro",
-      "Myanmar3",
-      "NotoSanMyanmar",
-      "NotoSansMyanmarUI",
-      "NotoZawDecode",
-      "Pyidaungsu",
-      "Ours-Unicode",
-      "Yunghkio",
-      "MyMyanmarUniversal",
-      "Mon3",
-      "NamKhoneUnicode",
-      "NKSSmart2",
-      "NKSSmart3",
-      "NKSSmart4",
-      "CherryUnicode",
-      "Kamjing",
-      "Yangon",
-      "Aka01-Bold",
-      "Aka01-Medium",
-      "Aka01-Regular",
-      "Aka011-Bold",
-      "Aka011-Light",
-      "Aka011-Regular",
-    ],
-  },
-  {
-    name: "Serif / Traditional",
-    fonts: ["MasterpieceTawWin", "MasterpieceUniSerif", "NotoSerifMyanmar"],
-  },
-  {
-    name: "Rounded",
-    fonts: ["MasterpieceUniRound", "MasterpieceDaungRound", "Aka10-Light"],
-  },
-  {
-    name: "Square / Blocky",
-    fonts: [
-      "MyanmarChatu",
-      "MyanmarChatuLight",
-      "MyanmarKhyay",
-      "MyanmarKuttar",
-      "MyanmarPonenyet",
-      "MyanmarSquare",
-      "MyanmarSquareLight",
-      "Aka06-Regular",
-    ],
-  },
-  {
-    name: "Typewriter / Monospaced",
-    fonts: ["MasterpieceUniType"],
-  },
-  {
-    name: "Display / Decorative",
-    fonts: [
-      "MasterpieceCTL",
-      "MasterpieceSpringRev",
-      "MasterpieceStadium",
-      "MasterpieceDaung",
-      "MyanmarPhiksel",
-      "MyanmarBlack",
-      "MyanmarHeadOne",
-      "YoeYar-One",
-      "OneTypeChiangMai",
-      "OneTypeMMDot",
-      "Aka02-Regular",
-      "Aka03-Regular",
-      "Aka08-Regular",
-    ],
-  },
-];

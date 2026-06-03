@@ -1,0 +1,582 @@
+{
+  "authors": [
+    {
+      "key": "khmer",
+      "title": "Khmer Type",
+      "description": "Modern and legacy Unicode fonts from KhmerType collection.",
+      "folder": "KhmerType",
+      "cssSuffix": "KhmerType"
+    },
+    {
+      "key": "masterpiece",
+      "title": "Masterpiece",
+      "description": "Masterpiece Unicode fonts for display and body text.",
+      "folder": "masterpiece",
+      "cssSuffix": "Masterpiece"
+    },
+    {
+      "key": "phoenix-digital-art",
+      "title": "Phoenix Digital Art",
+      "description": "Special purpose font releases from Phoenix Digital Art.",
+      "folder": "PhoenixDigitalArt",
+      "cssSuffix": "PhoenixDigitalArt"
+    },
+    {
+      "key": "one-type",
+      "title": "One Type",
+      "description": "Free font releases from One Type.",
+      "folder": "OneType",
+      "cssSuffix": "OneType"
+    },
+    {
+      "key": "aka",
+      "title": "A Ka",
+      "description": "A Ka Myanmar Unicode font family.",
+      "folder": "Aka",
+      "cssSuffix": "Aka"
+    },
+    {
+      "key": "unknown",
+      "title": "Unknown Author",
+      "description": "Community fonts with unknown or mixed attribution.",
+      "folder": "unknown",
+      "cssSuffix": "UnknownAuthor"
+    },
+    {
+      "key": "other",
+      "title": "Other Fonts",
+      "description": "Additional Myanmar Unicode families from multiple sources.",
+      "folder": "other",
+      "cssSuffix": "Other"
+    }
+  ],
+  "styles": [
+    "Handwritten / Script",
+    "Sans-Serif / Clean UI",
+    "Serif / Traditional",
+    "Rounded",
+    "Square / Blocky",
+    "Typewriter / Monospaced",
+    "Display / Decorative"
+  ],
+  "fonts": [
+    {
+      "name": "MyanmarAngoun",
+      "author": "khmer",
+      "file": "MyanmarAngoun.ttf",
+      "localName": "Myanmar Angoun",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarChatu",
+      "author": "khmer",
+      "file": "MyanmarChatu.ttf",
+      "localName": "Myanmar Chatu",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "MyanmarChatuLight",
+      "author": "khmer",
+      "file": "MyanmarChatuLight.ttf",
+      "localName": "Myanmar Chatu Light",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "MyanmarGantgaw",
+      "author": "khmer",
+      "file": "MyanmarGantgaw.ttf",
+      "localName": "Myanmar Gantgaw",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarKhyay",
+      "author": "khmer",
+      "file": "MyanmarKhyay.ttf",
+      "localName": "Myanmar Khyay",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "MyanmarKuttar",
+      "author": "khmer",
+      "file": "MyanmarKuttar.ttf",
+      "localName": "Myanmar Kuttar",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "MyanmarNayone",
+      "author": "khmer",
+      "file": "MyanmarNayone.ttf",
+      "localName": "Myanmar Nayone",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarNjaun",
+      "author": "khmer",
+      "file": "MyanmarNjaun.ttf",
+      "localName": "Myanmar Njaun",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarPauklay",
+      "author": "khmer",
+      "file": "MyanmarPauklay.ttf",
+      "localName": "Myanmar Pauklay",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarPhetsot",
+      "author": "khmer",
+      "file": "MyanmarPhetsot.ttf",
+      "localName": "Myanmar Phetsot",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarPhiksel",
+      "author": "khmer",
+      "file": "MyanmarPhiksel.ttf",
+      "localName": "Myanmar Phiksel",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "MyanmarPhikselSmooth",
+      "author": "khmer",
+      "file": "MyanmarPhikselSmooth.ttf",
+      "localName": "Myanmar Phiksel Smooth",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "MyanmarPonenyet",
+      "author": "khmer",
+      "file": "MyanmarPonenyet.ttf",
+      "localName": "Myanmar Ponenyet",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "MyanmarSabae",
+      "author": "khmer",
+      "file": "MyanmarSabae.ttf",
+      "localName": "Myanmar Sabae",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarSagar",
+      "author": "khmer",
+      "file": "MyanmarSagar.ttf",
+      "localName": "Myanmar Sagar",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarSanpya",
+      "author": "khmer",
+      "file": "MyanmarSanpya.ttf",
+      "localName": "Myanmar Sanpya",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarTagu",
+      "author": "khmer",
+      "file": "MyanmarTagu.ttf",
+      "localName": "Myanmar Tagu",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarThuriya",
+      "author": "khmer",
+      "file": "MyanmarThuriya.ttf",
+      "localName": "Myanmar Thuriya",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarWaso",
+      "author": "khmer",
+      "file": "MyanmarWaso.ttf",
+      "localName": "Myanmar Waso",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarYinmar",
+      "author": "khmer",
+      "file": "MyanmarYinmar.ttf",
+      "localName": "Myanmar Yinmar",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MasterpieceCTL",
+      "author": "masterpiece",
+      "file": "MasterpieceCTL.ttf",
+      "localName": "Masterpiece CTL",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "MasterpieceLakwel",
+      "author": "masterpiece",
+      "file": "MasterpieceLakwel.ttf",
+      "localName": "Masterpiece Lakwel",
+      "style": "Handwritten / Script"
+    },
+    {
+      "name": "MasterpieceSpringRev",
+      "author": "masterpiece",
+      "file": "MasterpieceSpringRev.ttf",
+      "localName": "Masterpiece Spring Revolution",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "MasterpieceStadium",
+      "author": "masterpiece",
+      "file": "MasterpieceStadium.ttf",
+      "localName": "Masterpiece Stadium",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "MasterpieceTawWin",
+      "author": "masterpiece",
+      "file": "MasterpieceTawWin.ttf",
+      "localName": "Masterpiece Taw Win",
+      "style": "Serif / Traditional"
+    },
+    {
+      "name": "MasterpieceUniHand",
+      "author": "masterpiece",
+      "file": "MasterpieceUniHand.ttf",
+      "localName": "Masterpiece Uni HandScript",
+      "style": "Handwritten / Script"
+    },
+    {
+      "name": "MasterpieceUniRound",
+      "author": "masterpiece",
+      "file": "MasterpieceUniRound.ttf",
+      "localName": "Masterpiece Uni Round",
+      "style": "Rounded"
+    },
+    {
+      "name": "MasterpieceUniSerif",
+      "author": "masterpiece",
+      "file": "MasterpieceUniSerif.ttf",
+      "localName": "Masterpiece Uni Serif",
+      "style": "Serif / Traditional"
+    },
+    {
+      "name": "MasterpieceUniType",
+      "author": "masterpiece",
+      "file": "MasterpieceUniType.ttf",
+      "localName": "Masterpiece Uni Type",
+      "style": "Typewriter / Monospaced"
+    },
+    {
+      "name": "MasterpieceYayChanZin",
+      "author": "masterpiece",
+      "file": "MasterpieceYayChanZin.ttf",
+      "localName": "Masterpiece Yay Chan Zin",
+      "style": "Handwritten / Script"
+    },
+    {
+      "name": "MasterpieceDaung",
+      "author": "masterpiece",
+      "file": "MasterpieceDaung.ttf",
+      "localName": "Masterpiece Daung",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "MasterpieceDaungRound",
+      "author": "masterpiece",
+      "file": "MasterpieceDaungRound.ttf",
+      "localName": "Masterpiece Daung Round",
+      "style": "Rounded"
+    },
+    {
+      "name": "ThitSarShweSi",
+      "author": "phoenix-digital-art",
+      "file": "ThitSarShweSi.ttf",
+      "localName": "Thit Sar Shwe Si",
+      "style": "Handwritten / Script"
+    },
+    {
+      "name": "OneTypeChiangMai",
+      "author": "one-type",
+      "file": "OneTypeChiangMai.ttf",
+      "localName": "OT Free01_ChiangMai",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "OneTypeMMDot",
+      "author": "one-type",
+      "file": "OneTypeMMDot.ttf",
+      "localName": "OT Free02_mmDot",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "Aka01-Bold",
+      "author": "aka",
+      "file": "Aka01-Bold.ttf",
+      "localName": "A ka 01",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Aka01-Medium",
+      "author": "aka",
+      "file": "Aka01-Medium.ttf",
+      "localName": "A ka 01",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Aka01-Regular",
+      "author": "aka",
+      "file": "Aka01-Regular.ttf",
+      "localName": "A ka 01",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Aka011-Bold",
+      "author": "aka",
+      "file": "Aka011-Bold.ttf",
+      "localName": "A ka -011",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Aka011-Light",
+      "author": "aka",
+      "file": "Aka011-Light.ttf",
+      "localName": "A ka -011",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Aka011-Regular",
+      "author": "aka",
+      "file": "Aka011-Regular.ttf",
+      "localName": "A ka -011",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Aka02-Regular",
+      "author": "aka",
+      "file": "Aka02-Regular.ttf",
+      "localName": "A ka 02",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "Aka03-Regular",
+      "author": "aka",
+      "file": "Aka03-Regular.ttf",
+      "localName": "A ka 03",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "Aka05-Regular",
+      "author": "aka",
+      "file": "Aka05-Regular.ttf",
+      "localName": "A ka 05",
+      "style": "Handwritten / Script"
+    },
+    {
+      "name": "Aka06-Regular",
+      "author": "aka",
+      "file": "Aka06-Regular.ttf",
+      "localName": "A ka 06",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "Aka08-Regular",
+      "author": "aka",
+      "file": "Aka08-Regular.ttf",
+      "localName": "A ka 08",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "Aka09-Regular",
+      "author": "aka",
+      "file": "Aka09-Regular.ttf",
+      "localName": "A ka 09",
+      "style": "Handwritten / Script"
+    },
+    {
+      "name": "Aka10-Light",
+      "author": "aka",
+      "file": "Aka10-Light.ttf",
+      "localName": "A ka 10",
+      "style": "Rounded"
+    },
+    {
+      "name": "CherryUnicode",
+      "author": "unknown",
+      "file": "CherryUnicode.ttf",
+      "localName": "Cherry Unicode",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Kamjing",
+      "author": "unknown",
+      "file": "Kamjing.ttf",
+      "localName": "Kamjing-2",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarBlack",
+      "author": "unknown",
+      "file": "MyanmarBlack.ttf",
+      "localName": "Myanmar Black",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "MyanmarHeadOne",
+      "author": "unknown",
+      "file": "MyanmarHeadOne.ttf",
+      "localName": "Myanmar Head One",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "MyanmarSquare",
+      "author": "unknown",
+      "file": "MyanmarSquare.ttf",
+      "localName": "Myanmar Square",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "MyanmarSquareLight",
+      "author": "unknown",
+      "file": "MyanmarSquareLight.ttf",
+      "localName": "Myanmar Square Light",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "NKSSmart2",
+      "author": "unknown",
+      "file": "NKSSmart2.ttf",
+      "localName": "NK SSmart2",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "NKSSmart3",
+      "author": "unknown",
+      "file": "NKSSmart3.ttf",
+      "localName": "NK SSmart3",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "NKSSmart4",
+      "author": "unknown",
+      "file": "NKSSmart4.ttf",
+      "localName": "NK SSmart4",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "NamKhoneUnicode",
+      "author": "unknown",
+      "file": "NamKhoneUnicode.ttf",
+      "localName": "NamKhoneUnicode",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Yangon",
+      "author": "unknown",
+      "file": "Yangon.ttf",
+      "localName": "Yangon",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "YoeYar-One",
+      "author": "unknown",
+      "file": "YoeYar-One.ttf",
+      "localName": "YoeYar-One",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "MyanmarAngoun",
+      "author": "unknown",
+      "file": "MyanmarAngoun.ttf",
+      "localName": "Myanmar Angoun",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarSabae",
+      "author": "unknown",
+      "file": "MyanmarSabae.ttf",
+      "localName": "Myanmar Sabae",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarSansPro",
+      "author": "unknown",
+      "file": "MyanmarSansPro.ttf",
+      "localName": "Myanmar Sans Pro",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Mon3",
+      "author": "other",
+      "file": "Mon3.ttf",
+      "localName": "MON3 Anonta 1",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Myanmar3",
+      "author": "other",
+      "file": "Myanmar3.TTF",
+      "localName": "Myanmar3",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyanmarSansPro",
+      "author": "other",
+      "file": "MyanmarSansPro.ttf",
+      "localName": "Myanmar Sans Pro",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "NotoSanMyanmar",
+      "author": "other",
+      "file": "NotoSanMyanmar.ttf",
+      "localName": "NotoSansMyanmarRegular",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "NotoSansMyanmarUI",
+      "author": "other",
+      "file": "NotoSansMyanmarUI.ttf",
+      "localName": "Noto Sans Myanmar UI",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "NotoZawDecode",
+      "author": "other",
+      "file": "NotoSansMyanmarUI-Regular-ZawDecode.ttf",
+      "localName": "Noto Sans Myanmar UI",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "NotoSerifMyanmar",
+      "author": "other",
+      "file": "NotoSerifMyanmar.ttf",
+      "localName": "Noto Serif Myanmar",
+      "style": "Serif / Traditional"
+    },
+    {
+      "name": "Ours-Unicode",
+      "author": "other",
+      "file": "Ours-Unicode.ttf",
+      "localName": "Ours-Unicode",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Pyidaungsu",
+      "author": "other",
+      "file": "Pyidaungsu.ttf",
+      "localName": "Pyidaungsu",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "Yunghkio",
+      "author": "other",
+      "file": "Yunghkio.ttf",
+      "localName": "Yunghkio",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "MyMyanmarUniversal",
+      "author": "other",
+      "file": "MyMyanmarUniversal.ttf",
+      "localName": "!MyMyanmar Universal",
+      "style": "Sans-Serif / Clean UI"
+    }
+  ]
+}
