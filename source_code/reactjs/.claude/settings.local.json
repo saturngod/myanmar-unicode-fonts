@@ -13,7 +13,11 @@
       "Bash(node *)",
       "Bash(grep -iE \"ts-node|tsx|tsc$\")",
       "Bash(bun *)",
-      "Bash(git -C /Users/bonjoy/Downloads/myanmar-unicode-fonts status --short)"
+      "Bash(git -C /Users/bonjoy/Downloads/myanmar-unicode-fonts status --short)",
+      "Bash(npm view *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(npm test *)"
     ]
   }
 }
