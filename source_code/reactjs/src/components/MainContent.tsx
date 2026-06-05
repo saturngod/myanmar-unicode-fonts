@@ -142,6 +142,7 @@ const categoryColors: Record<
     dot: "bg-amber-400",
   },
   aka: { bg: "bg-teal-50", text: "text-teal-700", dot: "bg-teal-400" },
+  saimoon: { bg: "bg-green-50", text: "text-green-700", dot: "bg-green-400" },
   unknown: { bg: "bg-gray-50", text: "text-gray-600", dot: "bg-gray-400" },
   other: {
     bg: "bg-emerald-50",

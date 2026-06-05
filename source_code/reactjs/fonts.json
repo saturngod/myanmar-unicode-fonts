@@ -36,6 +36,13 @@
       "cssSuffix": "Aka"
     },
     {
+      "key": "saimoon",
+      "title": "Sai Moon",
+      "description": "Sai Moon Unicode font family.",
+      "folder": "SaiMoon",
+      "cssSuffix": "SM"
+    },
+    {
       "key": "unknown",
       "title": "Unknown Author",
       "description": "Community fonts with unknown or mixed attribution.",
@@ -226,7 +233,7 @@
       "author": "masterpiece",
       "file": "MasterpieceStadium.ttf",
       "localName": "Masterpiece Stadium",
-      "style": "Display / Decorative"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MasterpieceTawWin",
@@ -422,7 +429,7 @@
       "author": "unknown",
       "file": "MyanmarHeadOne.ttf",
       "localName": "Myanmar Head One",
-      "style": "Display / Decorative"
+      "style": "Square / Blocky"
     },
     {
       "name": "MyanmarSquare",
@@ -478,7 +485,7 @@
       "author": "unknown",
       "file": "YoeYar-One.ttf",
       "localName": "YoeYar-One",
-      "style": "Display / Decorative"
+      "style": "Serif / Traditional"
     },
     {
       "name": "MyanmarAngoun",
@@ -577,6 +584,111 @@
       "file": "MyMyanmarUniversal.ttf",
       "localName": "!MyMyanmar Universal",
       "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "NotoSansMyanmar",
+      "author": "other",
+      "file": "NotoSansMyanmar-Regular.ttf",
+      "localName": "NotoSansMyanmar",
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "SM01_WaTokeLay-Regular",
+      "author": "saimoon",
+      "file": "SM01_WaTokeLay-Regular.ttf",
+      "localName": "SM01_WaTokeLay",
+      "style": "Handwritten / Script"
+    },
+    {
+      "name": "SM02_KanBaung-Regular",
+      "author": "saimoon",
+      "file": "SM02_KanBaung-Regular.ttf",
+      "localName": "SM02_KanBaung",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "SM03_KaWai-Regular",
+      "author": "saimoon",
+      "file": "SM03_KaWai-Regular.ttf",
+      "localName": "SM03_KaWai",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "SM04Moon-Italic",
+      "author": "saimoon",
+      "file": "SM04Moon-Italic.ttf",
+      "localName": "SM04_Moon",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "SM04_Moon-Bold",
+      "author": "saimoon",
+      "file": "SM04_Moon-Bold.ttf",
+      "localName": "SM04_Moon",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "SM04_Moon-Regular",
+      "author": "saimoon",
+      "file": "SM04_Moon-Regular.ttf",
+      "localName": "SM04_Moon",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "SM04_Moon-Thin",
+      "author": "saimoon",
+      "file": "SM04_Moon-Thin.ttf",
+      "localName": "SM04_Moon",
+      "style": "Square / Blocky"
+    },
+    {
+      "name": "SM06_LaikPyar-Bold",
+      "author": "saimoon",
+      "file": "SM06_LaikPyar-Bold.ttf",
+      "localName": "SM06_LaikPyar",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "SM06_LaikPyar-Regular",
+      "author": "saimoon",
+      "file": "SM06_LaikPyar-Regular.ttf",
+      "localName": "SM06_LaikPyar",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "SM06_LaikPyar-Straight",
+      "author": "saimoon",
+      "file": "SM06_LaikPyar-Straight.ttf",
+      "localName": "SM06_LaikPyar",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "SM06_LaikPyar-Thin",
+      "author": "saimoon",
+      "file": "SM06_LaikPyar-Thin.ttf",
+      "localName": "SM06_LaikPyar",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "SM07_Virus-Regular",
+      "author": "saimoon",
+      "file": "SM07_Virus-Regular.ttf",
+      "localName": "SM07_Virus",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "SM08_AntiVirus-Regular",
+      "author": "saimoon",
+      "file": "SM08_AntiVirus-Regular.ttf",
+      "localName": "SM08_AntiVirus",
+      "style": "Display / Decorative"
+    },
+    {
+      "name": "SM09_BeeZee-Regular",
+      "author": "saimoon",
+      "file": "SM09_BeeZee-Regular.otf",
+      "localName": "SM09_BeeZee",
+      "style": "Handwritten / Script"
     }
   ]
 }
