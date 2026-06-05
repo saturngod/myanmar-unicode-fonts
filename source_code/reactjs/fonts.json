@@ -5,56 +5,64 @@
       "title": "Khmer Type",
       "description": "Modern and legacy Unicode fonts from KhmerType collection.",
       "folder": "KhmerType",
-      "cssSuffix": "KhmerType"
+      "cssSuffix": "KhmerType",
+      "link": "https://github.com/khmertype"
     },
     {
       "key": "masterpiece",
       "title": "Masterpiece",
       "description": "Masterpiece Unicode fonts for display and body text.",
       "folder": "masterpiece",
-      "cssSuffix": "Masterpiece"
+      "cssSuffix": "Masterpiece",
+      "link": "https://sourceforge.net/projects/prahita/files/Myanmar%20Unicode%20Fonts/"
     },
     {
       "key": "phoenix-digital-art",
       "title": "Phoenix Digital Art",
       "description": "Special purpose font releases from Phoenix Digital Art.",
       "folder": "PhoenixDigitalArt",
-      "cssSuffix": "PhoenixDigitalArt"
+      "cssSuffix": "PhoenixDigitalArt",
+      "link": "https://www.facebook.com/PhoenixDigitalArt"
     },
     {
       "key": "one-type",
       "title": "One Type",
       "description": "Free font releases from One Type.",
       "folder": "OneType",
-      "cssSuffix": "OneType"
+      "cssSuffix": "OneType",
+      "link": "https://www.facebook.com/onetype.fontstudio"
     },
     {
       "key": "aka",
       "title": "A Ka",
       "description": "A Ka Myanmar Unicode font family.",
       "folder": "Aka",
-      "cssSuffix": "Aka"
+      "cssSuffix": "Aka",
+      "link": "https://www.facebook.com/profile.php?id=61570100936629"
     },
     {
       "key": "saimoon",
       "title": "Sai Moon",
       "description": "Sai Moon Unicode font family.",
       "folder": "SaiMoon",
-      "cssSuffix": "SM"
+      "cssSuffix": "SM",
+      "link": "https://www.facebook.com/21.11creative/"
     },
     {
       "key": "unknown",
       "title": "Unknown Author",
       "description": "Community fonts with unknown or mixed attribution.",
       "folder": "unknown",
-      "cssSuffix": "UnknownAuthor"
+      "cssSuffix": "UnknownAuthor",
+      "link": ""
     },
     {
       "key": "other",
       "title": "Other Fonts",
       "description": "Additional Myanmar Unicode families from multiple sources.",
       "folder": "other",
-      "cssSuffix": "Other"
+      "cssSuffix": "Other",
+      "link": ""
     }
   ],
   "styles": [

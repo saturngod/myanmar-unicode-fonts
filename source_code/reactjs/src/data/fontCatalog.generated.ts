@@ -18,6 +18,7 @@ export interface FontCategory {
   key: FontCategoryKey;
   title: string;
   description: string;
+  link: string;
   fonts: FontDefinition[];
 }
 
@@ -31,6 +32,7 @@ export const fontCatalog: FontCategory[] = [
     key: "khmer",
     title: "Khmer Type",
     description: "Modern and legacy Unicode fonts from KhmerType collection.",
+    link: "https://github.com/khmertype",
     fonts: [
       {
         id: "khmer:MyanmarAngoun",
@@ -238,6 +240,7 @@ export const fontCatalog: FontCategory[] = [
     key: "masterpiece",
     title: "Masterpiece",
     description: "Masterpiece Unicode fonts for display and body text.",
+    link: "https://sourceforge.net/projects/prahita/files/Myanmar%20Unicode%20Fonts/",
     fonts: [
       {
         id: "masterpiece:MasterpieceCTL",
@@ -365,6 +368,7 @@ export const fontCatalog: FontCategory[] = [
     key: "phoenix-digital-art",
     title: "Phoenix Digital Art",
     description: "Special purpose font releases from Phoenix Digital Art.",
+    link: "https://www.facebook.com/PhoenixDigitalArt",
     fonts: [
       {
         id: "phoenix-digital-art:ThitSarShweSi",
@@ -382,6 +386,7 @@ export const fontCatalog: FontCategory[] = [
     key: "one-type",
     title: "One Type",
     description: "Free font releases from One Type.",
+    link: "https://www.facebook.com/onetype.fontstudio",
     fonts: [
       {
         id: "one-type:OneTypeChiangMai",
@@ -409,6 +414,7 @@ export const fontCatalog: FontCategory[] = [
     key: "aka",
     title: "A Ka",
     description: "A Ka Myanmar Unicode font family.",
+    link: "https://www.facebook.com/profile.php?id=61570100936629",
     fonts: [
       {
         id: "aka:Aka01-Bold",
@@ -546,6 +552,7 @@ export const fontCatalog: FontCategory[] = [
     key: "saimoon",
     title: "Sai Moon",
     description: "Sai Moon Unicode font family.",
+    link: "https://www.facebook.com/21.11creative/",
     fonts: [
       {
         id: "saimoon:SM01_WaTokeLay-Regular",
@@ -693,6 +700,7 @@ export const fontCatalog: FontCategory[] = [
     key: "unknown",
     title: "Unknown Author",
     description: "Community fonts with unknown or mixed attribution.",
+    link: "",
     fonts: [
       {
         id: "unknown:CherryUnicode",
@@ -850,6 +858,7 @@ export const fontCatalog: FontCategory[] = [
     key: "other",
     title: "Other Fonts",
     description: "Additional Myanmar Unicode families from multiple sources.",
+    link: "",
     fonts: [
       {
         id: "other:Mon3",

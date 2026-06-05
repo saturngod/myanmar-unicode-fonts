@@ -590,3 +590,123 @@
     font-family: "MyMyanmarUniversal";
 }
 
+@font-face {
+    font-family:"NotoSansMyanmar-Regular";
+    src:local('NotoSansMyanmar'),url('./other/NotoSansMyanmar-Regular.ttf') format('truetype');
+}
+.NotoSansMyanmar-Regular {
+    font-family: "NotoSansMyanmar-Regular";
+}
+
+@font-face {
+    font-family:"SM01_WaTokeLay-Regular";
+    src:local('SM01_WaTokeLay'),url('./SaiMoon/SM01_WaTokeLay-Regular.ttf') format('truetype');
+}
+.SM01_WaTokeLay-Regular {
+    font-family: "SM01_WaTokeLay-Regular";
+}
+
+@font-face {
+    font-family:"SM02_KanBaung-Regular";
+    src:local('SM02_KanBaung'),url('./SaiMoon/SM02_KanBaung-Regular.ttf') format('truetype');
+}
+.SM02_KanBaung-Regular {
+    font-family: "SM02_KanBaung-Regular";
+}
+
+@font-face {
+    font-family:"SM03_KaWai-Regular";
+    src:local('SM03_KaWai'),url('./SaiMoon/SM03_KaWai-Regular.ttf') format('truetype');
+}
+.SM03_KaWai-Regular {
+    font-family: "SM03_KaWai-Regular";
+}
+
+@font-face {
+    font-family:"SM04Moon-Italic";
+    src:local('SM04_Moon'),url('./SaiMoon/SM04Moon-Italic.ttf') format('truetype');
+}
+.SM04Moon-Italic {
+    font-family: "SM04Moon-Italic";
+}
+
+@font-face {
+    font-family:"SM04_Moon-Bold";
+    src:local('SM04_Moon'),url('./SaiMoon/SM04_Moon-Bold.ttf') format('truetype');
+}
+.SM04_Moon-Bold {
+    font-family: "SM04_Moon-Bold";
+}
+
+@font-face {
+    font-family:"SM04_Moon-Regular";
+    src:local('SM04_Moon'),url('./SaiMoon/SM04_Moon-Regular.ttf') format('truetype');
+}
+.SM04_Moon-Regular {
+    font-family: "SM04_Moon-Regular";
+}
+
+@font-face {
+    font-family:"SM04_Moon-Thin";
+    src:local('SM04_Moon'),url('./SaiMoon/SM04_Moon-Thin.ttf') format('truetype');
+}
+.SM04_Moon-Thin {
+    font-family: "SM04_Moon-Thin";
+}
+
+@font-face {
+    font-family:"SM06_LaikPyar-Bold";
+    src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Bold.ttf') format('truetype');
+}
+.SM06_LaikPyar-Bold {
+    font-family: "SM06_LaikPyar-Bold";
+}
+
+@font-face {
+    font-family:"SM06_LaikPyar-Regular";
+    src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Regular.ttf') format('truetype');
+}
+.SM06_LaikPyar-Regular {
+    font-family: "SM06_LaikPyar-Regular";
+}
+
+@font-face {
+    font-family:"SM06_LaikPyar-Straight";
+    src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Straight.ttf') format('truetype');
+}
+.SM06_LaikPyar-Straight {
+    font-family: "SM06_LaikPyar-Straight";
+}
+
+@font-face {
+    font-family:"SM06_LaikPyar-Thin";
+    src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Thin.ttf') format('truetype');
+}
+.SM06_LaikPyar-Thin {
+    font-family: "SM06_LaikPyar-Thin";
+}
+
+@font-face {
+    font-family:"SM07_Virus-Regular";
+    src:local('SM07_Virus'),url('./SaiMoon/SM07_Virus-Regular.ttf') format('truetype');
+}
+.SM07_Virus-Regular {
+    font-family: "SM07_Virus-Regular";
+}
+
+@font-face {
+    font-family:"SM08_AntiVirus-Regular";
+    src:local('SM08_AntiVirus'),url('./SaiMoon/SM08_AntiVirus-Regular.ttf') format('truetype');
+}
+.SM08_AntiVirus-Regular {
+    font-family: "SM08_AntiVirus-Regular";
+}
+
+@font-face {
+    font-family:"SM09_BeeZee-Regular";
+    src:local('SM09_BeeZee'),url('./SaiMoon/SM09_BeeZee-Regular.otf') format('truetype');
+}
+.SM09_BeeZee-Regular {
+    font-family: "SM09_BeeZee-Regular";
+}
+

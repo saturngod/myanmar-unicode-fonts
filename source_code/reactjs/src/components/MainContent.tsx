@@ -156,6 +156,7 @@ const AuthorSection: React.FC<{
     key: FontCategoryKey;
     title: string;
     description: string;
+    link: string;
     fonts: FontDefinition[];
   };
 }> = ({ category }) => {
@@ -166,6 +167,29 @@ const AuthorSection: React.FC<{
       <div className="flex items-center gap-2.5 mb-4">
         <div className={`w-2 h-2 rounded-full ${colors.dot}`} />
         <h2 className="text-base font-bold text-gray-900">{category.title}</h2>
+        {category.link && (
+          <a
+            href={category.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-gray-600 transition-colors"
+            title={`Visit ${category.title}`}
+          >
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+              />
+            </svg>
+          </a>
+        )}
         <span
           className={`text-xs font-semibold px-2 py-0.5 rounded-full ${colors.bg} ${colors.text}`}
         >

@@ -22,6 +22,7 @@ interface AuthorMeta {
   description: string;
   folder: string;
   cssSuffix: string;
+  link?: string;
 }
 interface FontEntry {
   name: string;
@@ -183,6 +184,7 @@ const catalogLiteral = data.authors
       `    key: ${JSON.stringify(a.key)},\n` +
       `    title: ${JSON.stringify(a.title)},\n` +
       `    description: ${JSON.stringify(a.description)},\n` +
+      `    link: ${JSON.stringify(a.link ?? "")},\n` +
       `    fonts: [\n${fonts}\n    ],\n` +
       `  },`
     );
@@ -220,6 +222,7 @@ export interface FontCategory {
   key: FontCategoryKey;
   title: string;
   description: string;
+  link: string;
   fonts: FontDefinition[];
 }
 
