@@ -125,7 +125,7 @@ const categoryColors: Record<
   FontCategoryKey,
   { bg: string; text: string; dot: string }
 > = {
-  khmer: { bg: "bg-blue-50", text: "text-blue-700", dot: "bg-blue-400" },
+  khmer: { bg: "bg-cyan-50", text: "text-cyan-700", dot: "bg-cyan-400" },
   masterpiece: {
     bg: "bg-purple-50",
     text: "text-purple-700",
@@ -142,12 +142,12 @@ const categoryColors: Record<
     dot: "bg-amber-400",
   },
   aka: { bg: "bg-teal-50", text: "text-teal-700", dot: "bg-teal-400" },
-  saimoon: { bg: "bg-green-50", text: "text-green-700", dot: "bg-green-400" },
+  saimoon: { bg: "bg-blue-50", text: "text-blue-700", dot: "bg-blue-400" },
   unknown: { bg: "bg-gray-50", text: "text-gray-600", dot: "bg-gray-400" },
   other: {
-    bg: "bg-emerald-50",
-    text: "text-emerald-700",
-    dot: "bg-emerald-400",
+    bg: "bg-lime-50",
+    text: "text-lime-700",
+    dot: "bg-lime-400",
   },
 };
 
