@@ -14,6 +14,7 @@ interface FontContextProps {
     leftPanelCollapsed: boolean;
     selectedStyleCategory: string;
     selectedAuthorCategory: string;
+    selectedLanguageCategory: string;
     changeFontSize: (newFontSize: number) => void;
     changeLineHeight: (newLineHeight: number) => void;
     changePreviewText: (newPreviewText: string) => void;
@@ -22,6 +23,7 @@ interface FontContextProps {
     toggleLeftPanel: (collapsed: boolean) => void;
     changeSelectedStyleCategory: (category: string) => void;
     changeSelectedAuthorCategory: (category: string) => void;
+    changeSelectedLanguageCategory: (category: string) => void;
 }
 
 export const FontContext = createContext<FontContextProps | undefined>(undefined);
@@ -83,6 +85,7 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
     const [leftPanelCollapsed, setLeftPanelCollapsed] = useState<boolean>(defaultLeftPanelCollapsed());
     const [selectedStyleCategory, setSelectedStyleCategory] = useState<string>('all');
     const [selectedAuthorCategory, setSelectedAuthorCategory] = useState<string>('all');
+    const [selectedLanguageCategory, setSelectedLanguageCategory] = useState<string>('all');
 
     const changeFontSize = (newFontSize: number) => {
         setFontSize(newFontSize);
@@ -122,6 +125,10 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         setSelectedAuthorCategory(category);
     };
 
+    const changeSelectedLanguageCategory = (category: string) => {
+        setSelectedLanguageCategory(category);
+    };
+
     const contextValue: FontContextProps = {
         fontSize,
         lineHeight,
@@ -131,6 +138,7 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         leftPanelCollapsed,
         selectedStyleCategory,
         selectedAuthorCategory,
+        selectedLanguageCategory,
         changeFontSize,
         changeLineHeight,
         changePreviewText,
@@ -138,7 +146,8 @@ export const FontProvider: React.FC<{ children: React.ReactNode }> = ({ children
         changeSearchTerm,
         toggleLeftPanel,
         changeSelectedStyleCategory,
-        changeSelectedAuthorCategory
+        changeSelectedAuthorCategory,
+        changeSelectedLanguageCategory
     };
 
     return (

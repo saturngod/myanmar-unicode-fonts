@@ -6,7 +6,7 @@ import {
   useFontContext,
 } from '../Context/mmfontContext';
 import { fontStyleCategories, getStyleAllowedNames, normalizeFontName } from '../data/styleCategories';
-import { allFonts, fontCatalog } from '../data/fontCatalog';
+import { allFonts, fontCatalog, fontLanguageCategories, FontDefinition } from '../data/fontCatalog';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -27,6 +27,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     changeSelectedStyleCategory,
     selectedAuthorCategory,
     changeSelectedAuthorCategory,
+    selectedLanguageCategory,
+    changeSelectedLanguageCategory,
     changeSearchTerm,
   } = useFontContext();
 
@@ -34,36 +36,42 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   // When no style is selected, null means "no restriction".
   const styleAllowedNames = getStyleAllowedNames(selectedStyleCategory);
 
-  // Fonts visible under the currently selected author filter (used to narrow style counts).
+  // Per-axis predicates. Each count below respects the OTHER two active filters,
+  // so the numbers always reflect what's actually shown.
+  const matchesStyle = (f: FontDefinition) =>
+    !styleAllowedNames || styleAllowedNames.has(normalizeFontName(f.displayName));
+  const matchesLanguage = (f: FontDefinition) =>
+    selectedLanguageCategory === 'all' || f.languages.includes(selectedLanguageCategory);
+
+  // Fonts visible under the currently selected author filter (used to narrow style/language counts).
   const authorScopedFonts = (selectedAuthorCategory && selectedAuthorCategory !== 'all')
     ? fontCatalog.find(c => c.key === selectedAuthorCategory)?.fonts ?? []
     : allFonts;
-  const authorScopedNameSet = new Set(
-    authorScopedFonts.map(f => normalizeFontName(f.displayName))
-  );
 
-  // Count shown next to each Author row — respects the active style filter.
-  const getAuthorCount = (authorFonts: { displayName: string }[]) => {
-    if (!styleAllowedNames) return authorFonts.length;
-    return authorFonts.filter(f =>
-      styleAllowedNames.has(normalizeFontName(f.displayName))
-    ).length;
-  };
+  // Author row count — respects the active style + language filters.
+  const getAuthorCount = (authorFonts: FontDefinition[]) =>
+    authorFonts.filter(f => matchesStyle(f) && matchesLanguage(f)).length;
 
-  // "All Authors" count — fonts matching the active style filter (or total if none).
-  const allAuthorsCount = styleAllowedNames
-    ? fontCatalog.reduce((sum, cat) => sum + getAuthorCount(cat.fonts), 0)
-    : allFonts.length;
+  // "All Authors" count — fonts matching the active style + language filters.
+  const allAuthorsCount = fontCatalog.reduce((sum, cat) => sum + getAuthorCount(cat.fonts), 0);
 
-  // Count shown next to each Style row — respects the active author filter.
+  // Style row count — respects the active author + language filters.
   const getCategoryCount = (categoryFonts: string[]) => {
-    return categoryFonts.filter(f =>
-      authorScopedNameSet.has(normalizeFontName(f))
+    const allowed = new Set(categoryFonts.map(normalizeFontName));
+    return authorScopedFonts.filter(f =>
+      allowed.has(normalizeFontName(f.displayName)) && matchesLanguage(f)
     ).length;
   };
 
-  // "All Fonts" count — fonts within the active author filter.
-  const allStyleCount = authorScopedFonts.length;
+  // "All Fonts" count — fonts within the active author + language filters.
+  const allStyleCount = authorScopedFonts.filter(matchesLanguage).length;
+
+  // Language row count — respects the active author + style filters.
+  const getLanguageCount = (languageId: string) =>
+    authorScopedFonts.filter(f => matchesStyle(f) && f.languages.includes(languageId)).length;
+
+  // "All Languages" count — fonts within the active author + style filters.
+  const allLanguageCount = authorScopedFonts.filter(matchesStyle).length;
 
   return (
     <>
@@ -260,6 +268,36 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               </nav>
             </div>
 
+            {/* Language Categories */}
+            <div>
+              <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">
+                Language
+              </label>
+              <nav className="space-y-1">
+                <CategoryItem
+                  label="All Languages"
+                  count={allLanguageCount}
+                  active={selectedLanguageCategory === 'all'}
+                  onClick={() => {
+                    changeSelectedLanguageCategory('all');
+                    changeSearchTerm('');
+                  }}
+                />
+                {fontLanguageCategories.map(lang => (
+                  <CategoryItem
+                    key={lang.id}
+                    label={lang.name}
+                    count={getLanguageCount(lang.id)}
+                    active={selectedLanguageCategory === lang.id}
+                    onClick={() => {
+                      changeSelectedLanguageCategory(lang.id);
+                      changeSearchTerm('');
+                    }}
+                  />
+                ))}
+              </nav>
+            </div>
+
             {/* Reset button */}
             <button
               onClick={() => {
@@ -269,6 +307,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 toggleGrid(false);
                 changeSelectedAuthorCategory('all');
                 changeSelectedStyleCategory('all');
+                changeSelectedLanguageCategory('all');
               }}
               className="w-full py-2 px-3 text-sm text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-xl transition-colors flex items-center justify-center gap-2"
             >

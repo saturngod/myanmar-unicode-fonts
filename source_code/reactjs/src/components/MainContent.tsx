@@ -3,13 +3,14 @@ import { useFontContext } from "../Context/mmfontContext";
 import { FontList } from "./fontList";
 import {
   fontCatalog,
+  fontLanguageCategories,
   FontDefinition,
   FontCategoryKey,
 } from "../data/fontCatalog";
 import { getStyleAllowedNames, normalizeFontName } from "../data/styleCategories";
 
 export const MainContent: React.FC = () => {
-  const { searchTerm, selectedStyleCategory, selectedAuthorCategory } =
+  const { searchTerm, selectedStyleCategory, selectedAuthorCategory, selectedLanguageCategory } =
     useFontContext();
 
   const filteredCatalog = useMemo(() => {
@@ -34,6 +35,12 @@ export const MainContent: React.FC = () => {
           );
         }
 
+        if (selectedLanguageCategory && selectedLanguageCategory !== "all") {
+          fonts = fonts.filter((f) =>
+            f.languages.includes(selectedLanguageCategory),
+          );
+        }
+
         if (search) {
           fonts = fonts.filter((f) =>
             f.displayName.toLowerCase().includes(search),
@@ -45,7 +52,7 @@ export const MainContent: React.FC = () => {
       .filter((cat) => cat.fonts.length > 0);
 
     return result;
-  }, [selectedStyleCategory, selectedAuthorCategory, searchTerm]);
+  }, [selectedStyleCategory, selectedAuthorCategory, selectedLanguageCategory, searchTerm]);
 
   const totalFontCount = useMemo(
     () => filteredCatalog.reduce((sum, cat) => sum + cat.fonts.length, 0),
@@ -62,10 +69,14 @@ export const MainContent: React.FC = () => {
       ? selectedStyleCategory
       : null;
 
+  const languageTitle =
+    selectedLanguageCategory && selectedLanguageCategory !== "all"
+      ? fontLanguageCategories.find((l) => l.id === selectedLanguageCategory)?.name
+      : null;
+
   const styleLabel =
-    authorTitle && styleTitle
-      ? `${authorTitle} · ${styleTitle}`
-      : authorTitle || styleTitle || "All Fonts";
+    [authorTitle, styleTitle, languageTitle].filter(Boolean).join(" · ") ||
+    "All Fonts";
 
   return (
     <main className="flex-1 min-w-0">

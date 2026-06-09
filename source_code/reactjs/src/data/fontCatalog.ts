@@ -4,13 +4,15 @@
 import {
   fontCatalog,
   allFonts,
+  fontLanguageCategories,
   type FontCategoryKey,
   type FontDefinition,
   type FontCategory,
+  type LanguageCategory,
 } from "./fontCatalog.generated";
 
-export type { FontCategoryKey, FontDefinition, FontCategory };
-export { fontCatalog, allFonts };
+export type { FontCategoryKey, FontDefinition, FontCategory, LanguageCategory };
+export { fontCatalog, allFonts, fontLanguageCategories };
 
 const CDN_BASE_URL =
   "https://cdn.jsdelivr.net/gh/saturngod/myanmar-unicode-fonts@master/docs";

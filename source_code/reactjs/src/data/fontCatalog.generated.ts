@@ -12,6 +12,7 @@ export interface FontDefinition {
   previewFamily: string;
   localName: string;
   downloadFileName: string;
+  languages: string[];
 }
 
 export interface FontCategory {
@@ -25,6 +26,11 @@ export interface FontCategory {
 export interface StyleCategory {
   name: string;
   fonts: string[];
+}
+
+export interface LanguageCategory {
+  id: string;
+  name: string;
 }
 
 export const fontCatalog: FontCategory[] = [
@@ -43,6 +49,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarAngoun-KhmerType",
         localName: "Myanmar Angoun",
         downloadFileName: "MyanmarAngoun.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarChatu",
@@ -53,6 +60,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarChatu",
         localName: "Myanmar Chatu",
         downloadFileName: "MyanmarChatu.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarChatuLight",
@@ -63,6 +71,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarChatuLight",
         localName: "Myanmar Chatu Light",
         downloadFileName: "MyanmarChatuLight.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarGantgaw",
@@ -73,6 +82,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarGantgaw",
         localName: "Myanmar Gantgaw",
         downloadFileName: "MyanmarGantgaw.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarKhyay",
@@ -83,6 +93,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarKhyay",
         localName: "Myanmar Khyay",
         downloadFileName: "MyanmarKhyay.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarKuttar",
@@ -93,6 +104,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarKuttar",
         localName: "Myanmar Kuttar",
         downloadFileName: "MyanmarKuttar.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarNayone",
@@ -103,6 +115,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarNayone",
         localName: "Myanmar Nayone",
         downloadFileName: "MyanmarNayone.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarNjaun",
@@ -113,6 +126,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarNjaun",
         localName: "Myanmar Njaun",
         downloadFileName: "MyanmarNjaun.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarPauklay",
@@ -123,6 +137,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarPauklay",
         localName: "Myanmar Pauklay",
         downloadFileName: "MyanmarPauklay.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarPhetsot",
@@ -133,6 +148,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarPhetsot",
         localName: "Myanmar Phetsot",
         downloadFileName: "MyanmarPhetsot.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarPhiksel",
@@ -143,6 +159,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarPhiksel",
         localName: "Myanmar Phiksel",
         downloadFileName: "MyanmarPhiksel.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarPhikselSmooth",
@@ -153,6 +170,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarPhikselSmooth",
         localName: "Myanmar Phiksel Smooth",
         downloadFileName: "MyanmarPhikselSmooth.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarPonenyet",
@@ -163,6 +181,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarPonenyet",
         localName: "Myanmar Ponenyet",
         downloadFileName: "MyanmarPonenyet.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarSabae",
@@ -173,6 +192,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarSabae-KhmerType",
         localName: "Myanmar Sabae",
         downloadFileName: "MyanmarSabae.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarSagar",
@@ -183,6 +203,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarSagar",
         localName: "Myanmar Sagar",
         downloadFileName: "MyanmarSagar.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarSanpya",
@@ -193,6 +214,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarSanpya",
         localName: "Myanmar Sanpya",
         downloadFileName: "MyanmarSanpya.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarTagu",
@@ -203,6 +225,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarTagu",
         localName: "Myanmar Tagu",
         downloadFileName: "MyanmarTagu.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarThuriya",
@@ -213,6 +236,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarThuriya",
         localName: "Myanmar Thuriya",
         downloadFileName: "MyanmarThuriya.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarWaso",
@@ -223,6 +247,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarWaso",
         localName: "Myanmar Waso",
         downloadFileName: "MyanmarWaso.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "khmer:MyanmarYinmar",
@@ -233,6 +258,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarYinmar",
         localName: "Myanmar Yinmar",
         downloadFileName: "MyanmarYinmar.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
     ],
   },
@@ -251,6 +277,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceCTL",
         localName: "Masterpiece CTL",
         downloadFileName: "MasterpieceCTL.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceLakwel",
@@ -261,6 +288,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceLakwel",
         localName: "Masterpiece Lakwel",
         downloadFileName: "MasterpieceLakwel.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceSpringRev",
@@ -271,6 +299,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceSpringRev",
         localName: "Masterpiece Spring Revolution",
         downloadFileName: "MasterpieceSpringRev.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceStadium",
@@ -281,6 +310,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceStadium",
         localName: "Masterpiece Stadium",
         downloadFileName: "MasterpieceStadium.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceTawWin",
@@ -291,6 +321,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceTawWin",
         localName: "Masterpiece Taw Win",
         downloadFileName: "MasterpieceTawWin.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceUniHand",
@@ -301,6 +332,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceUniHand",
         localName: "Masterpiece Uni HandScript",
         downloadFileName: "MasterpieceUniHand.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceUniRound",
@@ -311,6 +343,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceUniRound",
         localName: "Masterpiece Uni Round",
         downloadFileName: "MasterpieceUniRound.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceUniSerif",
@@ -321,6 +354,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceUniSerif",
         localName: "Masterpiece Uni Serif",
         downloadFileName: "MasterpieceUniSerif.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceUniType",
@@ -331,6 +365,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceUniType",
         localName: "Masterpiece Uni Type",
         downloadFileName: "MasterpieceUniType.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceYayChanZin",
@@ -341,6 +376,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceYayChanZin",
         localName: "Masterpiece Yay Chan Zin",
         downloadFileName: "MasterpieceYayChanZin.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceDaung",
@@ -351,6 +387,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceDaung",
         localName: "Masterpiece Daung",
         downloadFileName: "MasterpieceDaung.ttf",
+        languages: ["burmese"],
       },
       {
         id: "masterpiece:MasterpieceDaungRound",
@@ -361,6 +398,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MasterpieceDaungRound",
         localName: "Masterpiece Daung Round",
         downloadFileName: "MasterpieceDaungRound.ttf",
+        languages: ["burmese"],
       },
     ],
   },
@@ -379,6 +417,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-ThitSarShweSi",
         localName: "Thit Sar Shwe Si",
         downloadFileName: "ThitSarShweSi.ttf",
+        languages: ["burmese"],
       },
     ],
   },
@@ -397,6 +436,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-OneTypeChiangMai",
         localName: "OT Free01_ChiangMai",
         downloadFileName: "OneTypeChiangMai.ttf",
+        languages: ["burmese"],
       },
       {
         id: "one-type:OneTypeMMDot",
@@ -407,6 +447,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-OneTypeMMDot",
         localName: "OT Free02_mmDot",
         downloadFileName: "OneTypeMMDot.ttf",
+        languages: ["burmese"],
       },
     ],
   },
@@ -425,6 +466,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka01-Bold",
         localName: "A ka 01",
         downloadFileName: "Aka01-Bold.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka01-Medium",
@@ -435,6 +477,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka01-Medium",
         localName: "A ka 01",
         downloadFileName: "Aka01-Medium.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka01-Regular",
@@ -445,6 +488,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka01-Regular",
         localName: "A ka 01",
         downloadFileName: "Aka01-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka011-Bold",
@@ -455,6 +499,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka011-Bold",
         localName: "A ka -011",
         downloadFileName: "Aka011-Bold.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka011-Light",
@@ -465,6 +510,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka011-Light",
         localName: "A ka -011",
         downloadFileName: "Aka011-Light.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka011-Regular",
@@ -475,6 +521,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka011-Regular",
         localName: "A ka -011",
         downloadFileName: "Aka011-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka02-Regular",
@@ -485,6 +532,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka02-Regular",
         localName: "A ka 02",
         downloadFileName: "Aka02-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka03-Regular",
@@ -495,6 +543,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka03-Regular",
         localName: "A ka 03",
         downloadFileName: "Aka03-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka05-Regular",
@@ -505,6 +554,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka05-Regular",
         localName: "A ka 05",
         downloadFileName: "Aka05-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka06-Regular",
@@ -515,6 +565,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka06-Regular",
         localName: "A ka 06",
         downloadFileName: "Aka06-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka08-Regular",
@@ -525,6 +576,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka08-Regular",
         localName: "A ka 08",
         downloadFileName: "Aka08-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka09-Regular",
@@ -535,6 +587,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka09-Regular",
         localName: "A ka 09",
         downloadFileName: "Aka09-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "aka:Aka10-Light",
@@ -545,6 +598,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Aka10-Light",
         localName: "A ka 10",
         downloadFileName: "Aka10-Light.ttf",
+        languages: ["burmese"],
       },
     ],
   },
@@ -563,6 +617,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM01_WaTokeLay-Regular",
         localName: "SM01_WaTokeLay",
         downloadFileName: "SM01_WaTokeLay-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM02_KanBaung-Regular",
@@ -573,6 +628,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM02_KanBaung-Regular",
         localName: "SM02_KanBaung",
         downloadFileName: "SM02_KanBaung-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM03_KaWai-Regular",
@@ -583,6 +639,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM03_KaWai-Regular",
         localName: "SM03_KaWai",
         downloadFileName: "SM03_KaWai-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM04Moon-Italic",
@@ -593,6 +650,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM04Moon-Italic",
         localName: "SM04_Moon",
         downloadFileName: "SM04Moon-Italic.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM04_Moon-Bold",
@@ -603,6 +661,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM04_Moon-Bold",
         localName: "SM04_Moon",
         downloadFileName: "SM04_Moon-Bold.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM04_Moon-Regular",
@@ -613,6 +672,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM04_Moon-Regular",
         localName: "SM04_Moon",
         downloadFileName: "SM04_Moon-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM04_Moon-Thin",
@@ -623,6 +683,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM04_Moon-Thin",
         localName: "SM04_Moon",
         downloadFileName: "SM04_Moon-Thin.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM06_LaikPyar-Bold",
@@ -633,6 +694,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM06_LaikPyar-Bold",
         localName: "SM06_LaikPyar",
         downloadFileName: "SM06_LaikPyar-Bold.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM06_LaikPyar-Regular",
@@ -643,6 +705,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM06_LaikPyar-Regular",
         localName: "SM06_LaikPyar",
         downloadFileName: "SM06_LaikPyar-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM06_LaikPyar-Straight",
@@ -653,6 +716,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM06_LaikPyar-Straight",
         localName: "SM06_LaikPyar",
         downloadFileName: "SM06_LaikPyar-Straight.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM06_LaikPyar-Thin",
@@ -663,6 +727,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM06_LaikPyar-Thin",
         localName: "SM06_LaikPyar",
         downloadFileName: "SM06_LaikPyar-Thin.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM07_Virus-Regular",
@@ -673,6 +738,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM07_Virus-Regular",
         localName: "SM07_Virus",
         downloadFileName: "SM07_Virus-Regular.ttf",
+        languages: ["burmese"],
       },
       {
         id: "saimoon:SM08_AntiVirus-Regular",
@@ -683,6 +749,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM08_AntiVirus-Regular",
         localName: "SM08_AntiVirus",
         downloadFileName: "SM08_AntiVirus-Regular.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","tailaing","khamti"],
       },
       {
         id: "saimoon:SM09_BeeZee-Regular",
@@ -693,6 +760,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-SM09_BeeZee-Regular",
         localName: "SM09_BeeZee",
         downloadFileName: "SM09_BeeZee-Regular.otf",
+        languages: ["burmese"],
       },
     ],
   },
@@ -711,6 +779,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-CherryUnicode",
         localName: "Cherry Unicode",
         downloadFileName: "CherryUnicode.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:Kamjing",
@@ -721,6 +790,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Kamjing",
         localName: "Kamjing-2",
         downloadFileName: "Kamjing.ttf",
+        languages: ["burmese","mon","rakhine","karen"],
       },
       {
         id: "unknown:MyanmarBlack",
@@ -731,6 +801,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarBlack",
         localName: "Myanmar Black",
         downloadFileName: "MyanmarBlack.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:MyanmarHeadOne",
@@ -741,6 +812,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarHeadOne",
         localName: "Myanmar Head One",
         downloadFileName: "MyanmarHeadOne.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:MyanmarSquare",
@@ -751,6 +823,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarSquare",
         localName: "Myanmar Square",
         downloadFileName: "MyanmarSquare.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:MyanmarSquareLight",
@@ -761,6 +834,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarSquareLight",
         localName: "Myanmar Square Light",
         downloadFileName: "MyanmarSquareLight.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:NKSSmart2",
@@ -771,6 +845,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-NKSSmart2",
         localName: "NK SSmart2",
         downloadFileName: "NKSSmart2.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:NKSSmart3",
@@ -781,6 +856,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-NKSSmart3",
         localName: "NK SSmart3",
         downloadFileName: "NKSSmart3.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:NKSSmart4",
@@ -791,6 +867,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-NKSSmart4",
         localName: "NK SSmart4",
         downloadFileName: "NKSSmart4.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:NamKhoneUnicode",
@@ -801,6 +878,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-NamKhoneUnicode",
         localName: "NamKhoneUnicode",
         downloadFileName: "NamKhoneUnicode.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:Yangon",
@@ -811,6 +889,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Yangon",
         localName: "Yangon",
         downloadFileName: "Yangon.ttf",
+        languages: ["burmese"],
       },
       {
         id: "unknown:YoeYar-One",
@@ -821,6 +900,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-YoeYar-One",
         localName: "YoeYar-One",
         downloadFileName: "YoeYar-One.ttf",
+        languages: ["burmese"],
       },
       {
         id: "unknown:MyanmarAngoun",
@@ -831,6 +911,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarAngoun-UnknownAuthor",
         localName: "Myanmar Angoun",
         downloadFileName: "MyanmarAngoun.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:MyanmarSabae",
@@ -841,6 +922,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarSabae-UnknownAuthor",
         localName: "Myanmar Sabae",
         downloadFileName: "MyanmarSabae.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "unknown:MyanmarSansPro",
@@ -851,6 +933,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarSansPro-UnknownAuthor",
         localName: "Myanmar Sans Pro",
         downloadFileName: "MyanmarSansPro.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
     ],
   },
@@ -869,6 +952,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Mon3",
         localName: "MON3 Anonta 1",
         downloadFileName: "Mon3.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "other:Myanmar3",
@@ -879,6 +963,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Myanmar3",
         localName: "Myanmar3",
         downloadFileName: "Myanmar3.TTF",
+        languages: ["burmese"],
       },
       {
         id: "other:MyanmarSansPro",
@@ -889,6 +974,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyanmarSansPro-Other",
         localName: "Myanmar Sans Pro",
         downloadFileName: "MyanmarSansPro.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "other:NotoSanMyanmar",
@@ -899,6 +985,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-NotoSanMyanmar",
         localName: "NotoSansMyanmarRegular",
         downloadFileName: "NotoSanMyanmar.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "other:NotoSansMyanmarUI",
@@ -909,6 +996,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-NotoSansMyanmarUI",
         localName: "Noto Sans Myanmar UI",
         downloadFileName: "NotoSansMyanmarUI.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "other:NotoZawDecode",
@@ -919,6 +1007,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-NotoZawDecode",
         localName: "Noto Sans Myanmar UI",
         downloadFileName: "NotoSansMyanmarUI-Regular-ZawDecode.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","tailaing","khamti"],
       },
       {
         id: "other:NotoSerifMyanmar",
@@ -929,6 +1018,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-NotoSerifMyanmar",
         localName: "Noto Serif Myanmar",
         downloadFileName: "NotoSerifMyanmar.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","tailaing","khamti"],
       },
       {
         id: "other:Ours-Unicode",
@@ -939,6 +1029,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Ours-Unicode",
         localName: "Ours-Unicode",
         downloadFileName: "Ours-Unicode.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "other:Pyidaungsu",
@@ -949,6 +1040,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Pyidaungsu",
         localName: "Pyidaungsu",
         downloadFileName: "Pyidaungsu.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","tailaing","khamti"],
       },
       {
         id: "other:Yunghkio",
@@ -959,6 +1051,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Yunghkio",
         localName: "Yunghkio",
         downloadFileName: "Yunghkio.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","khamti"],
       },
       {
         id: "other:MyMyanmarUniversal",
@@ -969,6 +1062,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-MyMyanmarUniversal",
         localName: "!MyMyanmar Universal",
         downloadFileName: "MyMyanmarUniversal.ttf",
+        languages: ["burmese"],
       },
       {
         id: "other:NotoSansMyanmar",
@@ -979,6 +1073,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-NotoSansMyanmar",
         localName: "NotoSansMyanmar",
         downloadFileName: "NotoSansMyanmar-Regular.ttf",
+        languages: ["burmese","mon","shan","rakhine","karen","pao","tailaing","khamti"],
       },
     ],
   },
@@ -1014,5 +1109,40 @@ export const fontStyleCategories: StyleCategory[] = [
   {
     name: "Display / Decorative",
     fonts: ["MyanmarPhiksel", "MasterpieceCTL", "MasterpieceSpringRev", "MasterpieceDaung", "OneTypeChiangMai", "OneTypeMMDot", "Aka02-Regular", "Aka03-Regular", "Aka08-Regular", "MyanmarBlack", "SM02_KanBaung-Regular", "SM03_KaWai-Regular", "SM06_LaikPyar-Bold", "SM06_LaikPyar-Regular", "SM06_LaikPyar-Straight", "SM06_LaikPyar-Thin", "SM07_Virus-Regular", "SM08_AntiVirus-Regular"],
+  },
+];
+
+export const fontLanguageCategories: LanguageCategory[] = [
+  {
+    id: "burmese",
+    name: "Burmese",
+  },
+  {
+    id: "mon",
+    name: "Mon",
+  },
+  {
+    id: "shan",
+    name: "Shan",
+  },
+  {
+    id: "rakhine",
+    name: "Rakhine",
+  },
+  {
+    id: "karen",
+    name: "Karen",
+  },
+  {
+    id: "pao",
+    name: "Pa'O",
+  },
+  {
+    id: "tailaing",
+    name: "Tai Laing",
+  },
+  {
+    id: "khamti",
+    name: "Khamti",
   },
 ];
