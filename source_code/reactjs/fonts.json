@@ -423,7 +423,8 @@
       "author": "unknown",
       "file": "Kamjing.ttf",
       "localName": "Kamjing-2",
-      "style": "Sans-Serif / Clean UI"
+      "style": "Sans-Serif / Clean UI",
+      "excludeLanguages": ["mon"]
     },
     {
       "name": "MyanmarBlack",

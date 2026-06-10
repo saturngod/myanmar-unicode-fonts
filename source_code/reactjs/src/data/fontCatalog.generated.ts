@@ -790,7 +790,7 @@ export const fontCatalog: FontCategory[] = [
         previewFamily: "MMFont-Kamjing",
         localName: "Kamjing-2",
         downloadFileName: "Kamjing.ttf",
-        languages: ["burmese","mon","rakhine","karen"],
+        languages: ["burmese","rakhine","karen"],
       },
       {
         id: "unknown:MyanmarBlack",

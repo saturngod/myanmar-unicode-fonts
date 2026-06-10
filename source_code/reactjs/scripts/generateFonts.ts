@@ -70,6 +70,10 @@ interface FontEntry {
   file: string;
   localName?: string | null;
   style?: string | null;
+  // Languages to drop from auto-detection. Use when a font bundles a script's
+  // glyphs (so glyph-coverage detection matches) but doesn't truly support it,
+  // e.g. Kamjing carries Mon glyphs but has no real Mon shaping.
+  excludeLanguages?: string[] | null;
 }
 interface FontsJson {
   authors: AuthorMeta[];
@@ -167,7 +171,9 @@ const enriched: EnrichedFont[] = data.fonts.map((f) => {
 
   const cssFamily = (nameCounts.get(f.name) ?? 0) > 1 ? `${f.name}-${author.cssSuffix}` : f.name;
 
-  const languages = detectLanguages(diskPath);
+  const excluded = new Set(f.excludeLanguages ?? []);
+  const languages = detectLanguages(diskPath).filter((id) => !excluded.has(id));
+  for (const id of excluded) warnings.push(`"${f.name}" excludes language "${id}" (manual override in fonts.json)`);
   if (languages.length === 0) warnings.push(`"${f.name}" supports no detected Myanmar language (file missing or unreadable?)`);
 
   return {

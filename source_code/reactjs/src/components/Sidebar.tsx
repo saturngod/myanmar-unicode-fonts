@@ -24,7 +24,7 @@ const PANGRAMS = [
   },
   {
     label: 'Mon',
-    text: 'ဍုၚ်ဗၟာဏံ မၞိဟ်တအ် ကောန်ဂကောံ ပၠောပ်ဗှ်ထောံ ကျာ်ဇၞော် ဂဥုဲ ဆုဒြဗ် ဖျုန် ညးသ္ကံ ဗ္တောန်သာ်ဏံ ယိုက်ဂၠေၚ်ပ္ကဴ ဇြဟတ် ဒ္ကေဝ်ဒ္ကေဝ်ၚ်၊ ဃောခမဳတအ် ပဋိပတ်ဓဝ် ဂါဎ ပ္ဍဲဌာန်ဝေဠုဝန်ဂှ် ၜိုတ်ၝောံဇၛောဝ် လေဝ် ရံၚ်စိုပ်ကၠုၚ်ရ။',
+    text: 'ဍုၚ်ဗၟာဏံ မၞိဟ်တအ် ကောန်ဂကောံ ပၠောပ်ဗှ်ထောံ ကျာ်ဇၞော် ဂဥုဲ ဆုဒြဗ် ဖျုန် ညးသ္ကံ ဗ္တောန်သာ်ဏံ ယိုက်ဂၠေၚ်ပ္ကဴ ဇြဟတ် ဒ္ကေဝ်ဒ္ကေဝ်ၚ်၊ ဃောညးပဏ္ဍိတ ကေုာံ ခမဳတအ် လုပ်ဈာန် ပဋိပတ်ဓဝ် ဂါဎ နွံပ္ဍဲဘာဌာန်ဝေဠုဝန်ဂှ် ၜိုတ်ၝောံဇၛောဝ် လေဝ် ဆောမံၚ် ရံၚ်စိုပ်ကၠုၚ်ရ။',
   },
 ];
 
@@ -210,11 +210,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="flex rounded-xl border border-gray-200 overflow-hidden">
                 <button
                   onClick={() => toggleGrid(false)}
-                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2.5 text-sm font-medium transition-colors ${
-                    !grid
+                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2.5 text-sm font-medium transition-colors ${!grid
                       ? 'bg-black text-white'
                       : 'bg-white text-gray-600 hover:bg-gray-50'
-                  }`}
+                    }`}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -223,11 +222,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 </button>
                 <button
                   onClick={() => toggleGrid(true)}
-                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2.5 text-sm font-medium transition-colors ${
-                    grid
+                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2.5 text-sm font-medium transition-colors ${grid
                       ? 'bg-black text-white'
                       : 'bg-white text-gray-600 hover:bg-gray-50'
-                  }`}
+                    }`}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <rect x="3" y="3" width="7" height="7" rx="1" />
