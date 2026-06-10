@@ -22,6 +22,10 @@ const PANGRAMS = [
     label: 'Shan',
     text: 'ပေႃးၶႂ်ႈၵျၶႅၼ်ႇၵႂႃႇၸိုင် တေလႆႈႁွင်ႉသြႃႇလီရဵၼ်းႁူႉသွၼ်ၽိုၵ်း\n\nၺႃးမိူဝ်ႈၾႃႉပၢင်ႇ ၸၢႆးသၢင်ႇလႄႈ ယိင်းဢိူၺ်ႉပေၼိုၵ်း\n\nသိူဝ်းၵျေႃႇတိုၵ်းထႃႈ ၸံလႄႈတင်းၵႆၼၼ်ႉသႃႊ။',
   },
+  {
+    label: 'Mon',
+    text: 'ဍုၚ်ဗၟာဏံ မၞိဟ်တအ် ကောန်ဂကောံ ပၠောပ်ဗှ်ထောံ ကျာ်ဇၞော် ဂဥုဲ ဆုဒြဗ် ဖျုန် ညးသ္ကံ ဗ္တောန်သာ်ဏံ ယိုက်ဂၠေၚ်ပ္ကဴ ဇြဟတ် ဒ္ကေဝ်ဒ္ကေဝ်ၚ်၊ ဃောခမဳတအ် ပဋိပတ်ဓဝ် ဂါဎ ပ္ဍဲဌာန်ဝေဠုဝန်ဂှ် ၜိုတ်ၝောံဇၛောဝ် လေဝ် ရံၚ်စိုပ်ကၠုၚ်ရ။',
+  },
 ];
 
 export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -130,20 +134,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 placeholder="Type Myanmar text to preview..."
                 className="w-full px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent resize-none transition-all"
               />
-              <div className="mt-2 flex items-center gap-2">
-                <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">
+              <div className="mt-2">
+                <span className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
                   Load Pangram
                 </span>
-                {PANGRAMS.map(p => (
-                  <button
-                    key={p.label}
-                    type="button"
-                    onClick={() => changePreviewText(p.text)}
-                    className="px-2.5 py-1 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
-                  >
-                    {p.label}
-                  </button>
-                ))}
+                <div className="grid grid-cols-2 gap-2">
+                  {PANGRAMS.map(p => (
+                    <button
+                      key={p.label}
+                      type="button"
+                      onClick={() => changePreviewText(p.text)}
+                      className="px-2.5 py-1.5 text-xs font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
+                    >
+                      {p.label}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
