@@ -383,6 +383,14 @@
 }
 
 @font-face {
+    font-family:"OpenDyslexic-Regular";
+    src:local('OpenDyslexic'),url('./Aka/OpenDyslexic-Regular.ttf') format('truetype');
+}
+.OpenDyslexic-Regular {
+    font-family: "OpenDyslexic-Regular";
+}
+
+@font-face {
     font-family:"CherryUnicode";
     src:local('Cherry Unicode'),url('./unknown/CherryUnicode.ttf') format('truetype');
 }

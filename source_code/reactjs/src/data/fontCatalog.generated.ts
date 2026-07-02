@@ -600,6 +600,17 @@ export const fontCatalog: FontCategory[] = [
         downloadFileName: "Aka10-Light.ttf",
         languages: ["burmese"],
       },
+      {
+        id: "aka:OpenDyslexic-Regular",
+        displayName: "OpenDyslexic-Regular",
+        category: "aka",
+        filePath: "/Aka/OpenDyslexic-Regular.ttf",
+        cssFamily: "OpenDyslexic-Regular",
+        previewFamily: "MMFont-OpenDyslexic-Regular",
+        localName: "OpenDyslexic",
+        downloadFileName: "OpenDyslexic-Regular.ttf",
+        languages: ["burmese","mon","rakhine","karen"],
+      },
     ],
   },
   {
@@ -1096,7 +1107,7 @@ export const fontStyleCategories: StyleCategory[] = [
   },
   {
     name: "Rounded",
-    fonts: ["MasterpieceUniRound", "MasterpieceDaungRound", "Aka10-Light"],
+    fonts: ["MasterpieceUniRound", "MasterpieceDaungRound", "Aka10-Light", "OpenDyslexic-Regular"],
   },
   {
     name: "Square / Blocky",

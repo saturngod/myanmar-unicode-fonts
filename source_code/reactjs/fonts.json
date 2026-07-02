@@ -412,6 +412,13 @@
       "style": "Rounded"
     },
     {
+      "name": "OpenDyslexic-Regular",
+      "author": "aka",
+      "file": "OpenDyslexic-Regular.ttf",
+      "localName": "OpenDyslexic",
+      "style": "Rounded"
+    },
+    {
       "name": "CherryUnicode",
       "author": "unknown",
       "file": "CherryUnicode.ttf",
