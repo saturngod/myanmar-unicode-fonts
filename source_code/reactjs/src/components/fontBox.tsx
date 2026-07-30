@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useFontContext } from "../Context/mmfontContext";
 import { useToast } from "../Context/toastContext";
-import { FontDefinition, getCdnFontUrl, getPublicFontUrl } from "../data/fontCatalog";
+import { FontDefinition, FontVariant, getCdnFontUrl, getPublicFontUrl } from "../data/fontCatalog";
 
 interface FontBoxProps {
     fontDefinition: FontDefinition;
@@ -10,7 +10,9 @@ interface FontBoxProps {
 const FONT_STYLE_TAG_ID = 'mmfont-preview-faces';
 const injectedPreviewFamilies = new Set<string>();
 
-const ensurePreviewFace = (fontDefinition: FontDefinition) => {
+// All weights of a family share one previewFamily and differ by font-weight /
+// font-style, so the browser picks the right file the same way Google Fonts does.
+const ensurePreviewFaces = (fontDefinition: FontDefinition) => {
     if (typeof document === 'undefined' || injectedPreviewFamilies.has(fontDefinition.previewFamily)) {
         return;
     }
@@ -22,27 +24,50 @@ const ensurePreviewFace = (fontDefinition: FontDefinition) => {
         document.head.appendChild(styleTag);
     }
 
-    styleTag.appendChild(
-        document.createTextNode(
-            `@font-face{font-family:"${fontDefinition.previewFamily}";src:local("${fontDefinition.localName}"),url("${getPublicFontUrl(fontDefinition.filePath)}") format("truetype");font-display:swap;}`
+    const rules = fontDefinition.variants
+        .map(
+            (variant) =>
+                `@font-face{font-family:"${fontDefinition.previewFamily}";` +
+                `font-weight:${variant.weight};font-style:${variant.italic ? 'italic' : 'normal'};` +
+                `src:local("${variant.localName}"),url("${getPublicFontUrl(variant.filePath)}") format("truetype");` +
+                `font-display:swap;}`
         )
-    );
+        .join('');
+
+    styleTag.appendChild(document.createTextNode(rules));
     injectedPreviewFamilies.add(fontDefinition.previewFamily);
 };
+
+const variantKey = (variant: FontVariant) => `${variant.weight}${variant.italic ? 'i' : ''}`;
 
 export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) => {
     const { fontSize, lineHeight, previewText } = useFontContext();
     const { showToast } = useToast();
     const [copied, setCopied] = useState(false);
+    const [selectedKey, setSelectedKey] = useState(
+        `${fontDefinition.defaultWeight}${fontDefinition.defaultItalic ? 'i' : ''}`,
+    );
 
     useEffect(() => {
-        ensurePreviewFace(fontDefinition);
+        ensurePreviewFaces(fontDefinition);
     }, [fontDefinition]);
 
-    const cdnUrl = getCdnFontUrl(fontDefinition.filePath);
+    const selected =
+        fontDefinition.variants.find((v) => variantKey(v) === selectedKey) ?? fontDefinition.variants[0];
+    const hasWeights = fontDefinition.variants.length > 1;
+    const cdnUrl = getCdnFontUrl(selected.filePath);
 
     const copyCSS = async () => {
-        const cssText = `@font-face {font-family:"${fontDefinition.cssFamily}";src:local('${fontDefinition.localName}'),url('${cdnUrl}') format('truetype');}`;
+        // Copy the whole family so the caller can use any weight, not just the
+        // one currently previewed.
+        const cssText = fontDefinition.variants
+            .map(
+                (variant) =>
+                    `@font-face {font-family:"${fontDefinition.cssFamily}";` +
+                    `font-weight:${variant.weight};font-style:${variant.italic ? 'italic' : 'normal'};` +
+                    `src:local('${variant.localName}'),url('${getCdnFontUrl(variant.filePath)}') format('truetype');}`,
+            )
+            .join('\n');
 
         try {
             await navigator.clipboard.writeText(cssText);
@@ -63,12 +88,12 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) =
             const url = window.URL.createObjectURL(blob);
             const link = document.createElement('a');
             link.href = url;
-            link.download = fontDefinition.downloadFileName;
+            link.download = selected.downloadFileName;
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
             window.URL.revokeObjectURL(url);
-            showToast(`${fontDefinition.displayName} downloaded`, 'success');
+            showToast(`${fontDefinition.displayName} ${selected.label} downloaded`, 'success');
         } catch (err) {
             console.error('Failed to download:', err);
             showToast('Failed to download font', 'error');
@@ -79,8 +104,13 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) =
         <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:border-gray-200 hover:shadow-lg hover:shadow-gray-100 transition-all duration-300">
             {/* Font name header */}
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-50">
-                <h3 className="text-sm font-semibold text-gray-700 truncate pr-2">
-                    {fontDefinition.displayName}
+                <h3 className="flex items-baseline gap-1.5 min-w-0 text-sm font-semibold text-gray-700 pr-2">
+                    <span className="truncate">{fontDefinition.displayName}</span>
+                    {hasWeights && (
+                        <span className="shrink-0 text-xs font-normal text-gray-400">
+                            {fontDefinition.variants.length} weights
+                        </span>
+                    )}
                 </h3>
                 <div className="flex items-center gap-0.5 shrink-0">
                     <button
@@ -116,6 +146,35 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) =
                 </div>
             </div>
 
+            {/* Weight selector — only for families that ship more than one weight */}
+            {hasWeights && (
+                <div className="flex items-center gap-1 px-4 py-2 border-b border-gray-50 overflow-x-auto scrollbar-thin">
+                    {fontDefinition.variants.map((variant) => {
+                        const key = variantKey(variant);
+                        const isActive = key === selectedKey;
+                        return (
+                            <button
+                                key={key}
+                                onClick={() => setSelectedKey(key)}
+                                title={`${variant.label} ${variant.weight}`}
+                                aria-label={`${fontDefinition.displayName} ${variant.label} ${variant.weight}`}
+                                aria-pressed={isActive}
+                                className={`
+                                    shrink-0 px-2 py-0.5 rounded-md text-xs font-medium transition-colors duration-150
+                                    ${isActive
+                                        ? 'bg-blue-500 text-white'
+                                        : 'text-gray-500 hover:text-gray-800 hover:bg-gray-100'
+                                    }
+                                `}
+                            >
+                                {variant.weight}
+                                {variant.italic && <span className="italic">i</span>}
+                            </button>
+                        );
+                    })}
+                </div>
+            )}
+
             {/* Font preview */}
             <div className="px-4 py-4 min-h-[80px]">
                 <div
@@ -124,6 +183,8 @@ export const FontBox: React.FC<FontBoxProps> = React.memo(({ fontDefinition }) =
                         fontFamily: `"${fontDefinition.previewFamily}", "${fontDefinition.displayName}", sans-serif`,
                         fontSize: fontSize + "px",
                         lineHeight: lineHeight,
+                        fontWeight: selected.weight,
+                        fontStyle: selected.italic ? "italic" : "normal",
                         whiteSpace: "pre-wrap"
                     }}
                 >

@@ -7,11 +7,12 @@ import {
   fontLanguageCategories,
   type FontCategoryKey,
   type FontDefinition,
+  type FontVariant,
   type FontCategory,
   type LanguageCategory,
 } from "./fontCatalog.generated";
 
-export type { FontCategoryKey, FontDefinition, FontCategory, LanguageCategory };
+export type { FontCategoryKey, FontDefinition, FontVariant, FontCategory, LanguageCategory };
 export { fontCatalog, allFonts, fontLanguageCategories };
 
 const CDN_BASE_URL =

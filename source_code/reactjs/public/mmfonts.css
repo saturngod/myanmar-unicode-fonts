@@ -1,5 +1,7 @@
 @font-face {
     font-family:"MyanmarAngoun";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Angoun'),url('./KhmerType/MyanmarAngoun.ttf') format('truetype');
 }
 .MyanmarAngoun {
@@ -8,12 +10,16 @@
 
 @font-face {
     font-family:"MyanmarChatu";
+    font-style: normal;
+    font-weight: 300;
+    src:local('Myanmar Chatu Light'),url('./KhmerType/MyanmarChatuLight.ttf') format('truetype');
+}
+@font-face {
+    font-family:"MyanmarChatu";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Chatu'),url('./KhmerType/MyanmarChatu.ttf') format('truetype');
 }
-.MyanmarChatu {
-    font-family: "MyanmarChatu";
-}
-
 @font-face {
     font-family:"MyanmarChatuLight";
     src:local('Myanmar Chatu Light'),url('./KhmerType/MyanmarChatuLight.ttf') format('truetype');
@@ -21,9 +27,14 @@
 .MyanmarChatuLight {
     font-family: "MyanmarChatuLight";
 }
+.MyanmarChatu {
+    font-family: "MyanmarChatu";
+}
 
 @font-face {
     font-family:"MyanmarGantgaw";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Gantgaw'),url('./KhmerType/MyanmarGantgaw.ttf') format('truetype');
 }
 .MyanmarGantgaw {
@@ -32,6 +43,8 @@
 
 @font-face {
     font-family:"MyanmarKhyay";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Khyay'),url('./KhmerType/MyanmarKhyay.ttf') format('truetype');
 }
 .MyanmarKhyay {
@@ -40,6 +53,8 @@
 
 @font-face {
     font-family:"MyanmarKuttar";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Kuttar'),url('./KhmerType/MyanmarKuttar.ttf') format('truetype');
 }
 .MyanmarKuttar {
@@ -48,6 +63,8 @@
 
 @font-face {
     font-family:"MyanmarNayone";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Nayone'),url('./KhmerType/MyanmarNayone.ttf') format('truetype');
 }
 .MyanmarNayone {
@@ -56,6 +73,8 @@
 
 @font-face {
     font-family:"MyanmarNjaun";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Njaun'),url('./KhmerType/MyanmarNjaun.ttf') format('truetype');
 }
 .MyanmarNjaun {
@@ -64,6 +83,8 @@
 
 @font-face {
     font-family:"MyanmarPauklay";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Pauklay'),url('./KhmerType/MyanmarPauklay.ttf') format('truetype');
 }
 .MyanmarPauklay {
@@ -72,6 +93,8 @@
 
 @font-face {
     font-family:"MyanmarPhetsot";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Phetsot'),url('./KhmerType/MyanmarPhetsot.ttf') format('truetype');
 }
 .MyanmarPhetsot {
@@ -80,6 +103,8 @@
 
 @font-face {
     font-family:"MyanmarPhiksel";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Phiksel'),url('./KhmerType/MyanmarPhiksel.ttf') format('truetype');
 }
 .MyanmarPhiksel {
@@ -88,6 +113,8 @@
 
 @font-face {
     font-family:"MyanmarPhikselSmooth";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Phiksel Smooth'),url('./KhmerType/MyanmarPhikselSmooth.ttf') format('truetype');
 }
 .MyanmarPhikselSmooth {
@@ -96,6 +123,8 @@
 
 @font-face {
     font-family:"MyanmarPonenyet";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Ponenyet'),url('./KhmerType/MyanmarPonenyet.ttf') format('truetype');
 }
 .MyanmarPonenyet {
@@ -104,6 +133,8 @@
 
 @font-face {
     font-family:"MyanmarSabae";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Sabae'),url('./KhmerType/MyanmarSabae.ttf') format('truetype');
 }
 .MyanmarSabae {
@@ -112,6 +143,8 @@
 
 @font-face {
     font-family:"MyanmarSagar";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Sagar'),url('./KhmerType/MyanmarSagar.ttf') format('truetype');
 }
 .MyanmarSagar {
@@ -120,6 +153,8 @@
 
 @font-face {
     font-family:"MyanmarSanpya";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Sanpya'),url('./KhmerType/MyanmarSanpya.ttf') format('truetype');
 }
 .MyanmarSanpya {
@@ -128,6 +163,8 @@
 
 @font-face {
     font-family:"MyanmarTagu";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Tagu'),url('./KhmerType/MyanmarTagu.ttf') format('truetype');
 }
 .MyanmarTagu {
@@ -136,6 +173,8 @@
 
 @font-face {
     font-family:"MyanmarThuriya";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Thuriya'),url('./KhmerType/MyanmarThuriya.ttf') format('truetype');
 }
 .MyanmarThuriya {
@@ -144,6 +183,8 @@
 
 @font-face {
     font-family:"MyanmarWaso";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Waso'),url('./KhmerType/MyanmarWaso.ttf') format('truetype');
 }
 .MyanmarWaso {
@@ -152,6 +193,8 @@
 
 @font-face {
     font-family:"MyanmarYinmar";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Yinmar'),url('./KhmerType/MyanmarYinmar.ttf') format('truetype');
 }
 .MyanmarYinmar {
@@ -160,6 +203,8 @@
 
 @font-face {
     font-family:"MasterpieceCTL";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece CTL'),url('./masterpiece/MasterpieceCTL.ttf') format('truetype');
 }
 .MasterpieceCTL {
@@ -168,6 +213,8 @@
 
 @font-face {
     font-family:"MasterpieceLakwel";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Lakwel'),url('./masterpiece/MasterpieceLakwel.ttf') format('truetype');
 }
 .MasterpieceLakwel {
@@ -176,6 +223,8 @@
 
 @font-face {
     font-family:"MasterpieceSpringRev";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Spring Revolution'),url('./masterpiece/MasterpieceSpringRev.ttf') format('truetype');
 }
 .MasterpieceSpringRev {
@@ -184,6 +233,8 @@
 
 @font-face {
     font-family:"MasterpieceStadium";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Stadium'),url('./masterpiece/MasterpieceStadium.ttf') format('truetype');
 }
 .MasterpieceStadium {
@@ -192,6 +243,8 @@
 
 @font-face {
     font-family:"MasterpieceTawWin";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Taw Win'),url('./masterpiece/MasterpieceTawWin.ttf') format('truetype');
 }
 .MasterpieceTawWin {
@@ -200,6 +253,8 @@
 
 @font-face {
     font-family:"MasterpieceUniHand";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Uni HandScript'),url('./masterpiece/MasterpieceUniHand.ttf') format('truetype');
 }
 .MasterpieceUniHand {
@@ -208,6 +263,8 @@
 
 @font-face {
     font-family:"MasterpieceUniRound";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Uni Round'),url('./masterpiece/MasterpieceUniRound.ttf') format('truetype');
 }
 .MasterpieceUniRound {
@@ -216,6 +273,8 @@
 
 @font-face {
     font-family:"MasterpieceUniSerif";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Uni Serif'),url('./masterpiece/MasterpieceUniSerif.ttf') format('truetype');
 }
 .MasterpieceUniSerif {
@@ -224,6 +283,8 @@
 
 @font-face {
     font-family:"MasterpieceUniType";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Uni Type'),url('./masterpiece/MasterpieceUniType.ttf') format('truetype');
 }
 .MasterpieceUniType {
@@ -232,6 +293,8 @@
 
 @font-face {
     font-family:"MasterpieceYayChanZin";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Yay Chan Zin'),url('./masterpiece/MasterpieceYayChanZin.ttf') format('truetype');
 }
 .MasterpieceYayChanZin {
@@ -240,6 +303,8 @@
 
 @font-face {
     font-family:"MasterpieceDaung";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Daung'),url('./masterpiece/MasterpieceDaung.ttf') format('truetype');
 }
 .MasterpieceDaung {
@@ -248,6 +313,8 @@
 
 @font-face {
     font-family:"MasterpieceDaungRound";
+    font-style: normal;
+    font-weight: 400;
     src:local('Masterpiece Daung Round'),url('./masterpiece/MasterpieceDaungRound.ttf') format('truetype');
 }
 .MasterpieceDaungRound {
@@ -256,6 +323,8 @@
 
 @font-face {
     font-family:"ThitSarShweSi";
+    font-style: normal;
+    font-weight: 400;
     src:local('Thit Sar Shwe Si'),url('./PhoenixDigitalArt/ThitSarShweSi.ttf') format('truetype');
 }
 .ThitSarShweSi {
@@ -264,6 +333,8 @@
 
 @font-face {
     font-family:"OneTypeChiangMai";
+    font-style: normal;
+    font-weight: 400;
     src:local('OT Free01_ChiangMai'),url('./OneType/OneTypeChiangMai.ttf') format('truetype');
 }
 .OneTypeChiangMai {
@@ -272,6 +343,8 @@
 
 @font-face {
     font-family:"OneTypeMMDot";
+    font-style: normal;
+    font-weight: 400;
     src:local('OT Free02_mmDot'),url('./OneType/OneTypeMMDot.ttf') format('truetype');
 }
 .OneTypeMMDot {
@@ -279,21 +352,23 @@
 }
 
 @font-face {
-    font-family:"Aka01-Bold";
-    src:local('A ka 01'),url('./Aka/Aka01-Bold.ttf') format('truetype');
+    font-family:"Aka01";
+    font-style: normal;
+    font-weight: 400;
+    src:local('A ka 01'),url('./Aka/Aka01-Regular.ttf') format('truetype');
 }
-.Aka01-Bold {
-    font-family: "Aka01-Bold";
-}
-
 @font-face {
-    font-family:"Aka01-Medium";
-    src:local('A ka 01'),url('./Aka/Aka01-Medium.ttf') format('truetype');
+    font-family:"Aka01";
+    font-style: normal;
+    font-weight: 500;
+    src:local('A ka 01 Medium'),url('./Aka/Aka01-Medium.ttf') format('truetype');
 }
-.Aka01-Medium {
-    font-family: "Aka01-Medium";
+@font-face {
+    font-family:"Aka01";
+    font-style: normal;
+    font-weight: 700;
+    src:local('A ka 01 Bold'),url('./Aka/Aka01-Bold.ttf') format('truetype');
 }
-
 @font-face {
     font-family:"Aka01-Regular";
     src:local('A ka 01'),url('./Aka/Aka01-Regular.ttf') format('truetype');
@@ -301,23 +376,46 @@
 .Aka01-Regular {
     font-family: "Aka01-Regular";
 }
+@font-face {
+    font-family:"Aka01-Medium";
+    src:local('A ka 01 Medium'),url('./Aka/Aka01-Medium.ttf') format('truetype');
+}
+.Aka01-Medium {
+    font-family: "Aka01-Medium";
+}
+@font-face {
+    font-family:"Aka01-Bold";
+    src:local('A ka 01 Bold'),url('./Aka/Aka01-Bold.ttf') format('truetype');
+}
+.Aka01-Bold {
+    font-family: "Aka01-Bold";
+}
 
 @font-face {
-    font-family:"Aka011-Bold";
-    src:local('A ka -011'),url('./Aka/Aka011-Bold.ttf') format('truetype');
+    font-family:"Aka011";
+    font-style: normal;
+    font-weight: 300;
+    src:local('A ka -011 Light'),url('./Aka/Aka011-Light.ttf') format('truetype');
 }
-.Aka011-Bold {
-    font-family: "Aka011-Bold";
+@font-face {
+    font-family:"Aka011";
+    font-style: normal;
+    font-weight: 400;
+    src:local('A ka -011'),url('./Aka/Aka011-Regular.ttf') format('truetype');
 }
-
+@font-face {
+    font-family:"Aka011";
+    font-style: normal;
+    font-weight: 700;
+    src:local('A ka -011 Bold'),url('./Aka/Aka011-Bold.ttf') format('truetype');
+}
 @font-face {
     font-family:"Aka011-Light";
-    src:local('A ka -011'),url('./Aka/Aka011-Light.ttf') format('truetype');
+    src:local('A ka -011 Light'),url('./Aka/Aka011-Light.ttf') format('truetype');
 }
 .Aka011-Light {
     font-family: "Aka011-Light";
 }
-
 @font-face {
     font-family:"Aka011-Regular";
     src:local('A ka -011'),url('./Aka/Aka011-Regular.ttf') format('truetype');
@@ -325,9 +423,18 @@
 .Aka011-Regular {
     font-family: "Aka011-Regular";
 }
+@font-face {
+    font-family:"Aka011-Bold";
+    src:local('A ka -011 Bold'),url('./Aka/Aka011-Bold.ttf') format('truetype');
+}
+.Aka011-Bold {
+    font-family: "Aka011-Bold";
+}
 
 @font-face {
     font-family:"Aka02-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('A ka 02'),url('./Aka/Aka02-Regular.ttf') format('truetype');
 }
 .Aka02-Regular {
@@ -336,6 +443,8 @@
 
 @font-face {
     font-family:"Aka03-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('A ka 03'),url('./Aka/Aka03-Regular.ttf') format('truetype');
 }
 .Aka03-Regular {
@@ -344,6 +453,8 @@
 
 @font-face {
     font-family:"Aka05-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('A ka 05'),url('./Aka/Aka05-Regular.ttf') format('truetype');
 }
 .Aka05-Regular {
@@ -352,6 +463,8 @@
 
 @font-face {
     font-family:"Aka06-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('A ka 06'),url('./Aka/Aka06-Regular.ttf') format('truetype');
 }
 .Aka06-Regular {
@@ -360,6 +473,8 @@
 
 @font-face {
     font-family:"Aka08-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('A ka 08'),url('./Aka/Aka08-Regular.ttf') format('truetype');
 }
 .Aka08-Regular {
@@ -368,6 +483,8 @@
 
 @font-face {
     font-family:"Aka09-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('A ka 09'),url('./Aka/Aka09-Regular.ttf') format('truetype');
 }
 .Aka09-Regular {
@@ -376,6 +493,8 @@
 
 @font-face {
     font-family:"Aka10-Light";
+    font-style: normal;
+    font-weight: 400;
     src:local('A ka 10'),url('./Aka/Aka10-Light.ttf') format('truetype');
 }
 .Aka10-Light {
@@ -384,6 +503,8 @@
 
 @font-face {
     font-family:"OpenDyslexic-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('OpenDyslexic'),url('./Aka/OpenDyslexic-Regular.ttf') format('truetype');
 }
 .OpenDyslexic-Regular {
@@ -392,6 +513,8 @@
 
 @font-face {
     font-family:"CherryUnicode";
+    font-style: normal;
+    font-weight: 400;
     src:local('Cherry Unicode'),url('./unknown/CherryUnicode.ttf') format('truetype');
 }
 .CherryUnicode {
@@ -400,6 +523,8 @@
 
 @font-face {
     font-family:"Kamjing";
+    font-style: normal;
+    font-weight: 400;
     src:local('Kamjing-2'),url('./unknown/Kamjing.ttf') format('truetype');
 }
 .Kamjing {
@@ -408,6 +533,8 @@
 
 @font-face {
     font-family:"MyanmarBlack";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Black'),url('./unknown/MyanmarBlack.ttf') format('truetype');
 }
 .MyanmarBlack {
@@ -416,6 +543,8 @@
 
 @font-face {
     font-family:"MyanmarHeadOne";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Head One'),url('./unknown/MyanmarHeadOne.ttf') format('truetype');
 }
 .MyanmarHeadOne {
@@ -424,12 +553,16 @@
 
 @font-face {
     font-family:"MyanmarSquare";
+    font-style: normal;
+    font-weight: 300;
+    src:local('Myanmar Square Light'),url('./unknown/MyanmarSquareLight.ttf') format('truetype');
+}
+@font-face {
+    font-family:"MyanmarSquare";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Square'),url('./unknown/MyanmarSquare.ttf') format('truetype');
 }
-.MyanmarSquare {
-    font-family: "MyanmarSquare";
-}
-
 @font-face {
     font-family:"MyanmarSquareLight";
     src:local('Myanmar Square Light'),url('./unknown/MyanmarSquareLight.ttf') format('truetype');
@@ -437,9 +570,14 @@
 .MyanmarSquareLight {
     font-family: "MyanmarSquareLight";
 }
+.MyanmarSquare {
+    font-family: "MyanmarSquare";
+}
 
 @font-face {
     font-family:"NKSSmart2";
+    font-style: normal;
+    font-weight: 400;
     src:local('NK SSmart2'),url('./unknown/NKSSmart2.ttf') format('truetype');
 }
 .NKSSmart2 {
@@ -448,6 +586,8 @@
 
 @font-face {
     font-family:"NKSSmart3";
+    font-style: normal;
+    font-weight: 400;
     src:local('NK SSmart3'),url('./unknown/NKSSmart3.ttf') format('truetype');
 }
 .NKSSmart3 {
@@ -456,6 +596,8 @@
 
 @font-face {
     font-family:"NKSSmart4";
+    font-style: normal;
+    font-weight: 400;
     src:local('NK SSmart4'),url('./unknown/NKSSmart4.ttf') format('truetype');
 }
 .NKSSmart4 {
@@ -464,6 +606,8 @@
 
 @font-face {
     font-family:"NamKhoneUnicode";
+    font-style: normal;
+    font-weight: 400;
     src:local('NamKhoneUnicode'),url('./unknown/NamKhoneUnicode.ttf') format('truetype');
 }
 .NamKhoneUnicode {
@@ -472,6 +616,8 @@
 
 @font-face {
     font-family:"Yangon";
+    font-style: normal;
+    font-weight: 400;
     src:local('Yangon'),url('./unknown/Yangon.ttf') format('truetype');
 }
 .Yangon {
@@ -480,6 +626,8 @@
 
 @font-face {
     font-family:"YoeYar-One";
+    font-style: normal;
+    font-weight: 400;
     src:local('YoeYar-One'),url('./unknown/YoeYar-One.ttf') format('truetype');
 }
 .YoeYar-One {
@@ -488,6 +636,8 @@
 
 @font-face {
     font-family:"Mon3";
+    font-style: normal;
+    font-weight: 400;
     src:local('MON3 Anonta 1'),url('./other/Mon3.ttf') format('truetype');
 }
 .Mon3 {
@@ -496,6 +646,8 @@
 
 @font-face {
     font-family:"Myanmar3";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar3'),url('./other/Myanmar3.TTF') format('truetype');
 }
 .Myanmar3 {
@@ -504,6 +656,8 @@
 
 @font-face {
     font-family:"MyanmarSansPro";
+    font-style: normal;
+    font-weight: 400;
     src:local('Myanmar Sans Pro'),url('./other/MyanmarSansPro.ttf') format('truetype');
 }
 .MyanmarSansPro {
@@ -512,6 +666,8 @@
 
 @font-face {
     font-family:"NotoSanMyanmar";
+    font-style: normal;
+    font-weight: 400;
     src:local('NotoSansMyanmarRegular'),url('./other/NotoSanMyanmar.ttf') format('truetype');
 }
 .NotoSanMyanmar {
@@ -520,12 +676,20 @@
 
 @font-face {
     font-family:"NotoSansMyanmarUI";
+    font-style: normal;
+    font-weight: 400;
     src:local('Noto Sans Myanmar UI'),url('./other/NotoSansMyanmarUI.ttf') format('truetype');
 }
 .NotoSansMyanmarUI {
     font-family: "NotoSansMyanmarUI";
 }
 
+@font-face {
+    font-family:"NotoZawDecode";
+    font-style: normal;
+    font-weight: 400;
+    src:local('Noto Sans Myanmar UI'),url('./other/NotoSansMyanmarUI-Regular-ZawDecode.ttf') format('truetype');
+}
 @font-face {
     font-family:"NotoSansMyanmarUI-Regular-ZawDecode";
     src:local('Noto Sans Myanmar UI'),url('./other/NotoSansMyanmarUI-Regular-ZawDecode.ttf') format('truetype');
@@ -536,6 +700,8 @@
 
 @font-face {
     font-family:"NotoSerifMyanmar";
+    font-style: normal;
+    font-weight: 400;
     src:local('Noto Serif Myanmar'),url('./other/NotoSerifMyanmar.ttf') format('truetype');
 }
 .NotoSerifMyanmar {
@@ -544,6 +710,8 @@
 
 @font-face {
     font-family:"Ours-Unicode";
+    font-style: normal;
+    font-weight: 400;
     src:local('Ours-Unicode'),url('./other/Ours-Unicode.ttf') format('truetype');
 }
 .Ours-Unicode {
@@ -552,6 +720,8 @@
 
 @font-face {
     font-family:"Pyidaungsu";
+    font-style: normal;
+    font-weight: 400;
     src:local('Pyidaungsu'),url('./other/Pyidaungsu.ttf') format('truetype');
 }
 .Pyidaungsu {
@@ -560,6 +730,8 @@
 
 @font-face {
     font-family:"Yunghkio";
+    font-style: normal;
+    font-weight: 400;
     src:local('Yunghkio'),url('./other/Yunghkio.ttf') format('truetype');
 }
 .Yunghkio {
@@ -568,12 +740,20 @@
 
 @font-face {
     font-family:"MyMyanmarUniversal";
+    font-style: normal;
+    font-weight: 400;
     src:local('!MyMyanmar Universal'),url('./other/MyMyanmarUniversal.ttf') format('truetype');
 }
 .MyMyanmarUniversal {
     font-family: "MyMyanmarUniversal";
 }
 
+@font-face {
+    font-family:"NotoSansMyanmar";
+    font-style: normal;
+    font-weight: 400;
+    src:local('NotoSansMyanmar'),url('./other/NotoSansMyanmar-Regular.ttf') format('truetype');
+}
 @font-face {
     font-family:"NotoSansMyanmar-Regular";
     src:local('NotoSansMyanmar'),url('./other/NotoSansMyanmar-Regular.ttf') format('truetype');
@@ -584,6 +764,8 @@
 
 @font-face {
     font-family:"SM01_WaTokeLay-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('SM01_WaTokeLay'),url('./SaiMoon/SM01_WaTokeLay-Regular.ttf') format('truetype');
 }
 .SM01_WaTokeLay-Regular {
@@ -592,6 +774,8 @@
 
 @font-face {
     font-family:"SM02_KanBaung-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('SM02_KanBaung'),url('./SaiMoon/SM02_KanBaung-Regular.ttf') format('truetype');
 }
 .SM02_KanBaung-Regular {
@@ -600,6 +784,8 @@
 
 @font-face {
     font-family:"SM03_KaWai-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('SM03_KaWai'),url('./SaiMoon/SM03_KaWai-Regular.ttf') format('truetype');
 }
 .SM03_KaWai-Regular {
@@ -607,21 +793,36 @@
 }
 
 @font-face {
-    font-family:"SM04Moon-Italic";
-    src:local('SM04_Moon'),url('./SaiMoon/SM04Moon-Italic.ttf') format('truetype');
+    font-family:"SM04_Moon";
+    font-style: normal;
+    font-weight: 100;
+    src:local('SM04_Moon Thin'),url('./SaiMoon/SM04_Moon-Thin.ttf') format('truetype');
 }
-.SM04Moon-Italic {
-    font-family: "SM04Moon-Italic";
-}
-
 @font-face {
-    font-family:"SM04_Moon-Bold";
-    src:local('SM04_Moon'),url('./SaiMoon/SM04_Moon-Bold.ttf') format('truetype');
+    font-family:"SM04_Moon";
+    font-style: normal;
+    font-weight: 400;
+    src:local('SM04_Moon'),url('./SaiMoon/SM04_Moon-Regular.ttf') format('truetype');
 }
-.SM04_Moon-Bold {
-    font-family: "SM04_Moon-Bold";
+@font-face {
+    font-family:"SM04_Moon";
+    font-style: normal;
+    font-weight: 700;
+    src:local('SM04_Moon Bold'),url('./SaiMoon/SM04_Moon-Bold.ttf') format('truetype');
 }
-
+@font-face {
+    font-family:"SM04_Moon";
+    font-style: italic;
+    font-weight: 400;
+    src:local('SM04_Moon Italic'),url('./SaiMoon/SM04Moon-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family:"SM04_Moon-Thin";
+    src:local('SM04_Moon Thin'),url('./SaiMoon/SM04_Moon-Thin.ttf') format('truetype');
+}
+.SM04_Moon-Thin {
+    font-family: "SM04_Moon-Thin";
+}
 @font-face {
     font-family:"SM04_Moon-Regular";
     src:local('SM04_Moon'),url('./SaiMoon/SM04_Moon-Regular.ttf') format('truetype');
@@ -629,33 +830,25 @@
 .SM04_Moon-Regular {
     font-family: "SM04_Moon-Regular";
 }
-
 @font-face {
-    font-family:"SM04_Moon-Thin";
-    src:local('SM04_Moon'),url('./SaiMoon/SM04_Moon-Thin.ttf') format('truetype');
+    font-family:"SM04_Moon-Bold";
+    src:local('SM04_Moon Bold'),url('./SaiMoon/SM04_Moon-Bold.ttf') format('truetype');
 }
-.SM04_Moon-Thin {
-    font-family: "SM04_Moon-Thin";
+.SM04_Moon-Bold {
+    font-family: "SM04_Moon-Bold";
 }
-
 @font-face {
-    font-family:"SM06_LaikPyar-Bold";
-    src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Bold.ttf') format('truetype');
+    font-family:"SM04Moon-Italic";
+    src:local('SM04_Moon Italic'),url('./SaiMoon/SM04Moon-Italic.ttf') format('truetype');
 }
-.SM06_LaikPyar-Bold {
-    font-family: "SM06_LaikPyar-Bold";
-}
-
-@font-face {
-    font-family:"SM06_LaikPyar-Regular";
-    src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Regular.ttf') format('truetype');
-}
-.SM06_LaikPyar-Regular {
-    font-family: "SM06_LaikPyar-Regular";
+.SM04Moon-Italic {
+    font-family: "SM04Moon-Italic";
 }
 
 @font-face {
     font-family:"SM06_LaikPyar-Straight";
+    font-style: normal;
+    font-weight: 400;
     src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Straight.ttf') format('truetype');
 }
 .SM06_LaikPyar-Straight {
@@ -663,15 +856,49 @@
 }
 
 @font-face {
+    font-family:"SM06_LaikPyar";
+    font-style: normal;
+    font-weight: 100;
+    src:local('SM06_LaikPyar Thin'),url('./SaiMoon/SM06_LaikPyar-Thin.ttf') format('truetype');
+}
+@font-face {
+    font-family:"SM06_LaikPyar";
+    font-style: normal;
+    font-weight: 400;
+    src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family:"SM06_LaikPyar";
+    font-style: normal;
+    font-weight: 700;
+    src:local('SM06_LaikPyar Bold'),url('./SaiMoon/SM06_LaikPyar-Bold.ttf') format('truetype');
+}
+@font-face {
     font-family:"SM06_LaikPyar-Thin";
-    src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Thin.ttf') format('truetype');
+    src:local('SM06_LaikPyar Thin'),url('./SaiMoon/SM06_LaikPyar-Thin.ttf') format('truetype');
 }
 .SM06_LaikPyar-Thin {
     font-family: "SM06_LaikPyar-Thin";
 }
+@font-face {
+    font-family:"SM06_LaikPyar-Regular";
+    src:local('SM06_LaikPyar'),url('./SaiMoon/SM06_LaikPyar-Regular.ttf') format('truetype');
+}
+.SM06_LaikPyar-Regular {
+    font-family: "SM06_LaikPyar-Regular";
+}
+@font-face {
+    font-family:"SM06_LaikPyar-Bold";
+    src:local('SM06_LaikPyar Bold'),url('./SaiMoon/SM06_LaikPyar-Bold.ttf') format('truetype');
+}
+.SM06_LaikPyar-Bold {
+    font-family: "SM06_LaikPyar-Bold";
+}
 
 @font-face {
     font-family:"SM07_Virus-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('SM07_Virus'),url('./SaiMoon/SM07_Virus-Regular.ttf') format('truetype');
 }
 .SM07_Virus-Regular {
@@ -680,6 +907,8 @@
 
 @font-face {
     font-family:"SM08_AntiVirus-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('SM08_AntiVirus'),url('./SaiMoon/SM08_AntiVirus-Regular.ttf') format('truetype');
 }
 .SM08_AntiVirus-Regular {
@@ -688,9 +917,130 @@
 
 @font-face {
     font-family:"SM09_BeeZee-Regular";
+    font-style: normal;
+    font-weight: 400;
     src:local('SM09_BeeZee'),url('./SaiMoon/SM09_BeeZee-Regular.otf') format('truetype');
 }
 .SM09_BeeZee-Regular {
     font-family: "SM09_BeeZee-Regular";
+}
+
+@font-face {
+    font-family:"Padauk";
+    font-style: normal;
+    font-weight: 400;
+    src:local('Padauk'),url('./SIL/Padauk-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family:"Padauk";
+    font-style: normal;
+    font-weight: 500;
+    src:local('Padauk Medium'),url('./SIL/Padauk-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family:"Padauk";
+    font-style: normal;
+    font-weight: 600;
+    src:local('Padauk SemiBold'),url('./SIL/Padauk-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family:"Padauk";
+    font-style: normal;
+    font-weight: 700;
+    src:local('Padauk Bold'),url('./SIL/Padauk-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family:"Padauk";
+    font-style: normal;
+    font-weight: 800;
+    src:local('Padauk ExtraBold'),url('./SIL/Padauk-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family:"Padauk-Regular";
+    src:local('Padauk'),url('./SIL/Padauk-Regular.ttf') format('truetype');
+}
+.Padauk-Regular {
+    font-family: "Padauk-Regular";
+}
+@font-face {
+    font-family:"Padauk-Medium";
+    src:local('Padauk Medium'),url('./SIL/Padauk-Medium.ttf') format('truetype');
+}
+.Padauk-Medium {
+    font-family: "Padauk-Medium";
+}
+@font-face {
+    font-family:"Padauk-SemiBold";
+    src:local('Padauk SemiBold'),url('./SIL/Padauk-SemiBold.ttf') format('truetype');
+}
+.Padauk-SemiBold {
+    font-family: "Padauk-SemiBold";
+}
+@font-face {
+    font-family:"Padauk-Bold";
+    src:local('Padauk Bold'),url('./SIL/Padauk-Bold.ttf') format('truetype');
+}
+.Padauk-Bold {
+    font-family: "Padauk-Bold";
+}
+@font-face {
+    font-family:"Padauk-ExtraBold";
+    src:local('Padauk ExtraBold'),url('./SIL/Padauk-ExtraBold.ttf') format('truetype');
+}
+.Padauk-ExtraBold {
+    font-family: "Padauk-ExtraBold";
+}
+
+@font-face {
+    font-family:"PadaukBook";
+    font-style: normal;
+    font-weight: 400;
+    src:local('Padauk Book'),url('./SIL/PadaukBook-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family:"PadaukBook";
+    font-style: normal;
+    font-weight: 500;
+    src:local('Padauk Book Medium'),url('./SIL/PadaukBook-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family:"PadaukBook";
+    font-style: normal;
+    font-weight: 600;
+    src:local('Padauk Book SemiBold'),url('./SIL/PadaukBook-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family:"PadaukBook";
+    font-style: normal;
+    font-weight: 700;
+    src:local('Padauk Book Bold'),url('./SIL/PadaukBook-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family:"PadaukBook-Regular";
+    src:local('Padauk Book'),url('./SIL/PadaukBook-Regular.ttf') format('truetype');
+}
+.PadaukBook-Regular {
+    font-family: "PadaukBook-Regular";
+}
+@font-face {
+    font-family:"PadaukBook-Medium";
+    src:local('Padauk Book Medium'),url('./SIL/PadaukBook-Medium.ttf') format('truetype');
+}
+.PadaukBook-Medium {
+    font-family: "PadaukBook-Medium";
+}
+@font-face {
+    font-family:"PadaukBook-SemiBold";
+    src:local('Padauk Book SemiBold'),url('./SIL/PadaukBook-SemiBold.ttf') format('truetype');
+}
+.PadaukBook-SemiBold {
+    font-family: "PadaukBook-SemiBold";
+}
+@font-face {
+    font-family:"PadaukBook-Bold";
+    src:local('Padauk Book Bold'),url('./SIL/PadaukBook-Bold.ttf') format('truetype');
+}
+.PadaukBook-Bold {
+    font-family: "PadaukBook-Bold";
 }
 

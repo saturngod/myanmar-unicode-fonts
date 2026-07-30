@@ -28,9 +28,32 @@ Run all from `source_code/reactjs/`:
 `fonts.json` shape:
 - `authors[]` — `{ key, title, description, folder, cssSuffix }`. `folder` is the `public/` subfolder; `title` is the **author name** shown in the sidebar.
 - `styles[]` — ordered list of style category names.
-- `fonts[]` — `{ name, author, file, style, localName? }`. `localName` is optional; if omitted the generator reads the embedded family name from the TTF.
+- `fonts[]` — one entry per **family**, not per file: `{ name, author, style, file? | variants?, localName? }`. `localName` is optional; if omitted the generator reads the embedded name from the TTF.
 
 The generator also **warns** if a `.ttf` exists in `public/<folder>/` but isn't in `fonts.json`, or if a font has no/unknown `style` — so the JSON can't silently drift from the actual files.
+
+### Multi-weight families
+
+A family that ships several weights is **one** `fonts[]` entry with a `variants[]` array — it renders as a single card with a weight selector, like Google Fonts. Never add one entry per weight.
+
+```json
+{
+  "name": "Padauk",
+  "author": "sil",
+  "variants": [
+    { "file": "Padauk-Regular.ttf", "weight": 400 },
+    { "file": "Padauk-Bold.ttf", "weight": 700 },
+    { "file": "Padauk-Italic.ttf", "weight": 400, "italic": true }
+  ],
+  "style": "Sans-Serif / Clean UI"
+}
+```
+
+- `weight` defaults to `400`, `italic` to `false`. The `label` shown to users (Thin/Light/Regular/Medium/SemiBold/Bold/ExtraBold/Black, `+ Italic`) is derived from those two.
+- `file` is shorthand for `variants: [{ file, weight: 400 }]` — keep it for single-weight fonts.
+- The **default** variant (what the card previews, and what `FontDefinition.filePath` / `localName` / `downloadFileName` point at) is the upright weight nearest 400.
+- `languages` is the union across all variants.
+- `localName` per variant is auto-read from each TTF. For multi-weight families the generator reads the **full name** (nameID 4, e.g. `"Padauk SemiBold"`), not the family name — every weight shares the same family name, so `local("Padauk")` inside the bold face would match a locally-installed Regular and the browser would fake the bold instead of fetching our file. Single-weight fonts still use the family name (nameID 16/1), unchanged.
 
 `src/data/fontCatalog.ts` and `src/data/styleCategories.ts` are now thin layers: they re-export the generated data and keep the runtime helpers (`getCdnFontUrl`, `getPublicFontUrl`, `getFontsByCategory`, `normalizeFontName`, `getStyleAllowedNames`). URL helpers can't be precomputed because they depend on `process.env.PUBLIC_URL`.
 
@@ -40,10 +63,10 @@ Derived-field rules (handled by the generator):
 
 ## Two font-loading paths at runtime
 
-1. **Runtime preview faces** (`src/components/fontBox.tsx`) — the React app injects its own `@font-face` rules into a single `<style id="mmfont-preview-faces">` tag, one per font, deduped via an in-memory `Set`, using the unique `previewFamily` so previews never collide. **This is what the live preview grid uses.**
-2. **Global stylesheet** (`public/mmfonts.css`) — generated, linked from `index.html`; provides `local()`-first faces keyed by filename. Legacy/global helper.
+1. **Runtime preview faces** (`src/components/fontBox.tsx`) — the React app injects its own `@font-face` rules into a single `<style id="mmfont-preview-faces">` tag, **one per variant**, deduped per family via an in-memory `Set`, using the unique `previewFamily` so previews never collide. All variants of a family share that one `previewFamily` and differ only by `font-weight`/`font-style`, so the card just sets `fontWeight` and the browser picks the file. **This is what the live preview grid uses.**
+2. **Global stylesheet** (`public/mmfonts.css`) — generated, linked from `index.html`. Emits weight-aware faces keyed by `cssFamily` (so `font-family: Padauk; font-weight: 700` works), plus legacy `local()`-first faces and helper classes keyed by filename.
 
-The copy-CSS and download buttons in `fontBox` point at a **jsDelivr CDN** URL (`getCdnFontUrl`), not local files — fonts are served from the GitHub repo via CDN for end users.
+The copy-CSS and download buttons in `fontBox` point at a **jsDelivr CDN** URL (`getCdnFontUrl`), not local files — fonts are served from the GitHub repo via CDN for end users. Copy-CSS emits the **whole family** (every weight); download fetches the **selected** weight.
 
 ## Two independent filter axes
 
@@ -62,8 +85,8 @@ Name matching for style filters goes through `normalizeFontName` (strips whitesp
 
 ## Adding a new font
 
-1. Copy the `.ttf` into `public/<author-folder>/`. (New author? create the folder and add an `authors[]` entry to `fonts.json`.)
-2. Add one entry to `fonts[]` in `fonts.json`: `{ "name", "author", "file", "style" }` (`localName` optional).
+1. Copy the `.ttf`(s) into `public/<author-folder>/`. (New author? create the folder, add an `authors[]` entry to `fonts.json`, and add a colour to `categoryColors` in `MainContent.tsx`.)
+2. Add **one** entry to `fonts[]` in `fonts.json`: `{ "name", "author", "file", "style" }` (`localName` optional). Multiple weights → use `variants[]` instead of `file`, see above.
 3. `bun run fonts` — regenerates the catalog + CSS and reports warnings.
 4. `bun run production` (or `npm run production`).
 

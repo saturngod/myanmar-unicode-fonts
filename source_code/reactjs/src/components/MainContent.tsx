@@ -160,6 +160,7 @@ const categoryColors: Record<
     text: "text-lime-700",
     dot: "bg-lime-400",
   },
+  sil: { bg: "bg-orange-50", text: "text-orange-700", dot: "bg-orange-400" },
 };
 
 const AuthorSection: React.FC<{

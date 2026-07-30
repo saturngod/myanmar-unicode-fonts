@@ -63,6 +63,14 @@
       "folder": "other",
       "cssSuffix": "Other",
       "link": ""
+    },
+    {
+      "key": "sil",
+      "title": "SIL",
+      "description": "Padauk and Padauk Book from SIL International, released under the OFL.",
+      "folder": "SIL",
+      "cssSuffix": "SIL",
+      "link": "https://software.sil.org/padauk/"
     }
   ],
   "styles": [
@@ -85,15 +93,16 @@
     {
       "name": "MyanmarChatu",
       "author": "khmer",
-      "file": "MyanmarChatu.ttf",
-      "localName": "Myanmar Chatu",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "MyanmarChatuLight",
-      "author": "khmer",
-      "file": "MyanmarChatuLight.ttf",
-      "localName": "Myanmar Chatu Light",
+      "variants": [
+        {
+          "file": "MyanmarChatuLight.ttf",
+          "weight": 300
+        },
+        {
+          "file": "MyanmarChatu.ttf",
+          "weight": 400
+        }
+      ],
       "style": "Sans-Serif / Clean UI"
     },
     {
@@ -321,45 +330,41 @@
       "style": "Display / Decorative"
     },
     {
-      "name": "Aka01-Bold",
+      "name": "Aka01",
       "author": "aka",
-      "file": "Aka01-Bold.ttf",
-      "localName": "A ka 01",
+      "variants": [
+        {
+          "file": "Aka01-Regular.ttf",
+          "weight": 400
+        },
+        {
+          "file": "Aka01-Medium.ttf",
+          "weight": 500
+        },
+        {
+          "file": "Aka01-Bold.ttf",
+          "weight": 700
+        }
+      ],
       "style": "Sans-Serif / Clean UI"
     },
     {
-      "name": "Aka01-Medium",
+      "name": "Aka011",
       "author": "aka",
-      "file": "Aka01-Medium.ttf",
-      "localName": "A ka 01",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "Aka01-Regular",
-      "author": "aka",
-      "file": "Aka01-Regular.ttf",
-      "localName": "A ka 01",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "Aka011-Bold",
-      "author": "aka",
-      "file": "Aka011-Bold.ttf",
-      "localName": "A ka -011",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "Aka011-Light",
-      "author": "aka",
-      "file": "Aka011-Light.ttf",
-      "localName": "A ka -011",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "Aka011-Regular",
-      "author": "aka",
-      "file": "Aka011-Regular.ttf",
-      "localName": "A ka -011",
+      "variants": [
+        {
+          "file": "Aka011-Light.ttf",
+          "weight": 300
+        },
+        {
+          "file": "Aka011-Regular.ttf",
+          "weight": 400
+        },
+        {
+          "file": "Aka011-Bold.ttf",
+          "weight": 700
+        }
+      ],
       "style": "Sans-Serif / Clean UI"
     },
     {
@@ -452,15 +457,16 @@
     {
       "name": "MyanmarSquare",
       "author": "unknown",
-      "file": "MyanmarSquare.ttf",
-      "localName": "Myanmar Square",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "MyanmarSquareLight",
-      "author": "unknown",
-      "file": "MyanmarSquareLight.ttf",
-      "localName": "Myanmar Square Light",
+      "variants": [
+        {
+          "file": "MyanmarSquareLight.ttf",
+          "weight": 300
+        },
+        {
+          "file": "MyanmarSquare.ttf",
+          "weight": 400
+        }
+      ],
       "style": "Sans-Serif / Clean UI"
     },
     {
@@ -611,46 +617,28 @@
       "style": "Display / Decorative"
     },
     {
-      "name": "SM04Moon-Italic",
+      "name": "SM04_Moon",
       "author": "saimoon",
-      "file": "SM04Moon-Italic.ttf",
-      "localName": "SM04_Moon",
+      "variants": [
+        {
+          "file": "SM04_Moon-Thin.ttf",
+          "weight": 100
+        },
+        {
+          "file": "SM04_Moon-Regular.ttf",
+          "weight": 400
+        },
+        {
+          "file": "SM04_Moon-Bold.ttf",
+          "weight": 700
+        },
+        {
+          "file": "SM04Moon-Italic.ttf",
+          "weight": 400,
+          "italic": true
+        }
+      ],
       "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "SM04_Moon-Bold",
-      "author": "saimoon",
-      "file": "SM04_Moon-Bold.ttf",
-      "localName": "SM04_Moon",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "SM04_Moon-Regular",
-      "author": "saimoon",
-      "file": "SM04_Moon-Regular.ttf",
-      "localName": "SM04_Moon",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "SM04_Moon-Thin",
-      "author": "saimoon",
-      "file": "SM04_Moon-Thin.ttf",
-      "localName": "SM04_Moon",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "SM06_LaikPyar-Bold",
-      "author": "saimoon",
-      "file": "SM06_LaikPyar-Bold.ttf",
-      "localName": "SM06_LaikPyar",
-      "style": "Display / Decorative"
-    },
-    {
-      "name": "SM06_LaikPyar-Regular",
-      "author": "saimoon",
-      "file": "SM06_LaikPyar-Regular.ttf",
-      "localName": "SM06_LaikPyar",
-      "style": "Display / Decorative"
     },
     {
       "name": "SM06_LaikPyar-Straight",
@@ -660,10 +648,22 @@
       "style": "Display / Decorative"
     },
     {
-      "name": "SM06_LaikPyar-Thin",
+      "name": "SM06_LaikPyar",
       "author": "saimoon",
-      "file": "SM06_LaikPyar-Thin.ttf",
-      "localName": "SM06_LaikPyar",
+      "variants": [
+        {
+          "file": "SM06_LaikPyar-Thin.ttf",
+          "weight": 100
+        },
+        {
+          "file": "SM06_LaikPyar-Regular.ttf",
+          "weight": 400
+        },
+        {
+          "file": "SM06_LaikPyar-Bold.ttf",
+          "weight": 700
+        }
+      ],
       "style": "Display / Decorative"
     },
     {
@@ -686,6 +686,56 @@
       "file": "SM09_BeeZee-Regular.otf",
       "localName": "SM09_BeeZee",
       "style": "Handwritten / Script"
+    },
+    {
+      "name": "Padauk",
+      "author": "sil",
+      "variants": [
+        {
+          "file": "Padauk-Regular.ttf",
+          "weight": 400
+        },
+        {
+          "file": "Padauk-Medium.ttf",
+          "weight": 500
+        },
+        {
+          "file": "Padauk-SemiBold.ttf",
+          "weight": 600
+        },
+        {
+          "file": "Padauk-Bold.ttf",
+          "weight": 700
+        },
+        {
+          "file": "Padauk-ExtraBold.ttf",
+          "weight": 800
+        }
+      ],
+      "style": "Sans-Serif / Clean UI"
+    },
+    {
+      "name": "PadaukBook",
+      "author": "sil",
+      "variants": [
+        {
+          "file": "PadaukBook-Regular.ttf",
+          "weight": 400
+        },
+        {
+          "file": "PadaukBook-Medium.ttf",
+          "weight": 500
+        },
+        {
+          "file": "PadaukBook-SemiBold.ttf",
+          "weight": 600
+        },
+        {
+          "file": "PadaukBook-Bold.ttf",
+          "weight": 700
+        }
+      ],
+      "style": "Sans-Serif / Clean UI"
     }
   ]
 }
