@@ -487,30 +487,6 @@
 }
 
 @font-face {
-    font-family:"MyanmarAngoun";
-    src:local('Myanmar Angoun'),url('./unknown/MyanmarAngoun.ttf') format('truetype');
-}
-.MyanmarAngoun {
-    font-family: "MyanmarAngoun";
-}
-
-@font-face {
-    font-family:"MyanmarSabae";
-    src:local('Myanmar Sabae'),url('./unknown/MyanmarSabae.ttf') format('truetype');
-}
-.MyanmarSabae {
-    font-family: "MyanmarSabae";
-}
-
-@font-face {
-    font-family:"MyanmarSansPro";
-    src:local('Myanmar Sans Pro'),url('./unknown/MyanmarSansPro.ttf') format('truetype');
-}
-.MyanmarSansPro {
-    font-family: "MyanmarSansPro";
-}
-
-@font-face {
     font-family:"Mon3";
     src:local('MON3 Anonta 1'),url('./other/Mon3.ttf') format('truetype');
 }

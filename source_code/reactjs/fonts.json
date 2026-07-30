@@ -87,14 +87,14 @@
       "author": "khmer",
       "file": "MyanmarChatu.ttf",
       "localName": "Myanmar Chatu",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MyanmarChatuLight",
       "author": "khmer",
       "file": "MyanmarChatuLight.ttf",
       "localName": "Myanmar Chatu Light",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MyanmarGantgaw",
@@ -108,14 +108,14 @@
       "author": "khmer",
       "file": "MyanmarKhyay.ttf",
       "localName": "Myanmar Khyay",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MyanmarKuttar",
       "author": "khmer",
       "file": "MyanmarKuttar.ttf",
       "localName": "Myanmar Kuttar",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MyanmarNayone",
@@ -157,14 +157,14 @@
       "author": "khmer",
       "file": "MyanmarPhikselSmooth.ttf",
       "localName": "Myanmar Phiksel Smooth",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MyanmarPonenyet",
       "author": "khmer",
       "file": "MyanmarPonenyet.ttf",
       "localName": "Myanmar Ponenyet",
-      "style": "Square / Blocky"
+      "style": "Display / Decorative"
     },
     {
       "name": "MyanmarSabae",
@@ -290,7 +290,7 @@
       "author": "masterpiece",
       "file": "MasterpieceDaung.ttf",
       "localName": "Masterpiece Daung",
-      "style": "Display / Decorative"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MasterpieceDaungRound",
@@ -367,7 +367,7 @@
       "author": "aka",
       "file": "Aka02-Regular.ttf",
       "localName": "A ka 02",
-      "style": "Display / Decorative"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "Aka03-Regular",
@@ -395,7 +395,7 @@
       "author": "aka",
       "file": "Aka08-Regular.ttf",
       "localName": "A ka 08",
-      "style": "Display / Decorative"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "Aka09-Regular",
@@ -409,14 +409,14 @@
       "author": "aka",
       "file": "Aka10-Light.ttf",
       "localName": "A ka 10",
-      "style": "Rounded"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "OpenDyslexic-Regular",
       "author": "aka",
       "file": "OpenDyslexic-Regular.ttf",
       "localName": "OpenDyslexic",
-      "style": "Rounded"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "CherryUnicode",
@@ -431,35 +431,37 @@
       "file": "Kamjing.ttf",
       "localName": "Kamjing-2",
       "style": "Sans-Serif / Clean UI",
-      "excludeLanguages": ["mon"]
+      "excludeLanguages": [
+        "mon"
+      ]
     },
     {
       "name": "MyanmarBlack",
       "author": "unknown",
       "file": "MyanmarBlack.ttf",
       "localName": "Myanmar Black",
-      "style": "Display / Decorative"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MyanmarHeadOne",
       "author": "unknown",
       "file": "MyanmarHeadOne.ttf",
       "localName": "Myanmar Head One",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MyanmarSquare",
       "author": "unknown",
       "file": "MyanmarSquare.ttf",
       "localName": "Myanmar Square",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "MyanmarSquareLight",
       "author": "unknown",
       "file": "MyanmarSquareLight.ttf",
       "localName": "Myanmar Square Light",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "NKSSmart2",
@@ -502,27 +504,6 @@
       "file": "YoeYar-One.ttf",
       "localName": "YoeYar-One",
       "style": "Serif / Traditional"
-    },
-    {
-      "name": "MyanmarAngoun",
-      "author": "unknown",
-      "file": "MyanmarAngoun.ttf",
-      "localName": "Myanmar Angoun",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "MyanmarSabae",
-      "author": "unknown",
-      "file": "MyanmarSabae.ttf",
-      "localName": "Myanmar Sabae",
-      "style": "Sans-Serif / Clean UI"
-    },
-    {
-      "name": "MyanmarSansPro",
-      "author": "unknown",
-      "file": "MyanmarSansPro.ttf",
-      "localName": "Myanmar Sans Pro",
-      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "Mon3",
@@ -634,28 +615,28 @@
       "author": "saimoon",
       "file": "SM04Moon-Italic.ttf",
       "localName": "SM04_Moon",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "SM04_Moon-Bold",
       "author": "saimoon",
       "file": "SM04_Moon-Bold.ttf",
       "localName": "SM04_Moon",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "SM04_Moon-Regular",
       "author": "saimoon",
       "file": "SM04_Moon-Regular.ttf",
       "localName": "SM04_Moon",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "SM04_Moon-Thin",
       "author": "saimoon",
       "file": "SM04_Moon-Thin.ttf",
       "localName": "SM04_Moon",
-      "style": "Square / Blocky"
+      "style": "Sans-Serif / Clean UI"
     },
     {
       "name": "SM06_LaikPyar-Bold",
